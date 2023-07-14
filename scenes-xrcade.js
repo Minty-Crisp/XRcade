@@ -242,7 +242,7 @@ auxl.mtnFloorData = {
 	mixins: false,
 	classes: ['a-ent', 'clickable'],
 	components: {
-	['obj-model']:{obj: './assets/3d/land/mtnFloor.obj'},
+	['obj-model']:{obj: './assets/3d/XRcade/mtnFloor.obj'},
 	},
 };
 auxl.mtnFloor = auxl.Core(auxl.mtnFloorData);
@@ -440,7 +440,7 @@ auxl.tokenData = {
 	components: {
 		['gltf-model']:'./assets/3d/XRcade/token.glb',
 		gltfmat: {colors: '#f4057c, #05aaf4, #16aa60', emissive: '0.75,0.25,0.75'},
-		hovertext:{value: 'Sponsor Me', hover: 'top', offset: 2, twist: true,},
+		hovertext:{value: 'Sponsor My Work', hover: 'top', offset: 2, twist: true,},
 		clickrun__link1:{
 			cursorObj: 'tokenLink1',
 			component: 'null',
@@ -519,7 +519,7 @@ auxl.tokenLink3Data = {
 data:'tokenLink3Data',
 id:'tokenLink3',
 sources: false,
-text: {value:'Liberapay', wrapCount: 20, color: "#FFFFFF", font: "exo2bold", zOffset: 0.051, side: 'double', align: "center", baseline: 'center', width: 1.4},
+text: {value:'Liberapay', wrapCount: 20, color: "#FFFFFF", font: "exo2bold", zOffset: 0.051, side: 'double', align: "center", baseline: 'center', width: 1.4, opacity: 0},
 geometry: {primitive: 'box', depth: 0.1, width: 1.5, height: 0.5},
 material: {shader: "standard", color: "#2694ce", opacity: 1, metalness: 0.2, roughness: 0.8, emissive: "#2694ce", emissiveIntensity: 0.4, side: 'double'},
 position: new THREE.Vector3(2,3.5,-5.35),
@@ -559,7 +559,6 @@ auxl.sponsorData = {
 };
 auxl.sponsor1Data = auxl.coreDataFromTemplate(auxl.sponsorData, {id: 'sponsor1', position: new THREE.Vector3(0,3.5,-5.95),}, true);
 auxl.sponsor1 = auxl.Core(auxl.sponsor1Data);
-
 
 //XRcade Sign
 auxl.signData = {
