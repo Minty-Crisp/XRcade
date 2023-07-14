@@ -15,41 +15,6 @@ init: function () {
 //AUXL System Connection
 const auxl = document.querySelector('a-scene').systems.auxl;
 
-//Sounds
-//
-
-//Kenny
-auxl.confirm1 = './assets/audio/kenny/confirmation_001.ogg';
-auxl.confirm2 = './assets/audio/kenny/confirmation_002.ogg';
-auxl.confirm3 = './assets/audio/kenny/confirmation_003.ogg';
-auxl.confirm4 = './assets/audio/kenny/confirmation_004.ogg';
-auxl.drop1 = './assets/audio/kenny/drop_001.ogg';
-auxl.drop2 = './assets/audio/kenny/drop_002.ogg';
-auxl.drop3 = './assets/audio/kenny/drop_003.ogg';
-auxl.drop4 = './assets/audio/kenny/drop_004.ogg';
-auxl.error7 = './assets/audio/kenny/error_007.ogg';
-auxl.glass1 = './assets/audio/kenny/glass_001.ogg';
-auxl.glass3 = './assets/audio/kenny/glass_003.ogg';
-auxl.maximize6 = './assets/audio/kenny/maximize_006.ogg';
-auxl.maximize7 = './assets/audio/kenny/maximize_007.ogg';
-auxl.maximize8 = './assets/audio/kenny/maximize_008.ogg';
-auxl.minimize6 = './assets/audio/kenny/minimize_006.ogg';
-auxl.minimize7 = './assets/audio/kenny/minimize_007.ogg';
-auxl.minimize8 = './assets/audio/kenny/minimize_008.ogg';
-auxl.pluck1 = './assets/audio/kenny/pluck_001.ogg';
-auxl.pluck2 = './assets/audio/kenny/pluck_002.ogg';
-auxl.question3 = './assets/audio/kenny/question_003.ogg';
-auxl.select2 = './assets/audio/kenny/select_002.ogg';
-auxl.select6 = './assets/audio/kenny/select_006.ogg';
-auxl.select7 = './assets/audio/kenny/select_007.ogg';
-auxl.switch2 = './assets/audio/kenny/switch_002.ogg';
-
-//Music
-//
-
-//Silver Nimbus
-auxl.town3 = './assets/audio/silverNimbus/Town_III.ogg';
-
 //SkyBox
 auxl.skyGrad1Data = {
 data: 'skyGrad1Data',
@@ -429,11 +394,13 @@ id:'jukeBoxAudioToggle',
 sources: false,
 text: {value:'Disable Background Audio', wrapCount: 20, color: "#FFFFFF", font: "exo2bold", zOffset: 0.051, side: 'double', align: "center", baseline: 'center', width: 1.4},
 geometry: {primitive: 'box', depth: 0.1, width: 1.5, height: 0.5},
-material: {shader: "standard", color: "#2694ce", opacity: 1, metalness: 0.2, roughness: 0.8, emissive: "#2694ce", emissiveIntensity: 0.6, side: 'double'},
-position: new THREE.Vector3(-2,2,-5.5),
+material: {shader: "standard", color: "#2694ce", opacity: 1, metalness: 0.2, roughness: 0.8, emissive: "#2694ce", emissiveIntensity: 0.4, side: 'double'},
+position: new THREE.Vector3(-2,2,-5.35),
 rotation: new THREE.Vector3(0,0,0),
 scale: new THREE.Vector3(1,1,1),
 animations:{
+	hoveron: {property: 'material.emissiveIntensity', from: '0.4', to: '0.8', dur: 1, delay: 0, loop: false, dir: 'normal', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'mouseenter'},
+	hoveroff: {property: 'material.emissiveIntensity', from: '0.8', to: '0.4', dur: 1, delay: 0, loop: false, dir: 'normal', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'mouseleave'},
 	click: {property: 'scale', from: '1 1 1', to: '1.1 1.1 1.1', dur: 125, delay: 0, loop: '1', dir: 'alternate', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'click'},
 },
 mixins: false,
@@ -474,9 +441,105 @@ auxl.tokenData = {
 		['gltf-model']:'./assets/3d/XRcade/token.glb',
 		gltfmat: {colors: '#f4057c, #05aaf4, #16aa60', emissive: '0.75,0.25,0.75'},
 		hovertext:{value: 'Sponsor Me', hover: 'top', offset: 2, twist: true,},
+		clickrun__link1:{
+			cursorObj: 'tokenLink1',
+			component: 'null',
+			method: 'ToggleSpawn',
+			params: 'null',
+		},
+		clickrun__link2:{
+			cursorObj: 'tokenLink2',
+			component: 'null',
+			method: 'ToggleSpawn',
+			params: 'null',
+		},
+		clickrun__link3:{
+			cursorObj: 'tokenLink3',
+			component: 'null',
+			method: 'ToggleSpawn',
+			params: 'null',
+		},
 	},
 };
 auxl.token = auxl.Core(auxl.tokenData);
+//Link 1 - Github
+auxl.tokenLink1Data = {
+data:'tokenLink1Data',
+id:'tokenLink1',
+sources: false,
+text: {value:'Github Sponsor', wrapCount: 20, color: "#FFFFFF", font: "exo2bold", zOffset: 0.051, side: 'double', align: "center", baseline: 'center', width: 1.4},
+geometry: {primitive: 'box', depth: 0.1, width: 1.5, height: 0.5},
+material: {shader: "standard", color: "#2694ce", opacity: 1, metalness: 0.2, roughness: 0.8, emissive: "#2694ce", emissiveIntensity: 0.4, side: 'double'},
+position: new THREE.Vector3(2,2,-5.35),
+rotation: new THREE.Vector3(0,0,0),
+scale: new THREE.Vector3(1,1,1),
+animations:{
+	hoveron: {property: 'material.emissiveIntensity', from: '0.4', to: '0.8', dur: 1, delay: 0, loop: false, dir: 'normal', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'mouseenter'},
+	hoveroff: {property: 'material.emissiveIntensity', from: '0.8', to: '0.4', dur: 1, delay: 0, loop: false, dir: 'normal', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'mouseleave'},
+	click: {property: 'scale', from: '1 1 1', to: '1.1 1.1 1.1', dur: 125, delay: 0, loop: '1', dir: 'alternate', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'click'},
+},
+mixins: false,
+classes: ['clickable','a-ent'],
+components: {
+	clickrunfunc__toggleaudio:{
+		method: 'OpenLink',
+		params: 'https://github.com/Minty-Crisp',
+	},
+},
+};
+auxl.tokenLink1 = auxl.Core(auxl.tokenLink1Data);
+//Link 2 - Kofi
+auxl.tokenLink2Data = {
+data:'tokenLink2Data',
+id:'tokenLink2',
+sources: false,
+text: {value:'Ko-fi', wrapCount: 20, color: "#FFFFFF", font: "exo2bold", zOffset: 0.051, side: 'double', align: "center", baseline: 'center', width: 1.4},
+geometry: {primitive: 'box', depth: 0.1, width: 1.5, height: 0.5},
+material: {shader: "standard", color: "#2694ce", opacity: 1, metalness: 0.2, roughness: 0.8, emissive: "#2694ce", emissiveIntensity: 0.4, side: 'double'},
+position: new THREE.Vector3(2,2.75,-5.35),
+rotation: new THREE.Vector3(0,0,0),
+scale: new THREE.Vector3(1,1,1),
+animations:{
+	hoveron: {property: 'material.emissiveIntensity', from: '0.4', to: '0.8', dur: 1, delay: 0, loop: false, dir: 'normal', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'mouseenter'},
+	hoveroff: {property: 'material.emissiveIntensity', from: '0.8', to: '0.4', dur: 1, delay: 0, loop: false, dir: 'normal', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'mouseleave'},
+	click: {property: 'scale', from: '1 1 1', to: '1.1 1.1 1.1', dur: 125, delay: 0, loop: '1', dir: 'alternate', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'click'},
+},
+mixins: false,
+classes: ['clickable','a-ent'],
+components: {
+	clickrunfunc__toggleaudio:{
+		method: 'OpenLink',
+		params: 'https://ko-fi.com/mintycrisp',
+	},
+},
+};
+auxl.tokenLink2 = auxl.Core(auxl.tokenLink2Data);
+//Link 3 - Liberapay
+auxl.tokenLink3Data = {
+data:'tokenLink3Data',
+id:'tokenLink3',
+sources: false,
+text: {value:'Liberapay', wrapCount: 20, color: "#FFFFFF", font: "exo2bold", zOffset: 0.051, side: 'double', align: "center", baseline: 'center', width: 1.4},
+geometry: {primitive: 'box', depth: 0.1, width: 1.5, height: 0.5},
+material: {shader: "standard", color: "#2694ce", opacity: 1, metalness: 0.2, roughness: 0.8, emissive: "#2694ce", emissiveIntensity: 0.4, side: 'double'},
+position: new THREE.Vector3(2,3.5,-5.35),
+rotation: new THREE.Vector3(0,0,0),
+scale: new THREE.Vector3(1,1,1),
+animations:{
+	hoveron: {property: 'material.emissiveIntensity', from: '0.4', to: '0.8', dur: 1, delay: 0, loop: false, dir: 'normal', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'mouseenter'},
+	hoveroff: {property: 'material.emissiveIntensity', from: '0.8', to: '0.4', dur: 1, delay: 0, loop: false, dir: 'normal', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'mouseleave'},
+	click: {property: 'scale', from: '1 1 1', to: '1.1 1.1 1.1', dur: 125, delay: 0, loop: '1', dir: 'alternate', easing: 'easeInOutElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'click'},
+},
+mixins: false,
+classes: ['clickable','a-ent'],
+components: {
+	clickrunfunc__toggleaudio:{
+		method: 'OpenLink',
+		params: 'https://liberapay.com/mintycrisp/',
+	},
+},
+};
+auxl.tokenLink3 = auxl.Core(auxl.tokenLink3Data);
 
 //Sponsor
 auxl.sponsorData = {
@@ -671,7 +734,7 @@ auxl.cadeCabData = {
 	classes: ['clickable','a-ent'],
 	components:{
 		['gltf-model']:'./assets/3d/XRcade/cabinet.glb',
-		gltfmat: {random: true},
+		gltfmat: {colors:['random','random','random','random','random', 'black','random','random','random','random'],},
 		hovertext:{value: 'Ready?\nPlayer One', hover: 'top', offset: 5, twist: true,},
 	},
 };
@@ -703,35 +766,45 @@ auxl.cabLayer = auxl.Layer('cabLayer', auxl.cabLayerData);
 //Left
 //Cab 1
 auxl.cadeCab1Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab1Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-12}, end: {x:-8.5, y:0, z:-11.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab1Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game1Preview,]};
 auxl.cadeCab1Layer.layer.all.child0.core.core.text.value = 'Memory Order';
 //Cab 2
 auxl.cadeCab2Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab2Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-14}, end: {x:-8.5, y:0, z:-13.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab2Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game2Preview,]};
 auxl.cadeCab2Layer.layer.all.child0.core.core.text.value = 'Swipe Launch';
 //Cab 3
 auxl.cadeCab3Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab3Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-16}, end: {x:-8.5, y:0, z:-15.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab3Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game3Preview,]};
 auxl.cadeCab3Layer.layer.all.child0.core.core.text.value = 'Guess Hit';
 //Cab 4
 auxl.cadeCab4Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab4Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-18}, end: {x:-8.5, y:0, z:-17.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab4Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game4Preview,]};
 auxl.cadeCab4Layer.layer.all.child0.core.core.text.value = 'Drag Diffuse';
 //Cab 5
 auxl.cadeCab5Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab5Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-20}, end: {x:-8.5, y:0, z:-19.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab5Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game5Preview,]};
 auxl.cadeCab5Layer.layer.all.child0.core.core.text.value = 'Sharp Shooter';
 //Cab 6
 auxl.cadeCab6Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab6Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-22}, end: {x:-8.5, y:0, z:-21.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab6Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game6Preview,]};
 auxl.cadeCab6Layer.layer.all.child0.core.core.text.value = 'Perfect Scale';
 //Cab 7
 auxl.cadeCab7Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab7Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-24}, end: {x:-8.5, y:0, z:-23.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab7Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game7Preview,]};
 auxl.cadeCab7Layer.layer.all.child0.core.core.text.value = 'Reflex 7';
 
 //Right
 //Cab 8
 auxl.cadeCab8Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab8Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:8.5, y:0, z:-12}, end: {x:9, y:0, z:-11.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab8Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game8Preview,]};
 auxl.cadeCab8Layer.layer.all.child0.core.core.text.value = 'Tap It';
 //Cab 9
 auxl.cadeCab9Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab9Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:8.5, y:0, z:-14}, end: {x:9, y:0, z:-13.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab9Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game9Preview,]};
 auxl.cadeCab9Layer.layer.all.child0.core.core.text.value = 'Pop Pop';
 //Cab 10
 auxl.cadeCab10Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab10Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:8.5, y:0, z:-16}, end: {x:9, y:0, z:-15.5}, yOffset: 0, collide: true}}, true);
+auxl.cadeCab10Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game10Preview,]};
 auxl.cadeCab10Layer.layer.all.child0.core.core.text.value = 'Horde Halt';
 //Cab 11
 auxl.cadeCab11Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab11Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:8.5, y:0, z:-18}, end: {x:9, y:0, z:-17.5}, yOffset: 0, collide: true}}, true);
@@ -1051,24 +1124,42 @@ auxl.compCadeIdleData = {
 		self:{Speak:{speech:'Do you have fast reflexes? Test your speed with an onslaught of targets with Drag Diffuse.'}},
 	},
 	timeline4:{
-		self:{Speak:{speech:'Your top 5 High Scores for each game are recorded. Use the HTML menu to reset them if you need.'},},
+		self:{Speak:{speech:'Fancy yourself a quick shot? Try the Sharp Shooter game to see!'}},
 	},
 	timeline5:{
-		self:{Speak:{speech:'For more nostalgic styles, you can change the carpet with a few classic options on the back wall.'},},
+		self:{Speak:{speech:'Can you find the right shape in Perfect Scale? Tweak them till you find it!'}},
 	},
 	timeline6:{
-		self:{Speak:{speech:'Check back often for more games!'},},
+		self:{Speak:{speech:'You may have a quick response time once, but how well can you do with 7 average chances?'}},
 	},
 	timeline7:{
-		self:{Speak:{speech:'Interested in supporting Mintys XRcade development?'},},
+		self:{Speak:{speech:'Tap it, Swipe it, Double Tap it or Drag it! Can you keep up?'}},
 	},
 	timeline8:{
-		self:{Speak:{speech:'There are various ways you can help, view them all at mintycrisp.com or mintyxr.com .'},},
+		self:{Speak:{speech:'Call yourself a collector? Collect as many as you can in Pop Pop!'}},
 	},
 	timeline9:{
-		self:{Speak:{speech:'Mintys XRcade is made for Web XR. You can play on Desktop, Mobile and in VR!'},},
+		self:{Speak:{speech:'Can you withstand the onslaught? Stun and Slash to protect yourself and see how long you can last.'}},
 	},
 	timeline10:{
+		self:{Speak:{speech:'Your top 5 High Scores for each game are recorded. Use the HTML menu to reset them if you need.'},},
+	},
+	timeline11:{
+		self:{Speak:{speech:'For more nostalgic styles, you can change the carpet with a few classic options on the back wall.'},},
+	},
+	timeline12:{
+		self:{Speak:{speech:'Check back often for more games!'},},
+	},
+	timeline13:{
+		self:{Speak:{speech:'Interested in supporting Mintys XRcade development?'},},
+	},
+	timeline14:{
+		self:{Speak:{speech:'There are various ways you can help, view them all at mintycrisp.com or mintyxr.com .'},},
+	},
+	timeline15:{
+		self:{Speak:{speech:'Mintys XRcade is made for Web XR. You can play on Desktop, Mobile and in VR!'},},
+	},
+	timeline16:{
 		self:{Speak:{speech:'XRcade is built with AUXL (A-Frame UX Library). An engine built on top of the excellent XR renderer A-Frame.'},},
 	},
 	timeline11:{
@@ -1176,35 +1267,45 @@ auxl.buildSceneLibrary = () => {
 	//Left
 	//Cab 1
 	auxl.cadeCab1Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab1Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-12}, end: {x:-8.5, y:0, z:-11.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab1Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game1Preview,]};
 	auxl.cadeCab1Layer.GetChild('cadeCab1Layer1').core.text.value = 'Memory Order';
 	//Cab 2
 	auxl.cadeCab2Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab2Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-14}, end: {x:-8.5, y:0, z:-13.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab2Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game2Preview,]};
 	auxl.cadeCab2Layer.GetChild('cadeCab2Layer1').core.text.value = 'Swipe Launch';
 	//Cab 3
 	auxl.cadeCab3Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab3Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-16}, end: {x:-8.5, y:0, z:-15.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab3Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game3Preview,]};
 	auxl.cadeCab3Layer.GetChild('cadeCab3Layer1').core.text.value = 'Guess Hit';
 	//Cab 4
 	auxl.cadeCab4Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab4Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-18}, end: {x:-8.5, y:0, z:-17.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab4Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game4Preview,]};
 	auxl.cadeCab4Layer.GetChild('cadeCab4Layer1').core.text.value = 'Drag Diffuse';
 	//Cab 5
 	auxl.cadeCab5Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab5Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-20}, end: {x:-8.5, y:0, z:-19.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab5Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game5Preview,]};
 	auxl.cadeCab5Layer.layer.all.child0.core.core.text.value = 'Sharp Shooter';
 	//Cab 6
 	auxl.cadeCab6Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab6Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-22}, end: {x:-8.5, y:0, z:-21.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab6Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game6Preview,]};
 	auxl.cadeCab6Layer.layer.all.child0.core.core.text.value = 'Perfect Scale';
 	//Cab 7
 	auxl.cadeCab7Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab7Layer', {rotation: new THREE.Vector3(0,90,0)}, {grid: {start:{x:-9, y:0, z:-24}, end: {x:-8.5, y:0, z:-23.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab7Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game7Preview,]};
 	auxl.cadeCab7Layer.layer.all.child0.core.core.text.value = 'Reflex 7';
 
 	//Right
 	//Cab 8
 	auxl.cadeCab8Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab8Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:8.5, y:0, z:-12}, end: {x:9, y:0, z:-11.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab8Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game8Preview,]};
 	auxl.cadeCab8Layer.layer.all.child0.core.core.text.value = 'Tap It';
 	//Cab 9
 	auxl.cadeCab9Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab9Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:8.5, y:0, z:-14}, end: {x:9, y:0, z:-13.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab9Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game9Preview,]};
 	auxl.cadeCab9Layer.layer.all.child0.core.core.text.value = 'Pop Pop';
 	//Cab 10
 	auxl.cadeCab10Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab10Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:8.5, y:0, z:-16}, end: {x:9, y:0, z:-15.5}, yOffset: 0, collide: true}}, true);
+	auxl.cadeCab10Layer.layer.all.parent.core.core.components.gltfmat = {colors:['random','random','random','random','random','white','random','random','random','random'], textures:[false, false, false, false, false, auxl.game10Preview,]};
 	auxl.cadeCab10Layer.layer.all.child0.core.core.text.value = 'Horde Halt';
 	//Cab 11
 	auxl.cadeCab11Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab11Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:8.5, y:0, z:-18}, end: {x:9, y:0, z:-17.5}, yOffset: 0, collide: true}}, true);
@@ -1421,7 +1522,7 @@ auxl.game1Data = {
 	start:{
 		player:{TwistTo: 0},
 		memory:{SpawnMemGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50',color: auxl.memoryGameColor.base, emissive: auxl.memoryGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern27, repeat: '50 50',color: auxl.memoryGameColor.base, emissive: auxl.memoryGameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1460,7 +1561,7 @@ auxl.game2Data = {
 	start:{
 		player:{TwistTo: 0},
 		swipeLaunchGame:{SpawnSLGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50',color: auxl.swipeLaunchGameColor.base, emissive: auxl.swipeLaunchGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern16, repeat: '50 50',color: auxl.swipeLaunchGameColor.base, emissive: auxl.swipeLaunchGameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1499,7 +1600,7 @@ auxl.game3Data = {
 	start:{
 		player:{TwistTo: 0},
 		guessHitGame:{SpawnGHGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50',color: auxl.guessHitGameColor.base, emissive: auxl.guessHitGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern14, repeat: '50 50',color: auxl.guessHitGameColor.base, emissive: auxl.guessHitGameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1538,7 +1639,7 @@ auxl.game4Data = {
 	start:{
 		player:{TwistTo: 0},
 		dragDiffuseGame:{SpawnDDGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50',color: auxl.dragDiffuseGameColor.base, emissive: auxl.dragDiffuseGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern32, repeat: '50 50',color: auxl.dragDiffuseGameColor.base, emissive: auxl.dragDiffuseGameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1577,7 +1678,7 @@ auxl.game5Data = {
 	start:{
 		player:{TwistTo: 0},
 		sharpShooterGame:{SpawnSSGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50', color: auxl.sharpShooterGameColor.base, emissive: auxl.sharpShooterGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern80, repeat: '50 50', color: auxl.sharpShooterGameColor.base, emissive: auxl.sharpShooterGameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1616,7 +1717,7 @@ auxl.game6Data = {
 	start:{
 		player:{TwistTo: 0},
 		perfectScaleGame:{SpawnPSGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50', color: auxl.perfectScaleGameColor.base, emissive: auxl.perfectScaleGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern60, repeat: '50 50', color: auxl.perfectScaleGameColor.base, emissive: auxl.perfectScaleGameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1655,7 +1756,7 @@ auxl.game7Data = {
 	start:{
 		player:{TwistTo: 0},
 		reflex7Game:{SpawnR7Game: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50', color: auxl.reflex7GameColor.base, emissive: auxl.reflex7GameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern83, repeat: '50 50', color: auxl.reflex7GameColor.base, emissive: auxl.reflex7GameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1694,7 +1795,7 @@ auxl.game8Data = {
 	start:{
 		player:{TwistTo: 0},
 		tapItGame:{SpawnTIGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50', color: auxl.tapItGameColor.base, emissive: auxl.tapItGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern75, repeat: '50 50', color: auxl.tapItGameColor.base, emissive: auxl.tapItGameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1733,7 +1834,7 @@ auxl.game9Data = {
 	start:{
 		player:{TwistTo: 0},
 		popPopGame:{SpawnPPGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50', color: auxl.popPopGameColor.base, emissive: auxl.popPopGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern34, repeat: '50 50', color: auxl.popPopGameColor.base, emissive: auxl.popPopGameColor.base,},}},
 	},
 	delay:{
 	},
@@ -1772,7 +1873,7 @@ auxl.game10Data = {
 	start:{
 		player:{TwistTo: 0},
 		hordeHaltGame:{SpawnHHGame: null},
-		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.patterns[Math.floor(Math.random()*auxl.patterns.length)], repeat: '50 50', color: auxl.hordeHaltGameColor.base, emissive: auxl.hordeHaltGameColor.base,},}},
+		mtnFloor:{SpawnCore:null,ChangeSelf:{property: 'material', value: {src: auxl.pattern82, repeat: '50 50', color: auxl.hordeHaltGameColor.base, emissive: auxl.hordeHaltGameColor.base,},}},
 	},
 	delay:{
 	},
