@@ -5,35 +5,35 @@
 ---
 ## XRcade Games :
 
-### Memory Order
-- How good are your memory skills? Play the Memory Order game to test yourself.
+### Memory Order : How good are your memory skills? Play the Memory Order game to test yourself.
+![memory order preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game1.jpg)
 
-### Swipe Launch
-- Do you have a quick hand? See how quick with the Swipe Launch game.
+### Swipe Launch : Do you have a quick hand? See how quick with the Swipe Launch game.
+![swipe launch preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game2.jpg)
 
-### Guess Hit
-- Have an eye for distance? Use your skills progress through the Guess Hit game.
+### Guess Hit : Have an eye for distance? Use your skills progress through the Guess Hit game.
+![guess hit preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game3.jpg)
 
-### Drag Diffuse
-- Do you have fast reflexes? Test your speed with an onslaught of targets with Drag Diffuse.
+### Drag Diffuse : Do you have fast reflexes? Test your speed with an onslaught of targets with Drag Diffuse.
+![drag diffuse preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game4.jpg)
 
-### Sharp Shooter
-- Fancy yourself a quick shot? Try the Sharp Shooter game to see!
+### Sharp Shooter : Fancy yourself a quick shot? Try the Sharp Shooter game to see!
+![sharp shooter preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game5.jpg)
 
-### Perfect Scale
-- Can you find the right shape in Perfect Scale? Tweak them till you find it!
+### Perfect Scale : Can you find the right shape in Perfect Scale? Tweak them till you find it!
+![perfect scale preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game6.jpg)
 
-### Reflex 7
-- You may have a quick response time once, but how well can you do with 7 average chances?
+### Reflex 7 : You may have a quick response time once, but how well can you do with 7 average chances?
+![reflex 7 preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game7.jpg)
 
-### Tap It
-- Tap it, Swipe it, Double Tap it or Drag it! Can you keep up?
+### Tap It : Tap it, Swipe it, Double Tap it or Drag it! Can you keep up?
+![tap it preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game8.jpg)
 
-### Pop Pop
-- Call yourself a collector? Collect as many as you can in Pop Pop!
+### Pop Pop : Call yourself a collector? Collect as many as you can in Pop Pop!
+![pop pop preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game9.jpg)
 
-### Horde Halt
-- Can you withstand the onslaught? Stun and Slash to protect yourself and see how long you can last.
+### Horde Halt : Can you withstand the onslaught? Stun and Slash to protect yourself and see how long you can last.
+![horde halt preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/game10.jpg)
 ---
 # Minty Crisp ^-^ :watermelon: 
 
