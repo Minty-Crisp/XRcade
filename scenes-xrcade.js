@@ -547,15 +547,17 @@ auxl.sponsorData = {
 	id:'sponsor',
 	sources:false,
 	text: false,
-	geometry: {primitive: 'plane', height: 4, width: 6,},
-	material: {shader: "standard", opacity: 1, color: '#e5d02c', metalness: 0.3, roughness: 0.7, emissive: '#e5d02c', emissiveIntensity: 0.7, side: 'double', src: auxl.pattern14, repeat: '1 1.5'},
+	geometry: false,
+	material: false,
 	position: new THREE.Vector3(0,0,0),
 	rotation: new THREE.Vector3(0,0,0),
 	scale: new THREE.Vector3(1,1,1),
 	animations: false,
 	mixins: false,
 	classes: ['clickable','a-ent'],
-	components: false,
+	components: {
+		['zesty-banner']: {adUnit: '5380481b-af7b-4aaa-b97d-92c7d35ab4ae', format: 'wide', style: 'standard', beacon: true},
+	},
 };
 auxl.sponsor1Data = auxl.coreDataFromTemplate(auxl.sponsorData, {id: 'sponsor1', position: new THREE.Vector3(0,3.5,-5.95),}, true);
 auxl.sponsor1 = auxl.Core(auxl.sponsor1Data);
