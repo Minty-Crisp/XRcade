@@ -369,8 +369,8 @@ auxl.GameMenu = (gameMenuData) => {
 	}
 	//Move to Home
 	const MoveToHome = () => {
+console.log('Move to Home')
 		auxl[gameMenu.homeZone].Change(gameMenu.homeZone, gameMenu.homeConnect);
-		Exit();
 	}
 	//Exit Game World
 	const Exit = () => {
@@ -2812,7 +2812,6 @@ auxl.sharpShooterGameMenuData = {
 };
 auxl.sharpShooterGameMenu = auxl.GameMenu(auxl.sharpShooterGameMenuData);
 
-
 //
 //Perfect Scale
 //Adjust 3 Shapes to be as close to 1 1 1 scale as possible
@@ -4748,8 +4747,6 @@ auxl.popPopGameMenuData = {
 };
 auxl.popPopGameMenu = auxl.GameMenu(auxl.popPopGameMenuData);
 
-
-
 //
 //Horde Halt Game 
 //Stop on onslaught of enemies that by clicking to stun and swiping to kill
@@ -5193,8 +5190,6 @@ auxl.hordeHaltGameMenuData = {
 };
 auxl.hordeHaltGameMenu = auxl.GameMenu(auxl.hordeHaltGameMenuData);
 
-
-
 //
 //Basic Game Template
 //Basic game description
@@ -5453,33 +5448,143 @@ auxl.highScoresBoard = auxl.HighScoreBoard('highScoresBoard');
 auxl.buildMiniGames = () => {
 	//Memory Game
 	auxl.memory = auxl.MemoryGame('memory');
+	auxl.memoryGameMenuData = {
+		id: 'memoryGameMenu',
+		game: auxl.memory.memory,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game1',
+		gameCabinet: 'cadeCab1Layer',
+		outGamePos: new THREE.Vector3(-8,1.5,-11.75),
+		inGamePos: new THREE.Vector3(0.8,1.5,-1.25),
+	};
 	auxl.memoryGameMenu = auxl.GameMenu(auxl.memoryGameMenuData);
 	//Swipe Launch
 	auxl.swipeLaunchGame = auxl.SwipeLaunchGame('swipeLaunchGame');
+	auxl.swipeLaunchGameMenuData = {
+		id: 'swipeLaunchGameMenu',
+		game: auxl.swipeLaunchGame.swipeLaunch,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game2',
+		gameCabinet: 'cadeCab2Layer',
+		outGamePos: new THREE.Vector3(-8,1.5,-13.75),
+		inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
+	};
 	auxl.swipeLaunchGameMenu = auxl.GameMenu(auxl.swipeLaunchGameMenuData);
 	//Guess Hit
 	auxl.guessHitGame = auxl.GuessHitGame('guessHitGame');
+	auxl.guessHitGameMenuData = {
+		id: 'guessHitGameMenu',
+		game: auxl.guessHitGame.guessHit,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game3',
+		gameCabinet: 'cadeCab3Layer',
+		outGamePos: new THREE.Vector3(-8,1.5,-15.75),
+		inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
+	};
 	auxl.guessHitGameMenu = auxl.GameMenu(auxl.guessHitGameMenuData);
 	//Drag Diffuse
 	auxl.dragDiffuseGame = auxl.DragDiffuse('dragDiffuseGame');
+	auxl.dragDiffuseGameMenuData = {
+		id: 'dragDiffuseGameMenu',
+		game: auxl.dragDiffuseGame.dragDiffuse,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game4',
+		gameCabinet: 'cadeCab4Layer',
+		outGamePos: new THREE.Vector3(-8,1.5,-17.75),
+		inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
+	};
 	auxl.dragDiffuseGameMenu = auxl.GameMenu(auxl.dragDiffuseGameMenuData);
 	//Sharp Shooter
 	auxl.sharpShooterGame = auxl.SharpShooter('sharpShooterGame');
+	auxl.sharpShooterGameMenuData = {
+		id: 'sharpShooterGameMenu',
+		game: auxl.sharpShooterGame.sharpShooter,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game5',
+		gameCabinet: 'cadeCab5Layer',
+		outGamePos: new THREE.Vector3(-8,1.5,-19.75),
+		inGamePos: new THREE.Vector3(0.5,1.5,0.75),
+	};
 	auxl.sharpShooterGameMenu = auxl.GameMenu(auxl.sharpShooterGameMenuData);
 	//Perfect Scale
 	auxl.perfectScaleGame = auxl.PerfectScale('perfectScaleGame');
+	auxl.perfectScaleGameMenuData = {
+		id: 'perfectScaleGameMenu',
+		game: auxl.perfectScaleGame.perfectScale,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game6',
+		gameCabinet: 'cadeCab6Layer',
+		outGamePos: new THREE.Vector3(-8,1.5,-21.75),
+		inGamePos: new THREE.Vector3(0.5,1.5,7.5),
+	};
 	auxl.perfectScaleGameMenu = auxl.GameMenu(auxl.perfectScaleGameMenuData);
 	//Reflex 7
 	auxl.reflex7Game = auxl.Reflex7('reflex7Game');
+	auxl.reflex7GameMenuData = {
+		id: 'reflex7GameMenu',
+		game: auxl.reflex7Game.reflex7,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game7',
+		gameCabinet: 'cadeCab7Layer',
+		outGamePos: new THREE.Vector3(-8,1.5,-23.75),
+		inGamePos: new THREE.Vector3(0.75,1.5,0.5),
+	};
 	auxl.reflex7GameMenu = auxl.GameMenu(auxl.reflex7GameMenuData);
 	//Tap It
 	auxl.tapItGame = auxl.TapIt('tapItGame');
+	auxl.tapItGameMenuData = {
+		id: 'tapItGameMenu',
+		game: auxl.tapItGame.tapIt,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game8',
+		gameCabinet: 'cadeCab8Layer',
+		outGamePos: new THREE.Vector3(8,1.5,-11.75),
+		inGamePos: new THREE.Vector3(0.75,1.5,0.5),
+	};
 	auxl.tapItGameMenu = auxl.GameMenu(auxl.tapItGameMenuData);
 	//PopPop Game
 	auxl.popPopGame = auxl.PopPopGame('popPopGame');
+	auxl.popPopGameMenuData = {
+		id: 'popPopGameMenu',
+		game: auxl.popPopGame.popPop,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game9',
+		gameCabinet: 'cadeCab9Layer',
+		outGamePos: new THREE.Vector3(8,1.5,-13.75),
+		inGamePos: new THREE.Vector3(0.75,1.5,0.5),
+	};
 	auxl.popPopGameMenu = auxl.GameMenu(auxl.popPopGameMenuData);
 	//Horde Halt Game 
 	auxl.hordeHaltGame = auxl.HordeHaltGame('hordeHaltGame');
+	auxl.hordeHaltGameMenuData = {
+		id: 'hordeHaltGameMenu',
+		game: auxl.hordeHaltGame.hordeHalt,
+		homeZone: 'xrcadeZone',
+		homeConnect: 'xrcadeHome',
+		gameZone: 'xrcadeZone',
+		gameConnect: 'game10',
+		gameCabinet: 'cadeCab10Layer',
+		outGamePos: new THREE.Vector3(8,1.5,-15.75),
+		inGamePos: new THREE.Vector3(0.75,1.5,0.5),
+	};
 	auxl.hordeHaltGameMenu = auxl.GameMenu(auxl.hordeHaltGameMenuData);
 	//Highest Scores Board
 	auxl.highScoresBoard = auxl.HighScoreBoard('highScoresBoard');
