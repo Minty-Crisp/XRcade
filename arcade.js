@@ -4755,7 +4755,7 @@ auxl.HordeHaltGame = (id) => {
 	let hordeHalt = {};
 	hordeHalt.id = id;
 	let core = 'hordeHalt';
-	hordeHalt.title = 'hordeHalt';
+	hordeHalt.title = 'Horde Halt';
 	hordeHalt.instructionsText = 'How To Play :\nA horde of enemies will spawn relentlesly every level.\nKill enough each level to continue while avoiding dying from excessive damage.\nClick an enemy to stun it temporarily and swipe on/off to damage them.\nContinue clicking to reset the stun time.\nAs you progress, earn health and face more enemies which are more durable as well.\nHow many can you kill before they take you down?';
 	hordeHalt.controlsText = 'Game Controls :\nUse the controller raycaster and controller click to play the game.';
 	hordeHalt.previewImage = auxl.game10Preview;
