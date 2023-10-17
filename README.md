@@ -1,4 +1,4 @@
-# Minty's XRcade v0.1
+# Minty's XRcade v0.15
 ### [Play at mintyxr.com](https://mintyxr.com)
 ## A WebXR arcade full of A-Frame built games using [A-Frame UX Library ](https://github.com/Minty-Crisp/AUXL). Currently with 10 games to choose from! Support for VR | Desktop | Mobile.
 ![xrcade preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/mintyxr-cade-revamp0.jpg)
