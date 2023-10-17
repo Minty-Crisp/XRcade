@@ -369,8 +369,8 @@ auxl.GameMenu = (gameMenuData) => {
 	}
 	//Move to Home
 	const MoveToHome = () => {
-console.log('Move to Home')
 		auxl[gameMenu.homeZone].Change(gameMenu.homeZone, gameMenu.homeConnect);
+		Exit();
 	}
 	//Exit Game World
 	const Exit = () => {
@@ -456,6 +456,21 @@ console.log('Move to Home')
 
 	return {gameMenu, SpawnGameMenu, DespawnGameMenu, ToggleGameMenu}
 }
+
+auxl.GameMenuControls = () => {
+	let gameMenus = {};
+	gameMenus.id = 'allGameMenus';
+
+	const DespawnAllGameMenus = () => {
+console.log('Running Despawn All Menus')
+		if(auxl.currentGameMenu){
+			auxl[auxl.currentGameMenu].DespawnGameMenu();
+		}
+	}
+	return {gameMenus, DespawnAllGameMenus}
+
+}
+auxl.allGameMenus = auxl.GameMenuControls();
 
 //
 //Highscore
@@ -941,7 +956,7 @@ auxl.MemoryGame = (id) => {
 	memory.layer = auxl.Layer('memory',layerData);
 
 	//UI
-	memory.memoryUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'memoryUI',{position: new THREE.Vector3(1.25,1.5,-1.5)}, true);
+	memory.memoryUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'memoryUI',{position: new THREE.Vector3(1.25,1.5,-1.5)}, false, true);
 	memory.memoryUI = auxl.Layer('memoryUI',memory.memoryUIData);
 	//Parent : memoryUI0
 	//Game Status : memoryUI1
@@ -1169,7 +1184,7 @@ auxl.memoryGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game1',
 	gameCabinet: 'cadeCab1Layer',
-	outGamePos: new THREE.Vector3(-8,1.5,-11.75),
+	outGamePos: new THREE.Vector3(-4.25,1.5,-6.75),
 	inGamePos: new THREE.Vector3(0.8,1.5,-1.25),
 };
 auxl.memoryGameMenu = auxl.GameMenu(auxl.memoryGameMenuData);
@@ -1287,7 +1302,7 @@ auxl.SwipeLaunchGame = (id) => {
 	swipeLaunch.displayTime = auxl.Core(swipeLaunch.displayTimeData);
 
 	//UI
-	swipeLaunch.swipeLaunchUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'swipeLaunchUI',{position: new THREE.Vector3(1,1.5,-0.5)}, true);
+	swipeLaunch.swipeLaunchUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'swipeLaunchUI',{position: new THREE.Vector3(1,1.5,-0.5)}, false, true);
 	swipeLaunch.swipeLaunchUI = auxl.Layer('swipeLaunchUI',swipeLaunch.swipeLaunchUIData);
 	//Parent : swipeLaunchUI0
 	//Game Status : swipeLaunchUI1
@@ -1553,7 +1568,7 @@ auxl.swipeLaunchGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game2',
 	gameCabinet: 'cadeCab2Layer',
-	outGamePos: new THREE.Vector3(-8,1.5,-13.75),
+	outGamePos: new THREE.Vector3(-4.25,1.5,-8.25),
 	inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
 };
 auxl.swipeLaunchGameMenu = auxl.GameMenu(auxl.swipeLaunchGameMenuData);
@@ -1652,7 +1667,7 @@ auxl.GuessHitGame = (id) => {
 	guessHit.hit = auxl.Core(guessHit.hitData);
 
 	//UI
-	guessHit.guessHitUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'guessHitUI',{position: new THREE.Vector3(1,1.5,-0.5)}, true);
+	guessHit.guessHitUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'guessHitUI',{position: new THREE.Vector3(1,1.5,-0.5)}, false, true);
 	guessHit.guessHitUI = auxl.Layer('guessHitUI',guessHit.guessHitUIData);
 
 	//Parent : guessHitUI0
@@ -1968,7 +1983,7 @@ auxl.guessHitGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game3',
 	gameCabinet: 'cadeCab3Layer',
-	outGamePos: new THREE.Vector3(-8,1.5,-15.75),
+	outGamePos: new THREE.Vector3(-4.25,1.5,-9.75),
 	inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
 };
 auxl.guessHitGameMenu = auxl.GameMenu(auxl.guessHitGameMenuData);
@@ -2011,7 +2026,7 @@ auxl.DragDiffuse = (id) => {
 	dragDiffuse.bombsToSpawn = bombsToSpawn;
 
 	//UI
-	dragDiffuse.dragDiffuseUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'dragDiffuseUI',{position: new THREE.Vector3(1.35,1.5,-0.5)}, true);
+	dragDiffuse.dragDiffuseUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'dragDiffuseUI',{position: new THREE.Vector3(1.35,1.5,-0.5)}, false, true);
 	dragDiffuse.dragDiffuseUI = auxl.Layer('dragDiffuseUI',dragDiffuse.dragDiffuseUIData);
 	//Parent : dragDiffuseUI0
 	//Game Status : dragDiffuseUI1
@@ -2513,7 +2528,7 @@ auxl.dragDiffuseGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game4',
 	gameCabinet: 'cadeCab4Layer',
-	outGamePos: new THREE.Vector3(-8,1.5,-17.75),
+	outGamePos: new THREE.Vector3(-4.25,1.5,-11.25),
 	inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
 };
 auxl.dragDiffuseGameMenu = auxl.GameMenu(auxl.dragDiffuseGameMenuData);
@@ -2614,7 +2629,7 @@ auxl.SharpShooter = (id) => {
 	sharpShooter.gameSound = auxl.Core(sharpShooter.gameSoundData);
 
 	//UI
-	sharpShooter.sharpShooterUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'sharpShooterUI',{position: new THREE.Vector3(1,1.5,0.5)}, true);
+	sharpShooter.sharpShooterUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'sharpShooterUI',{position: new THREE.Vector3(1,1.5,0.5)}, false, true);
 	sharpShooter.sharpShooterUI = auxl.Layer('sharpShooterUI',sharpShooter.sharpShooterUIData);
 	//Parent : sharpShooterUI0
 	//Game Status : sharpShooterUI1
@@ -2807,7 +2822,7 @@ auxl.sharpShooterGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game5',
 	gameCabinet: 'cadeCab5Layer',
-	outGamePos: new THREE.Vector3(-8,1.5,-19.75),
+	outGamePos: new THREE.Vector3(-2.25,1.5,-13.25),
 	inGamePos: new THREE.Vector3(0.5,1.5,0.75),
 };
 auxl.sharpShooterGameMenu = auxl.GameMenu(auxl.sharpShooterGameMenuData);
@@ -3072,7 +3087,7 @@ auxl.PerfectScale = (id) => {
 	perfectScale.scale4 = auxl.Core(perfectScale.scale4Data);
 
 	//UI
-	perfectScale.perfectScaleUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'perfectScaleUI',{position: new THREE.Vector3(1,1.5,7)}, true);
+	perfectScale.perfectScaleUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'perfectScaleUI',{position: new THREE.Vector3(1,1.5,7)}, false, true);
 	perfectScale.perfectScaleUI = auxl.Layer('perfectScaleUI',perfectScale.perfectScaleUIData);
 	//Parent : perfectScaleUI0
 	//Game Status : perfectScaleUI1
@@ -3744,7 +3759,7 @@ auxl.perfectScaleGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game6',
 	gameCabinet: 'cadeCab6Layer',
-	outGamePos: new THREE.Vector3(-8,1.5,-21.75),
+	outGamePos: new THREE.Vector3(-0.75,1.5,-13.25),
 	inGamePos: new THREE.Vector3(0.5,1.5,7.5),
 };
 auxl.perfectScaleGameMenu = auxl.GameMenu(auxl.perfectScaleGameMenuData);
@@ -3819,7 +3834,7 @@ auxl.Reflex7 = (id) => {
 	};
 	reflex7.target = auxl.Core(reflex7.targetData);
 	//UI
-	reflex7.reflex7UIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'reflex7UI',{position: new THREE.Vector3(1.5,1.5,0)}, true);
+	reflex7.reflex7UIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'reflex7UI',{position: new THREE.Vector3(1.5,1.5,0)}, false, true);
 	reflex7.reflex7UI = auxl.Layer('reflex7UI',reflex7.reflex7UIData);
 	//Parent : reflex7UI0
 	//Game Status : reflex7UI1
@@ -3989,7 +4004,7 @@ auxl.reflex7GameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game7',
 	gameCabinet: 'cadeCab7Layer',
-	outGamePos: new THREE.Vector3(-8,1.5,-23.75),
+	outGamePos: new THREE.Vector3(0.75,1.5,-13.25),
 	inGamePos: new THREE.Vector3(0.75,1.5,0.5),
 };
 auxl.reflex7GameMenu = auxl.GameMenu(auxl.reflex7GameMenuData);
@@ -4203,7 +4218,7 @@ auxl.TapIt = (id) => {
 	tapIt.drag2 = auxl.Core(tapIt.drag2Data);
 
 	//UI
-	tapIt.tapItUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'tapItUI',{position: new THREE.Vector3(1.5,1.5,0)}, true);
+	tapIt.tapItUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'tapItUI',{position: new THREE.Vector3(1.5,1.5,0)}, false, true);
 	tapIt.tapItUI = auxl.Layer('tapItUI',tapIt.tapItUIData);
 	//Parent : reflex7UI0
 	//Game Status : reflex7UI1
@@ -4440,7 +4455,7 @@ auxl.tapItGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game8',
 	gameCabinet: 'cadeCab8Layer',
-	outGamePos: new THREE.Vector3(8,1.5,-11.75),
+	outGamePos: new THREE.Vector3(2.25,1.5,-13.25),
 	inGamePos: new THREE.Vector3(0.75,1.5,0.5),
 };
 auxl.tapItGameMenu = auxl.GameMenu(auxl.tapItGameMenuData);
@@ -4550,7 +4565,7 @@ auxl.PopPopGame = (id) => {
 	}
 
 	//UI
-	popPop.popPopUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'popPopUI',{position: new THREE.Vector3(1.5,1.5,0)}, true);
+	popPop.popPopUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'popPopUI',{position: new THREE.Vector3(1.5,1.5,0)}, false, true);
 	popPop.popPopUI = auxl.Layer('popPopUI',popPop.popPopUIData);
 	//Parent : popPopUI0
 	//Game Status : popPopUI1
@@ -4742,7 +4757,7 @@ auxl.popPopGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game9',
 	gameCabinet: 'cadeCab9Layer',
-	outGamePos: new THREE.Vector3(8,1.5,-13.75),
+	outGamePos: new THREE.Vector3(4.25,1.5,-11.25),
 	inGamePos: new THREE.Vector3(0.75,1.5,0.5),
 };
 auxl.popPopGameMenu = auxl.GameMenu(auxl.popPopGameMenuData);
@@ -4911,7 +4926,7 @@ auxl.HordeHaltGame = (id) => {
 	}
 
 	//UI
-	hordeHalt.hordeHaltUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'hordeHaltUI',{position: new THREE.Vector3(1.5,1.5,0)}, true);
+	hordeHalt.hordeHaltUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'hordeHaltUI',{position: new THREE.Vector3(1.5,1.5,0)}, false, true);
 	hordeHalt.hordeHaltUI = auxl.Layer('hordeHaltUI',hordeHalt.hordeHaltUIData);
 	//Parent : hordeHaltUI0
 	//Game Status : hordeHaltUI1
@@ -5185,7 +5200,7 @@ auxl.hordeHaltGameMenuData = {
 	gameZone: 'xrcadeZone',
 	gameConnect: 'game10',
 	gameCabinet: 'cadeCab10Layer',
-	outGamePos: new THREE.Vector3(8,1.5,-15.75),
+	outGamePos: new THREE.Vector3(4.25,1.5,-9.75),
 	inGamePos: new THREE.Vector3(0.75,1.5,0.5),
 };
 auxl.hordeHaltGameMenu = auxl.GameMenu(auxl.hordeHaltGameMenuData);
@@ -5246,7 +5261,7 @@ auxl.BasicGame = (id) => {
 	basic.basicObj = auxl.Core(basic.basicObjData);
 
 	//UI
-	basic.basicUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'basicUI',{position: new THREE.Vector3(1.5,1.5,0)}, true);
+	basic.basicUIData = auxl.layerDataFromTemplate(auxl.uiGameLayerData, 'basicUI',{position: new THREE.Vector3(1.5,1.5,0)}, false, true);
 	basic.basicUI = auxl.Layer('basicUI',basic.basicUIData);
 	//Parent : basicUI0
 	//Game Status : basicUI1
@@ -5365,8 +5380,8 @@ auxl.HighScoreBoard = (id) => {
 	text: {value:'High Scores', color: "#FFFFFF", align: "center", font: "exo2bold", zOffset: 0.005, side: 'front', wrapCount: 25, baseline: 'center', align: 'left', width: 2.75},
 	geometry: {primitive: 'plane', width: 3, height: 3},
 	material: {shader: "standard", color: '#2694ce', emissive: '#2694ce', emissiveIntensity: 0.75, opacity: 1},
-	position: new THREE.Vector3(-9,2,-2),
-	rotation: new THREE.Vector3(0,90,0),
+	position: new THREE.Vector3(-5.5,2.25,1.73),
+	rotation: new THREE.Vector3(0,180,0),
 	scale: new THREE.Vector3(1,1,1),
 	animations: false,
 	mixins: false,
@@ -5381,8 +5396,8 @@ auxl.HighScoreBoard = (id) => {
 	text: false,
 	geometry: {primitive: 'plane', width: 3.2, height: 3.2},
 	material: {shader: "standard", color: '#FFFFFF', emissive: '#FFFFFF', emissiveIntensity: 0.5, opacity: 1},
-	position: new THREE.Vector3(-9.01,2,-2),
-	rotation: new THREE.Vector3(0,90,0),
+	position: new THREE.Vector3(-5.5,2.25,1.74),
+	rotation: new THREE.Vector3(0,180,0),
 	scale: new THREE.Vector3(1,1,1),
 	animations: false,
 	mixins: false,
@@ -5443,7 +5458,6 @@ auxl.HighScoreBoard = (id) => {
 auxl.AddObjGenToTracker('highScoreBoard', 'SpawnBoard', 'DespawnBoard');
 auxl.highScoresBoard = auxl.HighScoreBoard('highScoresBoard');
 
-
 //Build Mini Games Objects
 auxl.buildMiniGames = () => {
 	//Memory Game
@@ -5456,7 +5470,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game1',
 		gameCabinet: 'cadeCab1Layer',
-		outGamePos: new THREE.Vector3(-8,1.5,-11.75),
+		outGamePos: new THREE.Vector3(-4.25,1.5,-6.75),
 		inGamePos: new THREE.Vector3(0.8,1.5,-1.25),
 	};
 	auxl.memoryGameMenu = auxl.GameMenu(auxl.memoryGameMenuData);
@@ -5470,7 +5484,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game2',
 		gameCabinet: 'cadeCab2Layer',
-		outGamePos: new THREE.Vector3(-8,1.5,-13.75),
+		outGamePos: new THREE.Vector3(-4.25,1.5,-8.25),
 		inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
 	};
 	auxl.swipeLaunchGameMenu = auxl.GameMenu(auxl.swipeLaunchGameMenuData);
@@ -5484,7 +5498,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game3',
 		gameCabinet: 'cadeCab3Layer',
-		outGamePos: new THREE.Vector3(-8,1.5,-15.75),
+		outGamePos: new THREE.Vector3(-4.25,1.5,-9.75),
 		inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
 	};
 	auxl.guessHitGameMenu = auxl.GameMenu(auxl.guessHitGameMenuData);
@@ -5498,7 +5512,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game4',
 		gameCabinet: 'cadeCab4Layer',
-		outGamePos: new THREE.Vector3(-8,1.5,-17.75),
+		outGamePos: new THREE.Vector3(-4.25,1.5,-11.25),
 		inGamePos: new THREE.Vector3(0.75,1.5,-0.25),
 	};
 	auxl.dragDiffuseGameMenu = auxl.GameMenu(auxl.dragDiffuseGameMenuData);
@@ -5512,8 +5526,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game5',
 		gameCabinet: 'cadeCab5Layer',
-		outGamePos: new THREE.Vector3(-8,1.5,-19.75),
-		inGamePos: new THREE.Vector3(0.5,1.5,0.75),
+		outGamePos: new THREE.Vector3(-2.25,1.5,-13.25),		inGamePos: new THREE.Vector3(0.5,1.5,0.75),
 	};
 	auxl.sharpShooterGameMenu = auxl.GameMenu(auxl.sharpShooterGameMenuData);
 	//Perfect Scale
@@ -5526,7 +5539,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game6',
 		gameCabinet: 'cadeCab6Layer',
-		outGamePos: new THREE.Vector3(-8,1.5,-21.75),
+		outGamePos: new THREE.Vector3(-0.75,1.5,-13.25),
 		inGamePos: new THREE.Vector3(0.5,1.5,7.5),
 	};
 	auxl.perfectScaleGameMenu = auxl.GameMenu(auxl.perfectScaleGameMenuData);
@@ -5540,7 +5553,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game7',
 		gameCabinet: 'cadeCab7Layer',
-		outGamePos: new THREE.Vector3(-8,1.5,-23.75),
+		outGamePos: new THREE.Vector3(0.75,1.5,-13.25),
 		inGamePos: new THREE.Vector3(0.75,1.5,0.5),
 	};
 	auxl.reflex7GameMenu = auxl.GameMenu(auxl.reflex7GameMenuData);
@@ -5554,7 +5567,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game8',
 		gameCabinet: 'cadeCab8Layer',
-		outGamePos: new THREE.Vector3(8,1.5,-11.75),
+		outGamePos: new THREE.Vector3(2.25,1.5,-13.25),
 		inGamePos: new THREE.Vector3(0.75,1.5,0.5),
 	};
 	auxl.tapItGameMenu = auxl.GameMenu(auxl.tapItGameMenuData);
@@ -5568,7 +5581,7 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game9',
 		gameCabinet: 'cadeCab9Layer',
-		outGamePos: new THREE.Vector3(8,1.5,-13.75),
+		outGamePos: new THREE.Vector3(4.25,1.5,-11.25),
 		inGamePos: new THREE.Vector3(0.75,1.5,0.5),
 	};
 	auxl.popPopGameMenu = auxl.GameMenu(auxl.popPopGameMenuData);
@@ -5582,10 +5595,13 @@ auxl.buildMiniGames = () => {
 		gameZone: 'xrcadeZone',
 		gameConnect: 'game10',
 		gameCabinet: 'cadeCab10Layer',
-		outGamePos: new THREE.Vector3(8,1.5,-15.75),
+		outGamePos: new THREE.Vector3(4.25,1.5,-9.75),
 		inGamePos: new THREE.Vector3(0.75,1.5,0.5),
 	};
 	auxl.hordeHaltGameMenu = auxl.GameMenu(auxl.hordeHaltGameMenuData);
+//East
+//11 | x: 4.75, z: -8.25
+//12 | x: 4.75, z: -6.75
 	//Highest Scores Board
 	auxl.highScoresBoard = auxl.HighScoreBoard('highScoresBoard');
 }
