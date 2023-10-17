@@ -199,8 +199,8 @@ rotation: new THREE.Vector3(0,0,0),
 scale: new THREE.Vector3(1,1,1),
 classes: ['clickable','a-ent'],
 components: {
-	doorway:{zone: 'spookyZone', to: 'connect0', posTo: true, pos: new THREE.Vector3(3,0,14), twistTo: true, twist: 180},
-	hovertext:{value: 'Entrance',  hover: 'front', offset: 1, twist: false,},
+	doorway:{zone: 'spookyZone', to: 'connect0', posTo: true, pos: new THREE.Vector3(3,0,1), twistTo: true, twist: 180},
+	hovertext:{value: 'Entrance',  hover: 'top', offset: 0.75, altOffset: 0.5, twist: true,},
 },
 };
 auxl.spookyToEntrance = auxl.Core(auxl.spookyToEntranceData);
@@ -1634,7 +1634,7 @@ mixins: false,
 classes: ['clickable','a-ent'],
 components: {
 	doorway:{zone: 'entranceZone', to: 'connect0'},
-	hovertext:{value: 'Floor 1',  hover: 'front', offset: 1, twist: false,},
+	hovertext:{value: 'Floor 1',  hover: 'top', offset: 0.75, altOffset: 0.5, twist: true,},
 },
 };
 auxl.entranceToFloor1 = auxl.Core(auxl.entranceToFloor1Data);
@@ -1655,7 +1655,7 @@ mixins: false,
 classes: ['clickable','a-ent'],
 components: {
 	doorway:{zone: 'xrcadeZone', to: 'connect0'},
-	hovertext:{value: 'Entrance',  hover: 'front', offset: 1, twist: false,},
+	hovertext:{value: 'Entrance',  hover: 'top', offset: 0.75, altOffset: 0.5, twist: true,},
 },
 };
 auxl.floor1ToEntrance = auxl.Core(auxl.floor1ToEntranceData);
@@ -1664,23 +1664,20 @@ auxl.floor1ToEntrance = auxl.Core(auxl.floor1ToEntranceData);
 auxl.entranceToSpookyData = {
 data:'entranceToSpookyData',
 id:'entranceToSpooky',
-sources: false,
-text: false,
-geometry: {primitive: 'box', depth: 1, width: 3, height: 4},
-material: {shader: "standard", color: "#264e1a", emissive: '#264e1a', emissiveIntensity: 0.25, opacity: 1},
-position: new THREE.Vector3(3,2,-13),
+gridSize: new THREE.Vector3(3,0,0.5),
+grid: {start:{x:3, y:0, z:-13}, yOffset: 0, collide: true},
+//position: new THREE.Vector3(3,2,-13),
+position: new THREE.Vector3(0,0,0),
 rotation: new THREE.Vector3(0,0,0),
-scale: new THREE.Vector3(1,1,1),
-animations: false,
-mixins: false,
+scale: new THREE.Vector3(1.25,1.25,1.25),
 classes: ['clickable','a-ent'],
 components: {
-	doorway:{zone: 'entranceZone', to: 'connect1', posTo: true, pos: new THREE.Vector3(0,0,1.5), twistTo: true, twist: 0},
-	hovertext:{value: 'Spooky Zone',  hover: 'front', offset: 1, twist: false,},
+	['gltf-model']:'./assets/3d/kaykit/doors/door6.glb',
+	doorway:{zone: 'entranceZone', to: 'connect1', posTo: true, pos: new THREE.Vector3(0,0,-1), twistTo: true, twist: 0},
+	hovertext:{value: 'Spooky Zone',  hover: 'top', offset: 1.25, altOffset: 1, twist: true,},
 },
 };
 auxl.entranceToSpooky = auxl.Core(auxl.entranceToSpookyData);
-
 
 //Materials
 auxl.floorPattern1 = './assets/img/tiles/xrcade/1.jpg';
@@ -3722,7 +3719,7 @@ auxl.entranceZoneData = {
 	},
 	start:{
 		skyBox1:{SpawnSkyBox: null},
-		player:{UpdatePlayerPosition: new THREE.Vector3(0,0,1.5), TwistTo: 0},
+		player:{UpdatePlayerPosition: new THREE.Vector3(0,0,-1), TwistTo: 0},
 	},
 	delay:{
 		100:{
@@ -3766,7 +3763,7 @@ auxl.entranceHomeData = {
 		npcAttPodium:{SpawnCoreOnGrid:null},
 		//Doorways
 		entranceToFloor1:{SpawnCore:null},
-		entranceToSpooky:{SpawnCore:null},
+		entranceToSpooky:{SpawnCoreOnGrid:null},
 		//Floor
 		floor:{SpawnCore:null},
 		carpetChange1:{SpawnCore:null},
@@ -3873,7 +3870,7 @@ auxl.xrcadeZoneData = {
 	},
 	start:{
 		skyBox1:{SpawnSkyBox: null},
-		player:{UpdatePlayerPosition: new THREE.Vector3(0,0,1), TwistTo: 0},
+		player:{UpdatePlayerPosition: new THREE.Vector3(0,0,-1), TwistTo: 0},
 	},
 	delay:{
 		100:{
