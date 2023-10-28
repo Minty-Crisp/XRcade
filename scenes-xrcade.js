@@ -504,7 +504,7 @@ auxl.kayKitBoneAData = {
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/bone_A.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/bone_A.glb',
 	},
 };
 auxl.kayKitBoneA = auxl.Core(auxl.kayKitBoneAData);
@@ -516,7 +516,7 @@ auxl.kayKitBoneBData = {
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/bone_B.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/bone_B.glb',
 	},
 };
 auxl.kayKitBoneB = auxl.Core(auxl.kayKitBoneBData);
@@ -528,7 +528,7 @@ auxl.kayKitBoneCData = {
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/bone_C.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/bone_C.glb',
 	},
 };
 auxl.kayKitBoneC = auxl.Core(auxl.kayKitBoneCData);
@@ -540,7 +540,7 @@ auxl.kayKitCandleTripleData = {
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/candle_triple.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/candle_triple.glb',
 	},
 };
 auxl.kayKitCandleTriple = auxl.Core(auxl.kayKitCandleTripleData);
@@ -554,7 +554,7 @@ auxl.kayKitBenchDecoratedData = {
 	gridSize: new THREE.Vector3(2,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/bench_decorated.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/bench_decorated.glb',
 	},
 };
 auxl.kayKitBenchDecorated = auxl.Core(auxl.kayKitBenchDecoratedData);
@@ -568,7 +568,7 @@ auxl.kayKitCoffinData = {
 	gridSize: new THREE.Vector3(1.5,0,3),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/coffin.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/coffin.glb',
 	},
 };
 auxl.kayKitCoffin = auxl.Core(auxl.kayKitCoffinData);
@@ -582,7 +582,7 @@ auxl.kayKitCoffinDecoratedData = {
 	gridSize: new THREE.Vector3(1.5,0,3),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/coffin_decorated.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/coffin_decorated.glb',
 	},
 };
 auxl.kayKitCoffinDecorated = auxl.Core(auxl.kayKitCoffinDecoratedData);
@@ -596,7 +596,7 @@ auxl.kayKitCryptData = {
 	gridSize: new THREE.Vector3(6,0,9),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/crypt.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/crypt.glb',
 	},
 };
 auxl.kayKitCrypt = auxl.Core(auxl.kayKitCryptData);
@@ -610,7 +610,7 @@ auxl.kayKitGraveAData = {
 	gridSize: new THREE.Vector3(2,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/grave_A.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/grave_A.glb',
 	},
 };
 auxl.kayKitGraveA = auxl.Core(auxl.kayKitGraveAData);
@@ -624,7 +624,7 @@ auxl.kayKitGraveADestroyedData = {
 	gridSize: new THREE.Vector3(2.5,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/grave_A_destroyed.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/grave_A_destroyed.glb',
 	},
 };
 auxl.kayKitGraveADestroyed = auxl.Core(auxl.kayKitGraveADestroyedData);
@@ -638,7 +638,7 @@ auxl.kayKitGraveBData = {
 	gridSize: new THREE.Vector3(2,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/grave_B.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/grave_B.glb',
 	},
 };
 auxl.kayKitGraveA = auxl.Core(auxl.kayKitGraveBData);
@@ -652,7 +652,7 @@ auxl.kayKitGravemarkerAData = {
 	gridSize: new THREE.Vector3(1,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/gravemarker_A.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/gravemarker_A.glb',
 	},
 };
 auxl.kayKitGraveA = auxl.Core(auxl.kayKitGravemarkerAData);
@@ -666,7 +666,7 @@ auxl.kayKitGravemarkerBData = {
 	gridSize: new THREE.Vector3(1,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/gravemarker_B.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/gravemarker_B.glb',
 	},
 };
 auxl.kayKitGraveB = auxl.Core(auxl.kayKitGravemarkerBData);
@@ -680,7 +680,7 @@ auxl.kayKitGravestoneData = {
 	gridSize: new THREE.Vector3(1,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/gravestone.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/gravestone.glb',
 	},
 };
 auxl.kayKitGravestone = auxl.Core(auxl.kayKitGravestoneData);
@@ -692,7 +692,7 @@ auxl.kayKitLanternHangingData = {
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/lantern_hanging.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/lantern_hanging.glb',
 	},
 };
 auxl.kayKitLanternHanging = auxl.Core(auxl.kayKitLanternHangingData);
@@ -706,7 +706,7 @@ auxl.kayKitLanternStandingData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/lantern_standing.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/lantern_standing.glb',
 	},
 };
 auxl.kayKitLanternStanding = auxl.Core(auxl.kayKitLanternStandingData);
@@ -720,7 +720,7 @@ auxl.kayKitPillarData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/lantern_standing.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/lantern_standing.glb',
 	},
 };
 auxl.kayKitlanternStanding = auxl.Core(auxl.kayKitPillarData);
@@ -734,7 +734,7 @@ auxl.kayKitPlaqueData = {
 	gridSize: new THREE.Vector3(1.5,0,1.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/plaque.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/plaque.glb',
 	},
 };
 auxl.kayKitPlaque = auxl.Core(auxl.kayKitPlaqueData);
@@ -748,7 +748,7 @@ auxl.kayKitPlaqueCandlesData = {
 	gridSize: new THREE.Vector3(1.5,0,1.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/plaque_candles.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/plaque_candles.glb',
 	},
 };
 auxl.kayKitPlaqueCandles = auxl.Core(auxl.kayKitPlaqueCandlesData);
@@ -762,7 +762,7 @@ auxl.kayKitPostData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/post.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/post.glb',
 	},
 };
 auxl.kayKitPost = auxl.Core(auxl.kayKitPostData);
@@ -776,7 +776,7 @@ auxl.kayKitPostLanternData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/post_lantern.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/post_lantern.glb',
 	},
 };
 auxl.kayKitPostLantern = auxl.Core(auxl.kayKitPostLanternData);
@@ -790,7 +790,7 @@ auxl.kayKitPostSkullData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/post_skull.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/post_skull.glb',
 	},
 };
 auxl.kayKitPostSkull = auxl.Core(auxl.kayKitPostSkullData);
@@ -804,7 +804,7 @@ auxl.kayKitPumpkinOrangeData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/pumpkin_orange.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/pumpkin_orange.glb',
 	},
 };
 auxl.kayKitPumpkinOrange = auxl.Core(auxl.kayKitPumpkinOrangeData);
@@ -818,7 +818,7 @@ auxl.kayKitPumpkinOrangeJackoData = {
 	gridSize: new THREE.Vector3(1.5,0,1.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/pumpkin_orange_jackolantern.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/pumpkin_orange_jackolantern.glb',
 	},
 };
 auxl.kayKitPumpkinOrangeJacko = auxl.Core(auxl.kayKitPumpkinOrangeJackoData);
@@ -832,7 +832,7 @@ auxl.kayKitPumpkinOrangeSmallData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/pumpkin_orange_small.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/pumpkin_orange_small.glb',
 	},
 };
 auxl.kayKitPumpkinOrangeSmall = auxl.Core(auxl.kayKitPumpkinOrangeSmallData);
@@ -846,7 +846,7 @@ auxl.kayKitPumpkinYellowData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/pumpkin_yellow.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/pumpkin_yellow.glb',
 	},
 };
 auxl.kayKitPumpkinYellow = auxl.Core(auxl.kayKitPumpkinYellowData);
@@ -860,7 +860,7 @@ auxl.kayKitPumpkinYellowJackoData = {
 	gridSize: new THREE.Vector3(1.5,0,1.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/pumpkin_yellow_jackolantern.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/pumpkin_yellow_jackolantern.glb',
 	},
 };
 auxl.kayKitPumpkinYellowJacko = auxl.Core(auxl.kayKitPumpkinYellowJackoData);
@@ -874,7 +874,7 @@ auxl.kayKitPumpkinYellowSmallData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/pumpkin_yellow_small.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/pumpkin_yellow_small.glb',
 	},
 };
 auxl.kayKitPumpkinYellowSmall = auxl.Core(auxl.kayKitPumpkinYellowSmallData);
@@ -888,7 +888,7 @@ auxl.kayKitRibcageData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/ribcage.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/ribcage.glb',
 	},
 };
 auxl.kayKitRibcage = auxl.Core(auxl.kayKitRibcageData);
@@ -902,7 +902,7 @@ auxl.kayKitShrineData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/shrine.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/shrine.glb',
 	},
 };
 auxl.kayKitShrine = auxl.Core(auxl.kayKitShrineData);
@@ -916,7 +916,7 @@ auxl.kayKitShrineCandlesData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/shrine_candles.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/shrine_candles.glb',
 	},
 };
 auxl.kayKitShrineCandles = auxl.Core(auxl.kayKitShrineCandlesData);
@@ -930,7 +930,7 @@ auxl.kayKitSkullData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/skull.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/skull.glb',
 	},
 };
 auxl.kayKitSkull = auxl.Core(auxl.kayKitSkullData);
@@ -944,7 +944,7 @@ auxl.kayKitSkullCandlesData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/skull_candle.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/skull_candle.glb',
 	},
 };
 auxl.kayKitSkullCandles = auxl.Core(auxl.kayKitSkullCandlesData);
@@ -962,7 +962,7 @@ auxl.kayKitArchData = {
 	gridSize: new THREE.Vector3(4,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/arch.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/arch.glb',
 	},
 };
 auxl.kayKitArch = auxl.Core(auxl.kayKitArchData);
@@ -976,7 +976,7 @@ auxl.kayKitArchGateData = {
 	gridSize: new THREE.Vector3(4,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/arch_gate.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/arch_gate.glb',
 	},
 };
 auxl.kayKitArchGate = auxl.Core(auxl.kayKitArchGateData);
@@ -990,7 +990,7 @@ auxl.kayKitFenceData = {
 	gridSize: new THREE.Vector3(4,0,0.5),
 	grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/fence.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/fence.glb',
 	},
 };
 auxl.kayKitFence = auxl.Core(auxl.kayKitFenceData);
@@ -1004,7 +1004,7 @@ auxl.kayKitFenceBrokenData = {
 	gridSize: new THREE.Vector3(4,0,0.5),
 	grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/fence_broken.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/fence_broken.glb',
 	},
 };
 auxl.kayKitFenceBroken = auxl.Core(auxl.kayKitFenceBrokenData);
@@ -1018,7 +1018,7 @@ auxl.kayKitFenceGateData = {
 	gridSize: new THREE.Vector3(4,0,0.5),
 	grid: {start:{x:-10, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/fence_gate.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/fence_gate.glb',
 	},
 };
 auxl.kayKitFenceGate = auxl.Core(auxl.kayKitFenceGateData);
@@ -1032,7 +1032,7 @@ auxl.kayKitFencePillarData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/fence_pillar.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/fence_pillar.glb',
 	},
 };
 auxl.kayKitFencePillar = auxl.Core(auxl.kayKitFencePillarData);
@@ -1046,7 +1046,7 @@ auxl.kayKitFencePillarBrokenData = {
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/fence_pillar_broken.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/fence_pillar_broken.glb',
 	},
 };
 auxl.kayKitFencePillarBroken = auxl.Core(auxl.kayKitFencePillarBrokenData);
@@ -1065,7 +1065,7 @@ auxl.kayKitTreeDeadLargeData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_dead_large.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_dead_large.glb',
 	},
 };
 auxl.kayKitTreeDeadLarge = auxl.Core(auxl.kayKitTreeDeadLargeData);
@@ -1079,7 +1079,7 @@ auxl.kayKitTreeDeadLargeDecoratedData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_dead_large_decorated.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_dead_large_decorated.glb',
 	},
 };
 auxl.kayKitTreeDeadLargeDecorated = auxl.Core(auxl.kayKitTreeDeadLargeDecoratedData);
@@ -1093,7 +1093,7 @@ auxl.kayKitTreeDeadMediumData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_dead_medium.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_dead_medium.glb',
 	},
 };
 auxl.kayKitTreeDeadMedium = auxl.Core(auxl.kayKitTreeDeadMediumData);
@@ -1107,7 +1107,7 @@ auxl.kayKitTreeDeadSmallData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_dead_small.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_dead_small.glb',
 	},
 };
 auxl.kayKitTreeDeadSmall = auxl.Core(auxl.kayKitTreeDeadSmallData);
@@ -1121,7 +1121,7 @@ auxl.kayKitTreePineOrangeLargeData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_pine_orange_large.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_pine_orange_large.glb',
 	},
 };
 auxl.kayKitTreePineOrangeLarge = auxl.Core(auxl.kayKitTreePineOrangeLargeData);
@@ -1135,7 +1135,7 @@ auxl.kayKitTreePineOrangeMediumData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_pine_orange_medium.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_pine_orange_medium.glb',
 	},
 };
 auxl.kayKitTreePineOrangeMedium = auxl.Core(auxl.kayKitTreePineOrangeMediumData);
@@ -1149,7 +1149,7 @@ auxl.kayKitTreePineOrangeSmallData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_pine_orange_small.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_pine_orange_small.glb',
 	},
 };
 auxl.kayKitTreePineOrangeSmall = auxl.Core(auxl.kayKitTreePineOrangeSmallData);
@@ -1163,7 +1163,7 @@ auxl.kayKitTreePineYellowLargeData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_pine_yellow_large.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_pine_yellow_large.glb',
 	},
 };
 auxl.kayKitTreePineYellowLarge = auxl.Core(auxl.kayKitTreePineYellowLargeData);
@@ -1177,7 +1177,7 @@ auxl.kayKitTreePineYellowMediumData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_pine_yellow_medium.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_pine_yellow_medium.glb',
 	},
 };
 auxl.kayKitTreePineYellowMedium = auxl.Core(auxl.kayKitTreePineYellowMediumData);
@@ -1191,7 +1191,7 @@ auxl.kayKitTreePineYellowSmallData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
-		['gltf-model']:'./assets/3d/kaykit/hallows/tree_pine_yellow_small.glb',
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_pine_yellow_small.glb',
 	},
 };
 auxl.kayKitTreePineYellowSmall = auxl.Core(auxl.kayKitTreePineYellowSmallData);
@@ -1859,7 +1859,7 @@ auxl.spookyRoom1Table1Data = {
 	mixins: false,
 	classes: ['a-ent'],
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/cabinet_small.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/cabinet_small.glb',
 	},
 };
 auxl.spookyRoom1Table1AltData = auxl.coreDataFromTemplate(auxl.spookyRoom1Table1Data, {id: 'spookyRoom1Table1Alt',rotation: new THREE.Vector3(0,-90,0), }, true);
@@ -1875,7 +1875,7 @@ auxl.spookyRoom1Table2Data = {
 	mixins: false,
 	classes: ['a-ent'],
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/cabinet_small_decorated.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/cabinet_small_decorated.glb',
 	},
 };
 auxl.spookyRoom1Table2AltData = auxl.coreDataFromTemplate(auxl.spookyRoom1Table2Data, {id: 'spookyRoom1Table1Alt',rotation: new THREE.Vector3(0,90,0), }, true);
@@ -2288,7 +2288,7 @@ auxl.kayKitArmchairPillowsData = {
 	grid: {start:{x:-6, y:0, z:0}, yOffset: 0, collide: true},
 	classes: ['clickable','a-ent'],
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/armchair_pillows.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/armchair_pillows.glb',
 		hovertext:{value: 'Sit',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 		clickrun__trap:{
 			delay: '0',
@@ -2311,7 +2311,7 @@ auxl.kayKitBedSingleAData = {
 	grid: {start:{x:2, y:0, z:-5.5}, yOffset: 0, collide: true},
 	classes: ['clickable','a-ent'],
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/bed_single_A.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/bed_single_A.glb',
 		hovertext:{value: 'Sleep',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 		clickrun__trap:{
 			delay: '0',
@@ -2334,7 +2334,7 @@ auxl.kayKitCabinetMediumDecoratedData = {
 	grid: {start:{x:5, y:0, z:2}, yOffset: 0, collide: true},
 	classes: ['clickable','a-ent'],
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/cabinet_medium_decorated.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/cabinet_medium_decorated.glb',
 		hovertext:{value: 'Search',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 		clickrun__trap:{
 			delay: '0',
@@ -2356,7 +2356,7 @@ auxl.kayKitCabinetSmallData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	grid: {start:{x:-5.5, y:0, z:-1.5}, yOffset: 0, collide: true},
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/cabinet_small.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/cabinet_small.glb',
 	},
 };
 auxl.kayKitCabinetSmall = auxl.Core(auxl.kayKitCabinetSmallData);
@@ -2370,7 +2370,7 @@ auxl.kayKitCabinetSmallDecoratedData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	grid: {start:{x:4.5, y:0, z:-5.5}, yOffset: 0, collide: true},
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/cabinet_small_decorated.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/cabinet_small_decorated.glb',
 	},
 };
 auxl.kayKitCabinetSmallDecorated = auxl.Core(auxl.kayKitCabinetSmallDecoratedData);
@@ -2385,7 +2385,7 @@ auxl.kayKitCactusMediumAData = {
 	grid: {start:{x:-5.5, y:0, z:2.5}, yOffset: 0, collide: true},
 	classes: ['clickable','a-ent'],
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/cactus_medium_A.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/cactus_medium_A.glb',
 		hovertext:{value: 'Poke',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 		clickrun__trap:{
 			delay: '0',
@@ -2407,7 +2407,7 @@ auxl.kayKitChairStoolData = {
 	gridSize: new THREE.Vector3(1,0,1),
 	grid: {start:{x:-2, y:0, z:-2}, yOffset: 0, collide: true},
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/chair_stool.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/chair_stool.glb',
 	},
 };
 auxl.kayKitChairStool = auxl.Core(auxl.kayKitChairStoolData);
@@ -2421,7 +2421,7 @@ auxl.kayKitLampStandingData = {
 	gridSize: new THREE.Vector3(1.5,0,1.5),
 	grid: {start:{x:-4, y:0, z:-4}, yOffset: 0, collide: true},
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/lamp_standing.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/lamp_standing.glb',
 	},
 };
 auxl.kayKitLampStanding = auxl.Core(auxl.kayKitLampStandingData);
@@ -2433,7 +2433,7 @@ auxl.kayKitRugOvalAData = {
 	rotation: new THREE.Vector3(0,90,0),
 	scale: new THREE.Vector3(1,1,1),
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/rug_oval_A.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/rug_oval_A.glb',
 	},
 };
 auxl.kayKitRugOvalA = auxl.Core(auxl.kayKitRugOvalAData);
@@ -2446,7 +2446,7 @@ auxl.kayKitShelfBLargeDecoratedData = {
 	scale: new THREE.Vector3(1,1,1),
 	classes: ['clickable','a-ent'],
 	components: {
-		['gltf-model']:'./assets/3d/kaykit/house/shelf_B_large_decorated.glb',
+		['gltf-model']:'./assets/3d/kayKit/house/shelf_B_large_decorated.glb',
 		hovertext:{value: 'Read',  hover: 'top', offset: 1.5, altOffset: 0.5, twist: true,},
 		clickrun__trap:{
 			delay: '0',
