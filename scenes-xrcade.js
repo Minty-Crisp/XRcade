@@ -3381,13 +3381,12 @@ auxl.sharkMegaAttackData = {
 	data:'sharkMegaAttackData',
 	id:'sharkMegaAttack',
 	sounds:{
-		attack: {src: auxl.soundMonster3, autoplay: false, loop: false, volume: 10, on: 'attack'},
+		attack: {src: auxl.soundMonster3, autoplay: true, loop: false, volume: 10,},
 	},
 	position: new THREE.Vector3(0,8.5,-51),
 	rotation: new THREE.Vector3(0,180,0),
 	scale: new THREE.Vector3(26,26,26),
 	animations:{
-		//attack: {property: 'object3D.position.z', from: -56, to: -37.5, dur: 3000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
 		attack: {property: 'object3D.position.z', from: -56, to: -25.5, dur: 5000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
 	},
 	components:{
