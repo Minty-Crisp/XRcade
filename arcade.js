@@ -462,7 +462,6 @@ auxl.GameMenuControls = () => {
 	gameMenus.id = 'allGameMenus';
 
 	const DespawnAllGameMenus = () => {
-console.log('Running Despawn All Menus')
 		if(auxl.currentGameMenu){
 			auxl[auxl.currentGameMenu].DespawnGameMenu();
 		}

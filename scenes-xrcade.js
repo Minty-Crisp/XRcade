@@ -54,6 +54,67 @@ auxl.spookyPainting13Alt = './assets/img/spooky_portraits/13alt.jpg';
 auxl.spookyJump1 = './assets/img/spooky_portraits/jump1.jpg';
 
 
+//Sounds
+//
+
+//Game Sounds (https://gamesounds.xyz/)
+
+//General Sounds
+auxl.soundDoorOpen = './assets/audio/gameSounds/SBvfe1_Door Handle D 002.ogg';
+auxl.soundFootstep1 = './assets/audio/gameSounds/FS Ground Civilian Walk N03.ogg';
+auxl.soundFootstep2 = './assets/audio/gameSounds/FS Ground Civilian Walk N05.ogg';
+auxl.soundFootstep3 = './assets/audio/gameSounds/FS Wood Civilian Crouch N03.ogg';
+auxl.soundFootstep3 = './assets/audio/gameSounds/FS Wood Civilian Crouch N05.ogg';
+
+//Music
+auxl.soundSpookyMusic1 = './assets/audio/gameSounds/Anttis instrumentals - Sad Piece.ogg';
+
+//Spooky Sounds
+//Non-positionals
+
+//Respawn
+auxl.soundHarpAsscend = './assets/audio/gameSounds/33 FX3184 Ascending Harp Glissando.ogg';
+auxl.playerAudio.ChangeSelf({property:'auxsound__respawn', value: {src: auxl.soundHarpAsscend, autoplay: false, loop: false, volume: 0.5, on: 'respawn'}}, true)
+//Hearbeat
+auxl.soundHeartbeatSpeed = './assets/audio/gameSounds/heartbeat-speeding-up-02.ogg';
+auxl.playerAudio.ChangeSelf({property:'auxsound__heartbeat', value: {src: auxl.soundHeartbeatSpeed, autoplay: false, loop: false, volume: 0.35, on: 'heartbeat'}}, true)
+//Juicy Impact
+auxl.soundJuicyImpact1 = './assets/audio/gameSounds/Smash_Gore_Juicy_Smash_07.ogg';
+auxl.playerAudio.ChangeSelf({property:'auxsound__juicyimpact', value: {src: auxl.soundJuicyImpact1, autoplay: false, loop: false, volume: 0.75, on: 'juicyimpact'}}, true)
+//Trap Door
+auxl.soundTrapDoor = './assets/audio/gameSounds/trap-door-1.ogg';
+auxl.playerAudio.ChangeSelf({property:'auxsound__trapdoor', value: {src: auxl.soundTrapDoor, autoplay: false, loop: false, volume: 0.75, on: 'trapdoor'}}, true)
+//Trap
+auxl.soundConcreteGrind = './assets/audio/gameSounds/Metallic ball rolling on concrete 02.ogg';
+auxl.playerAudio.ChangeSelf({property:'auxsound__trap', value: {src: auxl.soundConcreteGrind, autoplay: false, loop: false, volume: 0.75, on: 'trap'}}, true)
+//Wind Fall
+auxl.soundWindFall = './assets/audio/gameSounds/wind_blustery_08_loop.ogg';
+auxl.playerAudio.ChangeSelf({property:'auxsound__windfall', value: {src: auxl.soundWindFall, autoplay: false, loop: false, volume: 1, on: 'trapdoor'}}, true)
+//Underwater
+auxl.soundUnderwater1 = './assets/audio/gameSounds/underwater_object_movement_quick_deep_15.ogg';
+auxl.playerAudio.ChangeSelf({property:'auxsound__underwater', value: {src: auxl.soundUnderwater1, autoplay: false, loop: false, volume: 0.5, on: 'underwater'}}, true)
+
+
+//Positional
+auxl.spookWoosh = './assets/audio/gameSounds/Scary_Breath_Whoosh_05.ogg';
+auxl.soundGlassBreak = './assets/audio/gameSounds/Glass6.ogg';
+auxl.soundFootsteps = './assets/audio/gameSounds/heavy_footsteps.ogg';
+auxl.soundKnifeSharpening = './assets/audio/gameSounds/sharpening-knife-1.ogg';
+auxl.soundMonster1 = './assets/audio/gameSounds/6Monsters_BlackBoss_Scream_04.ogg';
+auxl.soundMonster2 = './assets/audio/gameSounds/Creature_Dragon_Roar_01.ogg';
+auxl.soundMonster3 = './assets/audio/gameSounds/Dinosaur Growl 3_Mono.ogg';
+auxl.soundMonster4 = './assets/audio/gameSounds/Monster 20.ogg';
+auxl.soundMonster5 = './assets/audio/gameSounds/Monster 31.ogg';
+auxl.soundMonster6 = './assets/audio/gameSounds/Monster Bite 3.ogg';
+auxl.soundMonster7 = './assets/audio/gameSounds/Monster Tail Hit on Chainmail.ogg';
+auxl.soundMonster8 = './assets/audio/gameSounds/Monster_Roar_Growl_009.ogg';
+auxl.soundPendulumMachine = './assets/audio/gameSounds/79 Horror, Pendulum Torture Machine.ogg';
+auxl.soundScream1 = './assets/audio/gameSounds/SH101_Human_Female_Scream_Alien_OtherWorldly_Fienup_002.ogg';
+auxl.soundSqueakingChair = './assets/audio/gameSounds/SqueakingChair.ogg';
+auxl.soundWaterDrops = './assets/audio/gameSounds/water_drops2.ogg';
+auxl.soundWhaleCalls1 = './assets/audio/gameSounds/Whale Call-Answer Close (echo) 7.ogg';
+auxl.soundFlareFirework = './assets/audio/gameSounds/04 Fireworks, Mine Of Serpents--Fizz.ogg';
+
 //
 //Doors
 
@@ -204,13 +265,13 @@ auxl.ambientLight.core.components.light.intensity = 0.5;
 
 
 //The Deep Dark SkyBox Anims
-auxl.directionalLight.core.animations.fadeout = {property: 'light.intensity', from: 0.25, to: 0, dur: 24000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
+auxl.directionalLight.core.animations.fadeout = {property: 'light.intensity', from: 0.5, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
 
-auxl.directionalLight2.core.animations.fadeout = {property: 'light.intensity', from: 0.1, to: 0, dur: 24000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
+auxl.directionalLight2.core.animations.fadeout = {property: 'light.intensity', from: 0.1, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
 
-auxl.directionalLight3.core.animations.fadeout = {property: 'light.intensity', from: 0.2, to: 0, dur: 24000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
+auxl.directionalLight3.core.animations.fadeout = {property: 'light.intensity', from: 0.2, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
 
-auxl.ambientLight.core.animations.fadeout = {property: 'light.intensity', from: 0.75, to: 0, dur: 24000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
+auxl.ambientLight.core.animations.fadeout = {property: 'light.intensity', from: 0.5, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
 
 //SkyBox
 //
@@ -220,10 +281,6 @@ auxl.moonEyesData = {
 	data:'moonEyesData',
 	id:'moonEyes',
 	defaultParent: 'moon',
-	sources:false,
-	text: false,
-	geometry: false,
-	material: false,
 	position: new THREE.Vector3(0,10,100),
 	rotation: new THREE.Vector3(105,90,90),
 	scale: new THREE.Vector3(1.5,1.5,1.5),
@@ -286,6 +343,9 @@ auxl.SpookySkyBoxSpawnFix = auxl.SkyBoxSpawnFix();
 auxl.spookyToEntranceData = {
 data:'spookyToEntranceData',
 id:'spookyToEntrance',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 geometry: {primitive: 'box', depth: 1, width: 3, height: 4},
 material: {shader: "standard", color: "#264e1a", emissive: '#264e1a', emissiveIntensity: 0.25, opacity: 1},
 position: new THREE.Vector3(0,2,2.41),
@@ -303,6 +363,9 @@ auxl.spookyToEntrance = auxl.Core(auxl.spookyToEntranceData);
 auxl.spookyToExteriorData = {
 data:'spookyToExteriorData',
 id:'spookyToExterior',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,0),
 gridSize: new THREE.Vector3(3,0,0.5),
 grid: {start:{x:-1.5, y:0, z:-19.5}, xOffset: 1, yOffset: 1, zOffset: 1, collide: true},
@@ -311,20 +374,38 @@ scale: new THREE.Vector3(1.25,1.25,1.25),
 classes: ['clickable','a-ent'],
 components: {
 	['gltf-model']:'./assets/3d/kayKit/doors/door6.glb',
-	doorway:{zone: 'spookyZone', to: 'connect1', posTo: true, pos: new THREE.Vector3(0,0,0), twistTo: true, twist: 0},
+	doorway:{zone: 'spookyZone', to: 'connect1', posTo: true, pos: new THREE.Vector3(-1.75,0,20), twistTo: true, twist: 0},
 	hovertext:{value: 'The Hallows',  hover: 'front', offset: 0.75, altOffset: 2, twist: true,},
 },
 };
-//Enter if you dare!
 auxl.spookyToExterior = auxl.Core(auxl.spookyToExteriorData);
+auxl.spookyToExteriorEmote = auxl.InfoBubble('spookyToExteriorEmote', auxl.spookyToExterior, 3, 'orange');
+//Block
+auxl.spookyToExteriorBlockData = {
+	data:'spookyToExteriorBlockData',
+	id:'spookyToExteriorBlock',
+	geometry: {primitive: 'box', height: 10, width: 20, depth: 0.1},
+	material: {shader: "standard", color: "#000000", opacity: 0},
+	position: new THREE.Vector3(0,0,-14),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations: false,
+	mixins: false,
+	classes: ['clickable','a-ent'],
+	components: false,
+};
+auxl.spookyToExteriorBlock = auxl.Core(auxl.spookyToExteriorBlockData);
 
 //Exterior to Spooky
 auxl.exteriorToSpookyData = {
 data:'exteriorToSpookyData',
 id:'exteriorToSpooky',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,0),
-gridSize: new THREE.Vector3(3,0,0.5),
-grid: {start:{x:-1.5, y:0, z:3}, yOffset: 0, collide: true},
+gridSize: new THREE.Vector3(4,0,0.5),
+grid: {start:{x:-3.5, y:0, z:21.5}, yOffset: 0, collide: true},
 rotation: new THREE.Vector3(0,180,0),
 scale: new THREE.Vector3(1.25,1.25,1.25),
 animations: false,
@@ -337,14 +418,32 @@ components: {
 },
 };
 auxl.exteriorToSpooky = auxl.Core(auxl.exteriorToSpookyData);
-
+auxl.exteriorToSpookyEmote = auxl.InfoBubble('exteriorToSpookyEmote', auxl.exteriorToSpooky, 3, 'orange');
+//Block
+auxl.exteriorRoom0BlockData = {
+	data:'exteriorRoom0BlockData',
+	id:'exteriorRoom0Block',
+	geometry: {primitive: 'box', height: 10, width: 20, depth: 0.1},
+	material: {shader: "standard", color: "#000000", opacity: 0},
+	position: new THREE.Vector3(-2.25,0,16),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations: false,
+	mixins: false,
+	classes: ['clickable','a-ent'],
+	components: false,
+};
+auxl.exteriorRoom0Block = auxl.Core(auxl.exteriorRoom0BlockData);
 //Exterior to Room 1
 auxl.exteriorToRoom1Data = {
 data:'exteriorToRoom1Data',
 id:'exteriorToRoom1',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,0),
 gridSize: new THREE.Vector3(2,0,0.5),
-grid: {start:{x:-4, y:0, z:-8}, yOffset: 0, collide: true},
+grid: {start:{x:-2.5, y:0, z:-20.5}, yOffset: 0, collide: true},
 rotation: new THREE.Vector3(0,0,0),
 scale: new THREE.Vector3(1.25,1.25,1.25),
 classes: ['clickable','a-ent'],
@@ -355,42 +454,94 @@ components: {
 },
 };
 auxl.exteriorToRoom1 = auxl.Core(auxl.exteriorToRoom1Data);
-
+auxl.exteriorToRoom1Emote = auxl.InfoBubble('exteriorToRoom1Emote', auxl.exteriorToRoom1, 3, 'yellow');
+//Block
+auxl.exteriorRoom1BlockData = {
+	data:'exteriorRoom1BlockData',
+	id:'exteriorRoom1Block',
+	geometry: {primitive: 'box', height: 10, width: 20, depth: 0.1},
+	material: {shader: "standard", color: "#000000", opacity: 0},
+	position: new THREE.Vector3(-1,0,-16),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations: false,
+	mixins: false,
+	classes: ['clickable','a-ent'],
+	components: false,
+};
+auxl.exteriorRoom1Block = auxl.Core(auxl.exteriorRoom1BlockData);
 //Exterior to Room 2
 auxl.exteriorToRoom2Data = {
 data:'exteriorToRoom2Data',
 id:'exteriorToRoom2',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,0),
-gridSize: new THREE.Vector3(2,0,0.5),
-grid: {start:{x:-4, y:0, z:-12}, yOffset: 0, collide: true},
-rotation: new THREE.Vector3(0,0,0),
+gridSize: new THREE.Vector3(0.5,0,2),
+grid: {start:{x:20.5, y:0, z:-2.5}, yOffset: 0, collide: true},
+rotation: new THREE.Vector3(0,-90,0),
 scale: new THREE.Vector3(1.25,1.25,1.25),
 classes: ['clickable','a-ent'],
 components: {
-	['gltf-model']:'./assets/3d/kayKit/doors/door1.glb',
-	doorway:{zone: 'spookyZone', to: 'connect2', posTo: true, pos: new THREE.Vector3(0,0,0), twistTo: true, twist: 0},
+	['gltf-model']:'./assets/3d/kayKit/doors/door4.glb',
+	doorway:{zone: 'spookyZone', to: 'connect2', posTo: true, pos: new THREE.Vector3(0,0,4.5), twistTo: true, twist: 0},
 	hovertext:{value: 'Its a Trap!',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 },
 };
 auxl.exteriorToRoom2 = auxl.Core(auxl.exteriorToRoom2Data);
-
+auxl.exteriorToRoom2Emote = auxl.InfoBubble('exteriorToRoom2Emote', auxl.exteriorToRoom2, 3, 'orange');
+//Block
+auxl.exteriorRoom2BlockData = {
+	data:'exteriorRoom2BlockData',
+	id:'exteriorRoom2Block',
+	geometry: {primitive: 'box', height: 10, width: 0.1, depth: 20},
+	material: {shader: "standard", color: "#000000", opacity: 0},
+	position: new THREE.Vector3(16,0,-2.5),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations: false,
+	mixins: false,
+	classes: ['clickable','a-ent'],
+	components: false,
+};
+auxl.exteriorRoom2Block = auxl.Core(auxl.exteriorRoom2BlockData);
 //Exterior to Room 3
 auxl.exteriorToRoom3Data = {
 data:'exteriorToRoom3Data',
 id:'exteriorToRoom3',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,0),
-gridSize: new THREE.Vector3(2,0,0.5),
-grid: {start:{x:-4, y:0, z:-16}, yOffset: 0, collide: true},
-rotation: new THREE.Vector3(0,0,0),
+gridSize: new THREE.Vector3(0.5,0,1),
+grid: {start:{x:-20.5, y:0, z:-2}, yOffset: 0, collide: true},
+rotation: new THREE.Vector3(0,90,0),
 scale: new THREE.Vector3(1.25,1.25,1.25),
 classes: ['clickable','a-ent'],
 components: {
-	['gltf-model']:'./assets/3d/kayKit/doors/door1.glb',
+	['gltf-model']:'./assets/3d/kayKit/doors/door2.glb',
 	doorway:{zone: 'spookyZone', to: 'connect3', posTo: true, pos: new THREE.Vector3(0,8,0), twistTo: true, twist: 0},
 	hovertext:{value: 'The Dark Deep',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 },
 };
 auxl.exteriorToRoom3 = auxl.Core(auxl.exteriorToRoom3Data);
+auxl.exteriorToRoom3Emote = auxl.InfoBubble('exteriorToRoom3Emote', auxl.exteriorToRoom3, 3, 'red');
+//Block
+auxl.exteriorRoom3BlockData = {
+	data:'exteriorRoom3BlockData',
+	id:'exteriorRoom3Block',
+	geometry: {primitive: 'box', height: 10, width: 0.1, depth: 20},
+	material: {shader: "standard", color: "#000000", opacity: 0},
+	position: new THREE.Vector3(-16,0,-2),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations: false,
+	mixins: false,
+	classes: ['clickable','a-ent'],
+	components: false,
+};
+auxl.exteriorRoom3Block = auxl.Core(auxl.exteriorRoom3BlockData);
 
 //Neons
 //
@@ -606,8 +757,8 @@ auxl.kayKitGraveAData = {
 	id:'kayKitGraveA',
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(),
-	scale: new THREE.Vector3(1,1,1),
-	gridSize: new THREE.Vector3(2,0,1),
+	scale: new THREE.Vector3(0.75,0.65,0.75),
+	gridSize: new THREE.Vector3(1.5,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
 		['gltf-model']:'./assets/3d/kayKit/hallows/grave_A.glb',
@@ -620,8 +771,8 @@ auxl.kayKitGraveADestroyedData = {
 	id:'kayKitGraveADestroyed',
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(),
-	scale: new THREE.Vector3(1,1,1),
-	gridSize: new THREE.Vector3(2.5,0,1),
+	scale: new THREE.Vector3(0.75,0.65,0.75),
+	gridSize: new THREE.Vector3(2,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
 		['gltf-model']:'./assets/3d/kayKit/hallows/grave_A_destroyed.glb',
@@ -634,8 +785,8 @@ auxl.kayKitGraveBData = {
 	id:'kayKitGraveA',
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(),
-	scale: new THREE.Vector3(1,1,1),
-	gridSize: new THREE.Vector3(2,0,1),
+	scale: new THREE.Vector3(0.75,0.65,0.75),
+	gridSize: new THREE.Vector3(1.5,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
 		['gltf-model']:'./assets/3d/kayKit/hallows/grave_B.glb',
@@ -676,7 +827,7 @@ auxl.kayKitGravestoneData = {
 	id:'kayKitGravestone',
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(),
-	scale: new THREE.Vector3(1,1,1),
+	scale: new THREE.Vector3(0.75,0.65,0.75),
 	gridSize: new THREE.Vector3(1,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
 	components:{
@@ -713,7 +864,7 @@ auxl.kayKitLanternStanding = auxl.Core(auxl.kayKitLanternStandingData);
 //Pillar
 auxl.kayKitPillarData = {
 	data:'kayKitPillarData',
-	id:'kayKitlanternStanding',
+	id:'kayKitPillar',
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
@@ -723,7 +874,7 @@ auxl.kayKitPillarData = {
 		['gltf-model']:'./assets/3d/kayKit/hallows/lantern_standing.glb',
 	},
 };
-auxl.kayKitlanternStanding = auxl.Core(auxl.kayKitPillarData);
+auxl.kayKitPillar = auxl.Core(auxl.kayKitPillarData);
 //Plaque
 auxl.kayKitPlaqueData = {
 	data:'kayKitPlaqueData',
@@ -785,7 +936,7 @@ auxl.kayKitPostSkullData = {
 	data:'kayKitPostSkullData',
 	id:'kayKitPostSkull',
 	position: new THREE.Vector3(),
-	rotation: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,0,0),
 	scale: new THREE.Vector3(1,1,1),
 	gridSize: new THREE.Vector3(0.5,0,0.5),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
@@ -822,6 +973,10 @@ auxl.kayKitPumpkinOrangeJackoData = {
 	},
 };
 auxl.kayKitPumpkinOrangeJacko = auxl.Core(auxl.kayKitPumpkinOrangeJackoData);
+auxl.kayKitPumpkinOrangeJacko1Data = auxl.coreDataFromTemplate(auxl.kayKitPumpkinOrangeJackoData, {id: 'kayKitPumpkinOrangeJacko1', rotation: new THREE.Vector3(0,45,0),}, true);
+auxl.kayKitPumpkinOrangeJacko2Data = auxl.coreDataFromTemplate(auxl.kayKitPumpkinOrangeJackoData, {id: 'kayKitPumpkinOrangeJacko2', rotation: new THREE.Vector3(0,135,0),}, true);
+auxl.kayKitPumpkinOrangeJacko3Data = auxl.coreDataFromTemplate(auxl.kayKitPumpkinOrangeJackoData, {id: 'kayKitPumpkinOrangeJacko3', rotation: new THREE.Vector3(0,225,0),}, true);
+auxl.kayKitPumpkinOrangeJacko4Data = auxl.coreDataFromTemplate(auxl.kayKitPumpkinOrangeJackoData, {id: 'kayKitPumpkinOrangeJacko4', rotation: new THREE.Vector3(0,315,0),}, true);
 //Pumpkin Orange Small
 auxl.kayKitPumpkinOrangeSmallData = {
 	data:'kayKitPumpkinOrangeSmallData',
@@ -864,6 +1019,10 @@ auxl.kayKitPumpkinYellowJackoData = {
 	},
 };
 auxl.kayKitPumpkinYellowJacko = auxl.Core(auxl.kayKitPumpkinYellowJackoData);
+auxl.kayKitPumpkinYellowJacko1Data = auxl.coreDataFromTemplate(auxl.kayKitPumpkinYellowJackoData, {id: 'kayKitPumpkinYellowJacko1', rotation: new THREE.Vector3(0,45,0),}, true);
+auxl.kayKitPumpkinYellowJacko2Data = auxl.coreDataFromTemplate(auxl.kayKitPumpkinYellowJackoData, {id: 'kayKitPumpkinYellowJacko2', rotation: new THREE.Vector3(0,0,0),}, true);
+auxl.kayKitPumpkinYellowJacko3Data = auxl.coreDataFromTemplate(auxl.kayKitPumpkinYellowJackoData, {id: 'kayKitPumpkinYellowJacko3', rotation: new THREE.Vector3(0,225,0),}, true);
+auxl.kayKitPumpkinYellowJacko4Data = auxl.coreDataFromTemplate(auxl.kayKitPumpkinYellowJackoData, {id: 'kayKitPumpkinYellowJacko4', rotation: new THREE.Vector3(0,315,0),}, true);
 //Pumpkin Yellow Small
 auxl.kayKitPumpkinYellowSmallData = {
 	data:'kayKitPumpkinYellowSmallData',
@@ -925,7 +1084,7 @@ auxl.kayKitSkullData = {
 	data:'kayKitSkullData',
 	id:'kayKitSkull',
 	position: new THREE.Vector3(),
-	rotation: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,45,0),
 	scale: new THREE.Vector3(1,1,1),
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
@@ -939,7 +1098,7 @@ auxl.kayKitSkullCandlesData = {
 	data:'kayKitSkullCandlesData',
 	id:'kayKitSkullCandles',
 	position: new THREE.Vector3(),
-	rotation: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,315,0),
 	scale: new THREE.Vector3(1,1,1),
 	gridSize: new THREE.Vector3(1,0,1),
 	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
@@ -956,11 +1115,11 @@ auxl.kayKitSkullCandles = auxl.Core(auxl.kayKitSkullCandlesData);
 auxl.kayKitArchData = {
 	data:'kayKitArchData',
 	id:'kayKitArch',
-	position: new THREE.Vector3(),
+	position: new THREE.Vector3(-1.75,0,21),
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
 	gridSize: new THREE.Vector3(4,0,0.5),
-	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
+	grid: {start:{x:-3.5, y:0, z:21}, yOffset: 0, collide: true},
 	components:{
 		['gltf-model']:'./assets/3d/kayKit/hallows/arch.glb',
 	},
@@ -974,12 +1133,30 @@ auxl.kayKitArchGateData = {
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
 	gridSize: new THREE.Vector3(4,0,0.5),
-	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
+	grid: {start:{x:-3.5, y:0, z:-21}, yOffset: 0, collide: true},
 	components:{
 		['gltf-model']:'./assets/3d/kayKit/hallows/arch_gate.glb',
 	},
 };
 auxl.kayKitArchGate = auxl.Core(auxl.kayKitArchGateData);
+auxl.kayKitArchGateX1Data = auxl.coreDataFromTemplate(auxl.kayKitArchGateData, {id: 'kayKitArchGateX1', rotation: new THREE.Vector3(0,90,0), gridSize: new THREE.Vector3(0.5,0,4), grid: {start:{x:21, y:0, z:-3.5}, yOffset: 0, collide: true},}, true);
+auxl.kayKitArchGateX1 = auxl.Core(auxl.kayKitArchGateX1Data);
+auxl.kayKitArchGateX2Data = auxl.coreDataFromTemplate(auxl.kayKitArchGateData, {id: 'kayKitArchGateX2', rotation: new THREE.Vector3(0,90,0), gridSize: new THREE.Vector3(0.5,0,4), grid: {start:{x:-21, y:0, z:-3.5}, yOffset: 0, collide: true},}, true);
+auxl.kayKitArchGateX2 = auxl.Core(auxl.kayKitArchGateX2Data);
+
+//Arch Gate Z
+auxl.kayKitArchGateZData = {
+	data:'kayKitArchGateZData',
+	id:'kayKitArchGateZ',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,90,0),
+	scale: new THREE.Vector3(1,1,1),
+	gridSize: new THREE.Vector3(0.5,0,4),
+	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/arch_gate.glb',
+	},
+};
 //Fence
 auxl.kayKitFenceData = {
 	data:'kayKitFenceData',
@@ -994,12 +1171,25 @@ auxl.kayKitFenceData = {
 	},
 };
 auxl.kayKitFence = auxl.Core(auxl.kayKitFenceData);
+//Fence Z
+auxl.kayKitFenceZData = {
+	data:'kayKitFenceZData',
+	id:'kayKitFenceZ',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,90,0),
+	scale: new THREE.Vector3(1,1,1),
+	gridSize: new THREE.Vector3(0.5,0,4),
+	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/fence.glb',
+	},
+};
 //Fence Broken
 auxl.kayKitFenceBrokenData = {
 	data:'kayKitFenceBrokenData',
 	id:'kayKitFenceBroken',
 	position: new THREE.Vector3(),
-	rotation: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,0,0),
 	scale: new THREE.Vector3(1,1,1),
 	gridSize: new THREE.Vector3(4,0,0.5),
 	grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
@@ -1008,12 +1198,25 @@ auxl.kayKitFenceBrokenData = {
 	},
 };
 auxl.kayKitFenceBroken = auxl.Core(auxl.kayKitFenceBrokenData);
+//Fence Broken Z
+auxl.kayKitFenceBrokenZData = {
+	data:'kayKitFenceBrokenZData',
+	id:'kayKitFenceBrokenZ',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,90,0),
+	scale: new THREE.Vector3(1,1,1),
+	gridSize: new THREE.Vector3(0.5,0,4),
+	//grid: {start:{x:0, y:0, z:-10}, yOffset: 0, collide: true},
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/fence_broken.glb',
+	},
+};
 //Fence Gate
 auxl.kayKitFenceGateData = {
 	data:'kayKitFenceGateData',
 	id:'kayKitFenceGate',
 	position: new THREE.Vector3(),
-	rotation: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,0,0),
 	scale: new THREE.Vector3(1,1,1),
 	gridSize: new THREE.Vector3(4,0,0.5),
 	grid: {start:{x:-10, y:0, z:-10}, yOffset: 0, collide: true},
@@ -1022,6 +1225,19 @@ auxl.kayKitFenceGateData = {
 	},
 };
 auxl.kayKitFenceGate = auxl.Core(auxl.kayKitFenceGateData);
+//Fence Gate Z
+auxl.kayKitFenceGateZData = {
+	data:'kayKitFenceGateZData',
+	id:'kayKitFenceGateZ',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,90,0),
+	scale: new THREE.Vector3(1,1,1),
+	gridSize: new THREE.Vector3(0.5,0,4),
+	//grid: {start:{x:-10, y:0, z:-10}, yOffset: 0, collide: true},
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/fence_gate.glb',
+	},
+};
 //Fence Pillar
 auxl.kayKitFencePillarData = {
 	data:'kayKitFencePillarData',
@@ -1083,6 +1299,13 @@ auxl.kayKitTreeDeadLargeDecoratedData = {
 	},
 };
 auxl.kayKitTreeDeadLargeDecorated = auxl.Core(auxl.kayKitTreeDeadLargeDecoratedData);
+auxl.kayKitTreeDeadLargeDecorated1Data = auxl.coreDataFromTemplate(auxl.kayKitTreeDeadLargeDecoratedData, {id: 'kayKitTreeDeadLargeDecorated1', rotation: new THREE.Vector3(0,90,0),}, true);
+auxl.kayKitTreeDeadLargeDecorated2Data = auxl.coreDataFromTemplate(auxl.kayKitTreeDeadLargeDecoratedData, {id: 'kayKitTreeDeadLargeDecorated2', rotation: new THREE.Vector3(0,180,0),}, true);
+auxl.kayKitTreeDeadLargeDecorated3Data = auxl.coreDataFromTemplate(auxl.kayKitTreeDeadLargeDecoratedData, {id: 'kayKitTreeDeadLargeDecorated3', rotation: new THREE.Vector3(0,0,0),}, true);
+auxl.kayKitTreeDeadLargeDecorated4Data = auxl.coreDataFromTemplate(auxl.kayKitTreeDeadLargeDecoratedData, {id: 'kayKitTreeDeadLargeDecorated4', rotation: new THREE.Vector3(0,315,0),}, true);
+
+
+
 //Tree Dead Medium
 auxl.kayKitTreeDeadMediumData = {
 	data:'kayKitTreeDeadMediumData',
@@ -1224,73 +1447,172 @@ layout1:[
 ],},};
 auxl.hallowGridDoors = auxl.GridLayout(auxl.hallowGridDoorsData);
 
-//Fences
-auxl.hallowGridFencesData = {
-id: 'hallowGridFences',
+//Fences X
+auxl.hallowGridFencesXData = {
+id: 'hallowGridFencesX',
 coreData: [
-	auxl.kayKitArchGateData,
 	auxl.kayKitFenceData,
 	auxl.kayKitFenceBrokenData,
 	auxl.kayKitFenceGateData,
-	auxl.kayKitFencePillarData,
-	auxl.kayKitFencePillarBrokenData,
 ],
 grids:{
 layout1:[
-	{start:{x:-10, y:0, z:-5},},
-	{start:{x:-10, y:0, z:-10},},
-	{start:{x:-10, y:0, z:-15},},
-	{start:{x:-10, y:0, z:-20},},
-	{start:{x:-10, y:0, z:-25},},
-	{start:{x:-10, y:0, z:-30},},
+	{start:{x:-21, y:0, z:-21,},},
+	{start:{x:-17.5, y:0, z:-21,},},
+	{start:{x:-14, y:0, z:-21,},},
+	{start:{x:-10.5, y:0, z:-21,},},
+	{start:{x:-7, y:0, z:-21,},},
+	//{start:{x:-3.5, y:0, z:-21,},},
+	{start:{x:0, y:0, z:-21,},},
+	{start:{x:3.5, y:0, z:-21,},},
+	{start:{x:7, y:0, z:-21,},},
+	{start:{x:10.5, y:0, z:-21,},},
+	{start:{x:14, y:0, z:-21,},},
+	{start:{x:17.5, y:0, z:-21,},},
+	{start:{x:-21, y:0, z:21,},},
+	{start:{x:-17.5, y:0, z:21,},},
+	{start:{x:-14, y:0, z:21,},},
+	{start:{x:-10.5, y:0, z:21,},},
+	{start:{x:-7, y:0, z:21,},},
+	{start:{x:0, y:0, z:21,},},
+	{start:{x:3.5, y:0, z:21,},},
+	{start:{x:7, y:0, z:21,},},
+	{start:{x:10.5, y:0, z:21,},},
+	{start:{x:14, y:0, z:21,},},
+	{start:{x:17.5, y:0, z:21,},},
+
+	{start:{x:-21, y:0, z:-14},},
+	{start:{x:-21, y:0, z:7},},
+	{start:{x:17.5, y:0, z:-10.5},},
+	{start:{x:17.5, y:0, z:3.5},},
+	{start:{x:17.5, y:0, z:14.5},},
+	{start:{x:-21, y:0, z:14},},
 ],},};
-auxl.hallowGridFences = auxl.GridLayout(auxl.hallowGridFencesData);
+auxl.hallowGridFencesX = auxl.GridLayout(auxl.hallowGridFencesXData);
+
+
+//Fences Z
+auxl.hallowGridFencesZData = {
+id: 'hallowGridFencesZ',
+coreData: [
+	auxl.kayKitFenceZData,
+	auxl.kayKitFenceBrokenZData,
+	auxl.kayKitFenceGateZData,
+],
+grids:{
+layout1:[
+	{start:{x:-21, y:0, z:-21},},
+	{start:{x:-21, y:0, z:-17.5},},
+	{start:{x:-21, y:0, z:-14},},
+	{start:{x:-21, y:0, z:-10.5},},
+	{start:{x:-21, y:0, z:-7},},
+	//{start:{x:-21, y:0, z:-3.5},},
+	{start:{x:-21, y:0, z:0},},
+	{start:{x:-21, y:0, z:3.5},},
+	{start:{x:-21, y:0, z:7},},
+	{start:{x:-21, y:0, z:10.5},},
+	{start:{x:-21, y:0, z:14},},
+	{start:{x:-21, y:0, z:17.5},},
+	{start:{x:21, y:0, z:-21},},
+	{start:{x:21, y:0, z:-17.5},},
+	{start:{x:21, y:0, z:-14},},
+	{start:{x:21, y:0, z:-10.5},},
+	{start:{x:21, y:0, z:-7},},
+	//{start:{x:21, y:0, z:-3.5},},
+	{start:{x:21, y:0, z:0},},
+	{start:{x:21, y:0, z:3.5},},
+	{start:{x:21, y:0, z:7},},
+	{start:{x:21, y:0, z:10.5},},
+	{start:{x:21, y:0, z:14},},
+	{start:{x:21, y:0, z:17.5},},
+
+	{start:{x:-10.5, y:0, z:-21,},},
+	{start:{x:3.5, y:0, z:-21,},},
+	{start:{x:14, y:0, z:-21,},},
+	{start:{x:-14, y:0, z:17.5,},},
+	{start:{x:-7, y:0, z:17.5,},},
+	{start:{x:10.5, y:0, z:17.5,},},
+],},};
+auxl.hallowGridFencesZ = auxl.GridLayout(auxl.hallowGridFencesZData);
 
 //Graves
 auxl.hallowGridGravesData = {
 id: 'hallowGridGraves',
 coreData: [
+	auxl.kayKitGravemarkerAData,
 	auxl.kayKitGraveAData,
 	auxl.kayKitGraveADestroyedData,
 	auxl.kayKitGraveBData,
-	auxl.kayKitGravemarkerAData,
-	auxl.kayKitGravemarkerBData,
 	auxl.kayKitGravestoneData,
+	auxl.kayKitGravemarkerBData,
 ],
 grids:{
 layout1:[
-	{start:{x:0, y:0, z:-5},},
+	{start:{x:-17, y:0, z:12},},
+	{start:{x:-12, y:0, z:12},},
+	{start:{x:-7, y:0, z:12},},
+	{start:{x:3, y:0, z:12},},
+	{start:{x:8, y:0, z:12},},
+	{start:{x:13, y:0, z:12},},
+
+	{start:{x:-17, y:0, z:-5},},
+	{start:{x:-12, y:0, z:-5},},
+	{start:{x:-7, y:0, z:-5},},
 	{start:{x:3, y:0, z:-5},},
-	{start:{x:6, y:0, z:-5},},
-	{start:{x:9, y:0, z:-5},},
-	{start:{x:12, y:0, z:-5},},
-	{start:{x:15, y:0, z:-5},},
+	{start:{x:8, y:0, z:-5},},
+	{start:{x:13, y:0, z:-5},},
+
 ],},};
 auxl.hallowGridGraves = auxl.GridLayout(auxl.hallowGridGravesData);
+auxl.hallowGridGravesAltData = {
+id: 'hallowGridGravesAlt',
+coreData: [
+	auxl.kayKitGravemarkerBData,
+	auxl.kayKitGravemarkerAData,
+	auxl.kayKitGraveAData,
+	auxl.kayKitGravestoneData,
+	auxl.kayKitGraveBData,
+	auxl.kayKitGraveADestroyedData,
+],
+grids:{
+layout1:[
+	{start:{x:-15, y:0, z:5},},
+	{start:{x:-10, y:0, z:5},},
+	{start:{x:-5, y:0, z:5},},
+	{start:{x:5, y:0, z:5},},
+	{start:{x:10, y:0, z:5},},
+	{start:{x:15, y:0, z:5},},
+
+	{start:{x:-15, y:0, z:-12},},
+	{start:{x:-10, y:0, z:-12},},
+	{start:{x:-5, y:0, z:-12},},
+	{start:{x:5, y:0, z:-12},},
+	{start:{x:10, y:0, z:-12},},
+	{start:{x:15, y:0, z:-12},},
+
+],},};
+auxl.hallowGridGravesAlt = auxl.GridLayout(auxl.hallowGridGravesAltData);
 
 //Alt Graves
 auxl.hallowGridAltGravesData = {
 id: 'hallowGridAltGraves',
 coreData: [
-	auxl.kayKitBenchDecoratedData,
-	auxl.kayKitCoffinData,
+
+	auxl.kayKitShrineCandlesData,
 	auxl.kayKitCoffinDecoratedData,
 	auxl.kayKitPlaqueData,
 	auxl.kayKitPlaqueCandlesData,
-	auxl.kayKitRibcageData,
+	auxl.kayKitCoffinData,
 	auxl.kayKitShrineData,
-	auxl.kayKitShrineCandlesData,
 ],
 grids:{
 layout1:[
-	{start:{x:0, y:0, z:-10},},
-	{start:{x:3, y:0, z:-10},},
-	{start:{x:6, y:0, z:-10},},
-	{start:{x:9, y:0, z:-10},},
-	{start:{x:12, y:0, z:-10},},
-	{start:{x:15, y:0, z:-10},},
-	{start:{x:18, y:0, z:-10},},
-	{start:{x:21, y:0, z:-10},},
+	{start:{x:-16, y:0, z:0},},
+	{start:{x:-11, y:0, z:0},},
+	{start:{x:-6, y:0, z:0},},
+	{start:{x:4, y:0, z:0},},
+	{start:{x:9, y:0, z:0},},
+	{start:{x:14, y:0, z:0},},
 ],},};
 auxl.hallowGridAltGraves = auxl.GridLayout(auxl.hallowGridAltGravesData);
 
@@ -1298,70 +1620,194 @@ auxl.hallowGridAltGraves = auxl.GridLayout(auxl.hallowGridAltGravesData);
 auxl.hallowGridTreesData = {
 id: 'hallowGridTrees',
 coreData: [
-	auxl.kayKitTreeDeadLargeDecoratedData,
 	auxl.kayKitTreeDeadSmallData,
 	auxl.kayKitTreePineOrangeSmallData,
 	auxl.kayKitTreePineYellowSmallData,
 ],
 grids:{
 layout1:[
-	{start:{x:0, y:0, z:10},},
-	{start:{x:3, y:0, z:10},},
-	{start:{x:6, y:0, z:10},},
-	{start:{x:9, y:0, z:10},},
-	{start:{x:12, y:0, z:10},},
-	{start:{x:15, y:0, z:10},},
+	//Back
+	{start:{x:-17, y:0, z:-20.5},},
+	//{start:{x:-9, y:0, z:-20},},
+	{start:{x:7, y:0, z:-19.5},},
+	{start:{x:15, y:0, z:-20},},
+	//Front
+	{start:{x:-14, y:0, z:18.5},},
+	{start:{x:-6, y:0, z:19},},
+	//{start:{x:10, y:0, z:19.5},},
+	{start:{x:18, y:0, z:19},},
+	//Left
+	{start:{x:-19.5, y:0, z:-16},},
+	{start:{x:-20, y:0, z:-8},},
+	//{start:{x:-18, y:0, z:8},},
+	{start:{x:-20, y:0, z:16},},
+	//Right
+	{start:{x:19, y:0, z:-17},},
+	{start:{x:18.5, y:0, z:-9},},
+	//{start:{x:19, y:0, z:7},},
+	{start:{x:18, y:0, z:15},},
 ],},};
 auxl.hallowGridTrees = auxl.GridLayout(auxl.hallowGridTreesData);
+
+//Trees
+auxl.hallowGridSkullTreesData = {
+id: 'hallowGridSkullTrees',
+coreData: [
+	auxl.kayKitTreeDeadLargeDecorated3Data,
+	auxl.kayKitTreeDeadLargeDecorated2Data,
+	auxl.kayKitTreeDeadLargeDecorated1Data,
+	auxl.kayKitTreeDeadLargeDecorated4Data,
+],
+grids:{
+layout1:[
+	{start:{x:1, y:0, z:-20},},
+	{start:{x:2, y:0, z:19},},
+	{start:{x:-20, y:0, z:2},},
+	{start:{x:19, y:0, z:1},},
+],},};
+auxl.hallowGridSkullTrees = auxl.GridLayout(auxl.hallowGridSkullTreesData);
 
 //Deco
 auxl.hallowGridDecoData = {
 id: 'hallowGridDeco',
 coreData: [
 	auxl.kayKitPumpkinOrangeData,
-	auxl.kayKitPumpkinOrangeJackoData,
 	auxl.kayKitPumpkinOrangeSmallData,
 	auxl.kayKitPumpkinYellowData,
-	auxl.kayKitPumpkinYellowJackoData,
 	auxl.kayKitPumpkinYellowSmallData,
 	auxl.kayKitSkullData,
 	auxl.kayKitSkullCandlesData,
-	auxl.kayKitLanternHangingData,
-	auxl.kayKitLanternStandingData,
 ],
 grids:{
 layout1:[
-	{start:{x:0, y:0, z:5},},
-	{start:{x:3, y:0, z:5},},
-	{start:{x:6, y:0, z:5},},
-	{start:{x:9, y:0, z:5},},
-	{start:{x:12, y:0, z:5},},
-	{start:{x:15, y:0, z:5},},
-	{start:{x:18, y:0, z:5},},
-	{start:{x:21, y:0, z:5},},
-	{start:{x:24, y:0, z:5},},
-	{start:{x:27, y:0, z:5},},
-	{start:{x:30, y:0, z:5},},
+	{start:{x:-18.5, y:0, z:16.5},},
+	{start:{x:-13.5, y:0, z:7.5},},
+	{start:{x:7.5, y:0, z:-10},},
+	{start:{x:16.5, y:0, z:-16.5},},
+	{start:{x:16.5, y:0, z:11.5},},
+	{start:{x:11.5, y:0, z:3.5},},
+	{start:{x:-8.5, y:0, z:-1.5},},
+	{start:{x:-18.5, y:0, z:-10.5},},
+	{start:{x:-11.5, y:0, z:16.5},},
+	{start:{x:-14.5, y:0, z:4.5},},
+	{start:{x:1, y:0, z:-2},},
+	{start:{x:-7, y:0, z:-11},},
+	{start:{x:6.5, y:0, z:13.5},},
+	{start:{x:4.5, y:0, z:4.5},},
+	{start:{x:-17.5, y:0, z:-4.5},},
+	{start:{x:-14.5, y:0, z:3.5},},
 ],},};
 auxl.hallowGridDeco = auxl.GridLayout(auxl.hallowGridDecoData);
+
+
+//Jackos
+auxl.hallowGridJackosData = {
+id: 'hallowGridJackos',
+coreData: [
+	auxl.kayKitPumpkinYellowJacko2Data,
+	auxl.kayKitPumpkinOrangeJacko1Data,
+	auxl.kayKitPumpkinYellowJacko3Data,
+	auxl.kayKitPumpkinOrangeJacko3Data,
+	auxl.kayKitPumpkinYellowJacko1Data,
+	auxl.kayKitPumpkinYellowJacko4Data,
+	auxl.kayKitPumpkinOrangeJacko2Data,
+	auxl.kayKitPumpkinOrangeJacko4Data,
+],
+grids:{
+layout1:[
+	{start:{x:-7, y:0, z:6},},
+	{start:{x:-9, y:0, z:-16},},
+	{start:{x:13, y:0, z:17.5},},
+	{start:{x:9, y:0, z:-2},},
+	{start:{x:-19, y:0, z:-10},},
+	{start:{x:3, y:0, z:-12},},
+	{start:{x:-17.5, y:0, z:12.5},},
+	{start:{x:17.5, y:0, z:-17.5},},
+
+],},};
+auxl.hallowGridJackos = auxl.GridLayout(auxl.hallowGridJackosData);
+
 
 //Tall Deco
 auxl.hallowGridTallDecoData = {
 id: 'hallowGridTallDeco',
 coreData: [
-	auxl.kayKitPillarData,
-	auxl.kayKitPostData,
 	auxl.kayKitPostLanternData,
 	auxl.kayKitPostSkullData,
+	auxl.kayKitPostData,
 ],
 grids:{
 layout1:[
-	{start:{x:0, y:0, z:-15},},
-	{start:{x:3, y:0, z:-15},},
-	{start:{x:6, y:0, z:-15},},
-	{start:{x:9, y:0, z:-15},},
+	{start:{x:-9, y:0, z:-20},},
+	{start:{x:10, y:0, z:19.5},},
+	{start:{x:-18, y:0, z:8},},
+	{start:{x:19, y:0, z:7},},
 ],},};
 auxl.hallowGridTallDeco = auxl.GridLayout(auxl.hallowGridTallDecoData);
+
+//Benchs
+//
+
+//Bench Decorated 1
+auxl.spookyBenchDecorated1Data = {
+	data:'spookyBenchDecorated1Data',
+	id:'spookyBenchDecorated1',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	gridSize: new THREE.Vector3(2,0,1),
+	grid: {start:{x:11, y:0, z:-20}, yOffset: 0, collide: true},
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/bench_decorated.glb',
+	},
+};
+auxl.spookyBenchDecorated1 = auxl.Core(auxl.spookyBenchDecorated1Data);
+//Bench Decorated 2
+auxl.spookyBenchDecorated2Data = {
+	data:'spookyBenchDecorated2Data',
+	id:'spookyBenchDecorated2',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,180,0),
+	scale: new THREE.Vector3(1,1,1),
+	gridSize: new THREE.Vector3(2,0,1),
+	grid: {start:{x:-13, y:0, z:20}, yOffset: 0, collide: true},
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/bench_decorated.glb',
+	},
+};
+auxl.spookyBenchDecorated2 = auxl.Core(auxl.spookyBenchDecorated2Data);
+//Bench Decorated 3
+auxl.spookyBenchDecorated3Data = {
+	data:'spookyBenchDecorated3Data',
+	id:'spookyBenchDecorated3',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,90,0),
+	scale: new THREE.Vector3(1,1,1),
+	gridSize: new THREE.Vector3(1,0,2),
+	grid: {start:{x:-20.5, y:0, z:-13}, yOffset: 0, collide: true},
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/bench_decorated.glb',
+	},
+};
+auxl.spookyBenchDecorated3 = auxl.Core(auxl.spookyBenchDecorated3Data);
+//Bench Decorated 4
+auxl.spookyBenchDecorated4Data = {
+	data:'spookyBenchDecorated4Data',
+	id:'spookyBenchDecorated4',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,270,0),
+	scale: new THREE.Vector3(1,1,1),
+	gridSize: new THREE.Vector3(1,0,2),
+	grid: {start:{x:20, y:0, z:-8}, yOffset: 0, collide: true},
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/bench_decorated.glb',
+	},
+};
+auxl.spookyBenchDecorated4 = auxl.Core(auxl.spookyBenchDecorated4Data);
+
+
+
+
 
 //
 //No Collision Decoration
@@ -1598,6 +2044,9 @@ auxl.spookyRoom1Ext = auxl.Core(auxl.spookyRoom1ExtData);
 auxl.room1ToExteriorData = {
 data:'room1ToExteriorData',
 id:'room1ToExterior',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,59.725),
 gridSize: new THREE.Vector3(2.5,0,0.5),
 grid: {start:{x:-1, y:0, z:59.5}, collide: true},
@@ -1606,7 +2055,7 @@ scale: new THREE.Vector3(1.25,1.25,1.25),
 classes: ['clickable','a-ent'],
 components: {
 	['gltf-model']:'./assets/3d/kayKit/doors/door1.glb',
-	doorway:{zone: 'spookyZone', to: 'connect0', posTo: true, pos: new THREE.Vector3(-4,0,-7), twistTo: true, twist: 180},
+	doorway:{zone: 'spookyZone', to: 'connect0', posTo: true, pos: new THREE.Vector3(-2.5,0,-19.5), twistTo: true, twist: 180},
 	hovertext:{value: 'Return',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 	clickrun__click1:{
 		delay: '450',
@@ -1630,6 +2079,9 @@ auxl.room1ToExterior = auxl.Core(auxl.room1ToExteriorData);
 auxl.room1ToRoom1AltData = {
 data:'room1ToRoom1AltData',
 id:'room1ToRoom1Alt',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,59.725),
 gridSize: new THREE.Vector3(2.5,0,0.5),
 grid: {start:{x:-1, y:0, z:-59.5}, collide: true},
@@ -1643,6 +2095,22 @@ components: {
 },
 };
 auxl.room1ToRoom1Alt = auxl.Core(auxl.room1ToRoom1AltData);
+
+//Block Room 1 Alt Far Click
+auxl.spookyRoom1AltBlockData = {
+	data:'spookyRoom1AltBlockData',
+	id:'spookyRoom1AltBlock',
+	geometry: {primitive: 'box', height: 20, width: 20, depth: 0.1},
+	material: {shader: "standard", color: "#000000", opacity: 0},
+	position: new THREE.Vector3(0,0,-54),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations: false,
+	mixins: false,
+	classes: ['clickable','a-ent'],
+	components: false,
+};
+auxl.spookyRoom1AltBlock = auxl.Core(auxl.spookyRoom1AltBlockData);
 
 //Floor
 auxl.spookyRoom1FloorData = {
@@ -1767,7 +2235,7 @@ auxl.spookyRoom1Wall3 = auxl.Core(auxl.spookyRoom1Wall3Data);
 auxl.room1AltHorizonData = {
 id: 'room1AltHorizon',
 type: 'squareWall',
-texture: {src: auxl.pattern18, repeat: '12 14',},
+texture: {src: auxl.pattern18, repeat: '3 5',},
 baseColor: '#80401f',
 baseColorFamily: false,
 radius: 6,
@@ -1778,7 +2246,6 @@ width: 'normal',
 auxl.room1AltHorizon = auxl.Horizon(auxl.room1AltHorizonData);
 
 //Room 1 Rug
-//Painting 1
 auxl.spookyRoom1RugData = {
 	data:'spookyRoom1RugData',
 	id:'spookyRoom1Rug',
@@ -1799,7 +2266,9 @@ auxl.spookyRoom1Rug = auxl.Core(auxl.spookyRoom1RugData);
 auxl.room1Door1Data = {
 data:'room1Door1Data',
 id:'room1Door1',
-//position: new THREE.Vector3(4.725,0,45),
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,0),
 gridSize: new THREE.Vector3(1.5,0,3),
 grid: {start:{x:4, y:0, z:43.5}, collide: true},
@@ -1817,25 +2286,28 @@ auxl.room1Door1 = auxl.Core(auxl.room1Door1Data);
 auxl.room1Door2Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door2', position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:-5, y:0, z:28.5}, collide: true}, rotation: new THREE.Vector3(0,90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:3.5, y:0, z:45, twistTo: true, twist: 90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
 auxl.room1Door2 = auxl.Core(auxl.room1Door2Data);
 //Door 3
-auxl.room1Door3Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door3', position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:4, y:0, z:13.5}, collide: true}, rotation: new THREE.Vector3(0,-90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:-3.5, y:0, z:30, twistTo: true, twist: -90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
+auxl.room1Door3Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door3', sounds:{open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'}, knife: {src: auxl.soundKnifeSharpening, autoplay: true, loop: true, volume: 1, }, }, position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:4, y:0, z:13.5}, collide: true}, rotation: new THREE.Vector3(0,-90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:-3.5, y:0, z:30, twistTo: true, twist: -90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
 auxl.room1Door3 = auxl.Core(auxl.room1Door3Data);
 //Door 4
 auxl.room1Door4Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door4', position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:-5, y:0, z:-1.5}, collide: true}, rotation: new THREE.Vector3(0,90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:3.5, y:0, z:15, twistTo: true, twist: 90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
 auxl.room1Door4 = auxl.Core(auxl.room1Door4Data);
 //Door 5
-auxl.room1Door5Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door5', position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:4, y:0, z:-16.5}, collide: true}, rotation: new THREE.Vector3(0,-90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:-3.5, y:0, z:0, twistTo: true, twist: -90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
+auxl.room1Door5Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door5', sounds:{open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'}, drops: {src: auxl.soundWaterDrops, autoplay: true, loop: true, volume: 1,}, },position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:4, y:0, z:-16.5}, collide: true}, rotation: new THREE.Vector3(0,-90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:-3.5, y:0, z:0, twistTo: true, twist: -90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
 auxl.room1Door5 = auxl.Core(auxl.room1Door5Data);
 //Door 6
 auxl.room1Door6Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door6', position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:-5, y:0, z:-31.5}, collide: true}, rotation: new THREE.Vector3(0,90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:3.5, y:0, z:-15, twistTo: true, twist: 90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
 auxl.room1Door6 = auxl.Core(auxl.room1Door6Data);
 //Door 7
-auxl.room1Door7Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door7', position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:4, y:0, z:-46.5}, collide: true}, rotation: new THREE.Vector3(0,-90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:-3.5, y:0, z:-30, twistTo: true, twist: -90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
+auxl.room1Door7Data = auxl.coreDataFromTemplate(auxl.room1Door1Data, {id: 'room1Door7', sounds:{open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'}, pendulum: {src: auxl.soundPendulumMachine, autoplay: true, loop: true, volume: 1,}, }, position: new THREE.Vector3(0,0,0), gridSize: new THREE.Vector3(1.5,0,3), grid: {start:{x:4, y:0, z:-46.5}, collide: true}, rotation: new THREE.Vector3(0,-90,0), components: {['gltf-model']:'./assets/3d/kayKit/doors/door1.glb', ['teleportation-to']:{x:-3.5, y:0, z:-30, twistTo: true, twist: -90, event: 'click'}, hovertext:{value: '???',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},},}, true);
 auxl.room1Door7 = auxl.Core(auxl.room1Door7Data);
 //Alt Door
 //Door 7
 auxl.room1AltDoorData = {
 data:'room1AltDoorData',
 id:'room1AltDoor',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,-1.5,5.725),
 rotation: new THREE.Vector3(0,0,0),
 scale: new THREE.Vector3(1.25,1.25,1.25),
@@ -1901,14 +2373,15 @@ layout1:[
 ],},};
 auxl.room1TablesGrid = auxl.GridLayout(auxl.room1TablesGridData);
 
-
 //Paintings 1 - 13
 
 //Painting 1
 auxl.spookyRoom1Painting1Data = {
 	data:'spookyRoom1Painting1Data',
 	id:'spookyRoom1Painting1',
-	text: false,
+	sounds:{
+		spookwoosh: {src: auxl.spookWoosh, autoplay: false, loop: false, volume: 0.5, on: 'mouseenter'},
+	},
 	geometry: {primitive: 'plane', width: 2.5, height: 3.75,},
 	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting1,},
 	position: new THREE.Vector3(-4.725,3.25,40),
@@ -1934,7 +2407,7 @@ auxl.spookyRoom1Painting1Data = {
 };
 auxl.spookyRoom1Painting1 = auxl.Core(auxl.spookyRoom1Painting1Data);
 //Painting 2
-auxl.spookyRoom1Painting2Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting2', position: new THREE.Vector3(4.725,3.25,35), rotation: new THREE.Vector3(0,-90,0),	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting2,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting2', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting2Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting2', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting2,},},}, true);
+auxl.spookyRoom1Painting2Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting2', sounds:{spookwoosh: {src: auxl.spookWoosh, autoplay: false, loop: false, volume: 0.5, on: 'mouseenter'}, footsteps: {src: auxl.soundFootsteps, autoplay: true, loop: true, volume: 1,},}, position: new THREE.Vector3(4.725,3.25,35), rotation: new THREE.Vector3(0,-90,0),	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting2,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting2', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting2Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting2', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting2,},},}, true);
 auxl.spookyRoom1Painting2 = auxl.Core(auxl.spookyRoom1Painting2Data);
 //Painting 3
 auxl.spookyRoom1Painting3Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting3', position: new THREE.Vector3(4.725,3.25,25), rotation: new THREE.Vector3(0,-90,0),	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting3,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting3', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting3Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting3', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting3,},}}, true);
@@ -1971,6 +2444,9 @@ auxl.spookyRoom1Painting13Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Paint
 auxl.spookyRoom1Painting13 = auxl.Core(auxl.spookyRoom1Painting13Data);
 //Jump
 auxl.spookyRoom1Jump1Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Jump1', geometry: {primitive: 'box', height: 3.75, width: 2.5, depth: 0.1}, position: new THREE.Vector3(2,0,-15), rotation: new THREE.Vector3(0,0,0), material: {shader: "standard", opacity: 1, src: auxl.spookyJump1,},
+sounds:{
+	scare: {src: auxl.soundMonster1, autoplay: false, loop: false, volume: 1, on: 'jump'},
+},
 components: {
 ['stare']:{id: 'playerRig', twist: false,},
 ['camera-forward']: {distance: 2.5},
@@ -1983,8 +2459,6 @@ oneventrun__jump:{
 },
 },}, true);
 auxl.spookyRoom1Jump1 = auxl.Core(auxl.spookyRoom1Jump1Data);
-
-//RayDir = (rayEl, dist, dir) 
 
 //Lights
 
@@ -2097,6 +2571,9 @@ auxl.spookyRoom1Light7 = auxl.Core(auxl.spookyRoom1Light7Data);
 auxl.spookyRoom1Light2TriggerData = {
 data:'spookyRoom1Light2TriggerData',
 id:'spookyRoom1Light2Trigger',
+sounds:{
+	break: {src: auxl.soundGlassBreak, autoplay: false, loop: false, volume: 0.75, on: 'triggerEnter'},
+},
 geometry: {primitive: 'box', depth: 2, width: 10, height: 1},
 material: {shader: "standard", opacity: 0},
 position: new THREE.Vector3(0,0,0),
@@ -2114,6 +2591,9 @@ auxl.spookyRoom1Light2Trigger = auxl.Core(auxl.spookyRoom1Light2TriggerData);
 auxl.spookyRoom1Light4TriggerData = {
 data:'spookyRoom1Light4TriggerData',
 id:'spookyRoom1Light4Trigger',
+sounds:{
+	break: {src: auxl.soundGlassBreak, autoplay: false, loop: false, volume: 0.75, on: 'triggerEnter'},
+},
 geometry: {primitive: 'box', depth: 2, width: 10, height: 1},
 material: {shader: "standard", opacity: 0},
 position: new THREE.Vector3(0,0,0),
@@ -2129,6 +2609,19 @@ auxl.spookyRoom1Light4Trigger = auxl.Core(auxl.spookyRoom1Light4TriggerData);
 
 //
 //Room 2
+
+//Exterior Darkness
+auxl.spookyRoom2ExtData = {
+	data:'spookyRoom2ExtData',
+	id:'spookyRoom2Ext',
+	geometry: {primitive: 'box', height: 400, width: 400, depth: 400},
+	material: {shader: "standard", color: "#000000", opacity: 1, side: 'back', roughness: 1},
+	position: new THREE.Vector3(0,0,0),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	classes: ['a-ent'],
+};
+auxl.spookyRoom2Ext = auxl.Core(auxl.spookyRoom2ExtData);
 
 //Floor
 auxl.spookyRoom2FloorData = {
@@ -2255,11 +2748,14 @@ auxl.spookyRoom2BasementData = {
 };
 auxl.spookyRoom2Basement = auxl.Core(auxl.spookyRoom2BasementData);
 
-
 //Door
 auxl.room2ToExteriorDoorData = {
 data:'room2ToExteriorDoorData',
 id:'room2ToExteriorDoor',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+	squeak: {src: auxl.soundSqueakingChair, autoplay: true, loop: true, volume: 1,},
+},
 position: new THREE.Vector3(0,0,0),
 gridSize: new THREE.Vector3(2.5,0,0.5),
 grid: {start:{x:-1, y:0, z:5.5}, collide: true},
@@ -2267,8 +2763,8 @@ rotation: new THREE.Vector3(0,180,0),
 scale: new THREE.Vector3(1.25,1.25,1.25),
 classes: ['clickable','a-ent'],
 components: {
-	['gltf-model']:'./assets/3d/kayKit/doors/door1.glb',
-	doorway:{zone: 'spookyZone', to: 'connect0', posTo: true, pos: new THREE.Vector3(0,0,0), twistTo: true, twist: 0},
+	['gltf-model']:'./assets/3d/kayKit/doors/door4.glb',
+	doorway:{zone: 'spookyZone', to: 'connect0', posTo: true, pos: new THREE.Vector3(19.5,0,-2.5), twistTo: true, twist: 90},
 	hovertext:{value: 'Return',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 },
 };
@@ -2281,6 +2777,9 @@ auxl.room2ToExteriorDoor = auxl.Core(auxl.room2ToExteriorDoorData);
 auxl.kayKitArmchairPillowsData = {
 	data:'kayKitArmchairPillowsData',
 	id:'kayKitArmchairPillows',
+	sounds:{
+		interact: {src: auxl.drop1, autoplay: false, loop: false, volume: 0.5, on: 'mousedown'},
+	},
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(0,90,0),
 	scale: new THREE.Vector3(1,1,1),
@@ -2304,6 +2803,9 @@ auxl.kayKitArmchairPillows = auxl.Core(auxl.kayKitArmchairPillowsData);
 auxl.kayKitBedSingleAData = {
 	data:'kayKitBedSingleAData',
 	id:'kayKitBedSingleA',
+	sounds:{
+		interact: {src: auxl.drop1, autoplay: false, loop: false, volume: 0.5, on: 'mousedown'},
+	},
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1.25,1.75,1.25),
@@ -2327,6 +2829,9 @@ auxl.kayKitBedSingleA = auxl.Core(auxl.kayKitBedSingleAData);
 auxl.kayKitCabinetMediumDecoratedData = {
 	data:'kayKitCabinetMediumDecoratedData',
 	id:'kayKitCabinetMediumDecorated',
+	sounds:{
+		interact: {src: auxl.drop1, autoplay: false, loop: false, volume: 0.5, on: 'mousedown'},
+	},
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(0,-90,0),
 	scale: new THREE.Vector3(1,1,1),
@@ -2335,7 +2840,7 @@ auxl.kayKitCabinetMediumDecoratedData = {
 	classes: ['clickable','a-ent'],
 	components: {
 		['gltf-model']:'./assets/3d/kayKit/house/cabinet_medium_decorated.glb',
-		hovertext:{value: 'Search',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
+		hovertext:{value: 'Search',  hover: 'top', offset: 1.5, altOffset: 1, twist: true,},
 		clickrun__trap:{
 			delay: '0',
 			cursorObj: 'Room2Trap',
@@ -2378,6 +2883,9 @@ auxl.kayKitCabinetSmallDecorated = auxl.Core(auxl.kayKitCabinetSmallDecoratedDat
 auxl.kayKitCactusMediumAData = {
 	data:'kayKitCactusMediumAData',
 	id:'kayKitCactusMediumA',
+	sounds:{
+		interact: {src: auxl.drop1, autoplay: false, loop: false, volume: 0.5, on: 'mousedown'},
+	},
 	position: new THREE.Vector3(),
 	rotation: new THREE.Vector3(),
 	scale: new THREE.Vector3(1,1,1),
@@ -2441,6 +2949,9 @@ auxl.kayKitRugOvalA = auxl.Core(auxl.kayKitRugOvalAData);
 auxl.kayKitShelfBLargeDecoratedData = {
 	data:'kayKitShelfBLargeDecoratedData',
 	id:'kayKitShelfBLargeDecorated',
+	sounds:{
+		interact: {src: auxl.drop1, autoplay: false, loop: false, volume: 0.5, on: 'mousedown'},
+	},
 	position: new THREE.Vector3(-1.5,1.5,-6),
 	rotation: new THREE.Vector3(0,0,0),
 	scale: new THREE.Vector3(1,1,1),
@@ -2565,6 +3076,7 @@ auxl.Room2TrapSetup = () => {
 			auxl.spookyRoom2South.EmitEvent('trap');
 			auxl.spookyRoom2West.EmitEvent('trap');
 			auxl.spookyRoom2East.EmitEvent('trap');
+			auxl.playerAudio.EmitEvent('trap');
 			clearTimeout(timeout2);
 		}, 1000);
 		//Clear Furniture
@@ -2585,6 +3097,7 @@ auxl.Room2TrapSetup = () => {
 		}, 6700);
 		//Fall
 		let timeout4 = setTimeout(() => {
+			auxl.playerAudio.EmitEvent('trapdoor');
 			auxl.spookyRoom2Floor.EmitEvent('fall');
 			auxl.spookyRoom2Ceiling.EmitEvent('fall');
 			auxl.spookyRoom2North.EmitEvent('fall');
@@ -2595,23 +3108,31 @@ auxl.Room2TrapSetup = () => {
 			clearTimeout(timeout4);
 		}, 7750);
 		//Blood
+		let timeoutHit = setTimeout(() => {
+			auxl.playerAudio.EmitEvent('juicyimpact');
+			clearTimeout(timeoutHit);
+		}, 22500);
+		//Blood
 		let timeout5 = setTimeout(() => {
 			auxl.spookyRoom2Blood1.SpawnCore();
 			auxl.spookyRoom2Blood2.SpawnCore();
 			auxl.spookyRoom2Blood3.SpawnCore();
 			auxl.spookyRoom2Blood4.SpawnCore();
 			clearTimeout(timeout5);
-		}, 23500);
+		}, 23300);
 		//Move
 		let timeout6 = setTimeout(() => {
+			auxl.playerAudio.EmitEvent('respawn');
 			auxl.spookyZone.Move('connect0'),
 			clearTimeout(timeout6);
 		}, 30000);
 		//End
 		let timeout7 = setTimeout(() => {
-			auxl.player.UpdatePlayerPosition(new THREE.Vector3(0,0,0));
+			auxl.player.UpdatePlayerPosition(new THREE.Vector3(-13,0,1.25));
+			auxl.player.TwistTo(270);
 			auxl.player.UnlockLocomotion();
 			auxl.player.EnableClick();
+			auxl.exteriorToRoom2.SetFlag({flag: 'done', value: true});
 			auxl.spookyRoom2Blood1.DespawnCore();
 			auxl.spookyRoom2Blood2.DespawnCore();
 			auxl.spookyRoom2Blood3.DespawnCore();
@@ -2630,25 +3151,27 @@ auxl.Room2Trap = auxl.Room2TrapSetup();
 auxl.room3ToExteriorDoorData = {
 data:'room3ToExteriorDoorData',
 id:'room3ToExteriorDoor',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 position: new THREE.Vector3(0,0,0),
 gridSize: new THREE.Vector3(2.5,2,0.5),
-grid: {start:{x:-1, y:0, z:5.5}, collide: true},
+grid: {start:{x:-1, y:0, z:14}, collide: true},
 rotation: new THREE.Vector3(0,180,0),
 scale: new THREE.Vector3(1.25,1.25,1.25),
 classes: ['clickable','a-ent'],
 components: {
-	['gltf-model']:'./assets/3d/kayKit/doors/door1.glb',
-	doorway:{zone: 'spookyZone', to: 'connect0', posTo: true, pos: new THREE.Vector3(0,0,0), twistTo: true, twist: 0},
+	['gltf-model']:'./assets/3d/kayKit/doors/door2.glb',
+	doorway:{zone: 'spookyZone', to: 'connect0', posTo: true, pos: new THREE.Vector3(-19.5,0,-2), twistTo: true, twist: 270},
 	hovertext:{value: 'Return',  hover: 'top', offset: 1, altOffset: 0.5, twist: true,},
 },
 };
 auxl.room3ToExteriorDoor = auxl.Core(auxl.room3ToExteriorDoorData);
 
 //Exterior Darkness
-auxl.spookyRoom2ExtData = {
-	data:'spookyRoom2ExtData',
-	id:'spookyRoom2Ext',
-	//geometry: {primitive: 'box', height: 300, width: 300, depth: 300},
+auxl.spookyRoom3ExtData = {
+	data:'spookyRoom3ExtData',
+	id:'spookyRoom3Ext',
 	geometry: {primitive: 'sphere', radius: 150},
 	material: {shader: "standard", color: "#29527b", opacity: 1, side: 'back', roughness: 1},
 	position: new THREE.Vector3(0,0,0),
@@ -2659,15 +3182,11 @@ auxl.spookyRoom2ExtData = {
 	classes: ['a-ent'],
 	components: false,
 };
-auxl.spookyRoom2Ext = auxl.Core(auxl.spookyRoom2ExtData);
+auxl.spookyRoom3Ext = auxl.Core(auxl.spookyRoom3ExtData);
 
 
 //Block Rocks
 //
-
-/*
-gltfmat: {colors:['random', 'random', 'random', 'random', 'random', 'white', 'random', 'random', 'random', 'random'], textures:[false, false, false, false, false, auxl.game1Preview,],}
-*/
 
 //Block 1
 auxl.spookyRoom2Block1Data = {
@@ -2723,7 +3242,7 @@ layout1:[
 	{start:{x:-7, y:0, z:10},},
 	{start:{x:-14, y:5, z:3},},
 	{start:{x:12, y:7, z:-8},},
-	{start:{x:-8, y:15, z:-8},},
+	{start:{x:-13, y:15, z:-8},},
 	{start:{x:-4.5, y:10, z:8},},
 	{start:{x:4.5, y:14, z:15},},
 ],},};
@@ -2737,7 +3256,7 @@ coreData: [
 grids:{
 layout1:[
 	{start:{x:8, y:1, z:-4.5},},
-	{start:{x:-3, y:3, z:-14},},
+	{start:{x:-12, y:7, z:-14},},
 	{start:{x:0, y:15, z:0},},
 	{start:{x:13, y:8, z:-14},},
 	{start:{x:-11, y:2, z:12},},
@@ -2757,7 +3276,7 @@ layout1:[
 	{start:{x:-12, y:12, z:8},},
 	{start:{x:8, y:14, z:8},},
 	{start:{x:-15, y:1, z:-12},},
-	{start:{x:-4.5, y:9, z:-15},},
+	{start:{x:12, y:12, z:-15},},
 ],},};
 auxl.room2Block3Grid = auxl.GridLayout(auxl.room2Block3GridData);
 //Block 4
@@ -2777,7 +3296,7 @@ auxl.block4RingData = {
 	objData: auxl.spookyRoom2Block4Data,
 	total: 50,
 	outerRingRadius: 125,
-	innerRingRadius: 25,
+	innerRingRadius: 35,
 	sameTypeRadius: 5,
 	otherTypeRadius: 1,
 	ranYPos: true,
@@ -2797,27 +3316,204 @@ auxl.block4Ring = auxl.ObjsGenRing(auxl.block4RingData);
 
 //Fauna
 
-//Shark
-auxl.sharkAttackData = {
-	data:'sharkAttackData',
-	id:'sharkAttack',
-	position: new THREE.Vector3(0,6,-15),
-	rotation: new THREE.Vector3(0,180,0),
-	scale: new THREE.Vector3(3,3,3),
+//Sharks
+
+//Shark 1 Parent
+auxl.shark1ParentData = {
+	data:'shark1ParentData',
+	id:'shark1Parent',
+	position: new THREE.Vector3(0,-10,0),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations:{
+		swimming: {property: 'object3D.rotation.y', from: 0, to: 360, dur: 40000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	},
+};
+auxl.shark1Parent = auxl.Core(auxl.shark1ParentData);
+//Shark 1
+auxl.shark1Data = {
+	data:'shark1Data',
+	id:'shark1',
+	position: new THREE.Vector3(0,0,-45),
+	rotation: new THREE.Vector3(0,90,0),
+	scale: new THREE.Vector3(7,7,7),
 	components:{
 		['gltf-model']:'./assets/3d/fauna/Shark-attack.glb',
 		['animation-mixer']: {loop: 'repeat', repetitions: 'Infinity', timeScale: 1, },
 	},
 };
-auxl.sharkAttack = auxl.Core(auxl.sharkAttackData);
+auxl.shark1 = auxl.Core(auxl.shark1Data);
+//Shark 1 Layer
+auxl.shark1LayerData = {
+	parent: {core: auxl.shark1Parent}, 
+	child0: {core: auxl.shark1}, 
+}
+auxl.shark1Layer = auxl.Layer('shark1Layer',auxl.shark1LayerData);
+
+//Shark 2 Parent
+auxl.shark2ParentData = {
+	data:'shark2ParentData',
+	id:'shark2Parent',
+	position: new THREE.Vector3(0,5,0),
+	rotation: new THREE.Vector3(0,570,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations:{
+		swimming: {property: 'object3D.rotation.y', from: 570, to: 210, dur: 30000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	},
+};
+auxl.shark2Parent = auxl.Core(auxl.shark2ParentData);
+//Shark 2
+auxl.shark2Data = {
+	data:'shark2Data',
+	id:'shark2',
+	position: new THREE.Vector3(0,0,-35),
+	rotation: new THREE.Vector3(0,-90,0),
+	scale: new THREE.Vector3(5,5,5),
+	components:{
+		['gltf-model']:'./assets/3d/fauna/Shark-attack.glb',
+		['animation-mixer']: {loop: 'repeat', repetitions: 'Infinity', timeScale: 0.9, },
+	},
+};
+auxl.shark2 = auxl.Core(auxl.shark2Data);
+//Shark 2 Layer
+auxl.shark2LayerData = {
+	parent: {core: auxl.shark2Parent}, 
+	child0: {core: auxl.shark2}, 
+}
+auxl.shark2Layer = auxl.Layer('shark2Layer',auxl.shark2LayerData);
+
+//Shark 3 Parent
+auxl.shark3ParentData = {
+	data:'shark3ParentData',
+	id:'shark3Parent',
+	position: new THREE.Vector3(0,20,0),
+	rotation: new THREE.Vector3(0,135,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations:{
+		swimming: {property: 'object3D.rotation.y', from: 225, to: 585, dur: 35000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	},
+};
+auxl.shark3Parent = auxl.Core(auxl.shark3ParentData);
+//Shark 3
+auxl.shark3Data = {
+	data:'shark3Data',
+	id:'shark3',
+	position: new THREE.Vector3(0,0,-40),
+	rotation: new THREE.Vector3(0,90,0),
+	scale: new THREE.Vector3(6,6,6),
+	components:{
+		['gltf-model']:'./assets/3d/fauna/Shark-attack.glb',
+		['animation-mixer']: {loop: 'repeat', repetitions: 'Infinity', timeScale: 1.1, },
+	},
+};
+auxl.shark3 = auxl.Core(auxl.shark3Data);
+//Shark 3 Layer
+auxl.shark3LayerData = {
+	parent: {core: auxl.shark3Parent}, 
+	child0: {core: auxl.shark3}, 
+}
+auxl.shark3Layer = auxl.Layer('shark3Layer',auxl.shark3LayerData);
+
+//Shark 4 Parent
+auxl.shark4ParentData = {
+	data:'shark4ParentData',
+	id:'shark4Parent',
+	position: new THREE.Vector3(0,0,0),
+	rotation: new THREE.Vector3(0,45,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations:{
+		swimming: {property: 'object3D.rotation.y', from: 45, to: -315, dur: 35000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	},
+};
+auxl.shark4Parent = auxl.Core(auxl.shark4ParentData);
+//Shark 3
+auxl.shark4Data = {
+	data:'shark4Data',
+	id:'shark4',
+	position: new THREE.Vector3(0,0,-55),
+	rotation: new THREE.Vector3(0,-90,0),
+	scale: new THREE.Vector3(8,8,8),
+	components:{
+		['gltf-model']:'./assets/3d/fauna/Shark-attack.glb',
+		['animation-mixer']: {loop: 'repeat', repetitions: 'Infinity', timeScale: 1.1, },
+	},
+};
+auxl.shark4 = auxl.Core(auxl.shark4Data);
+//Shark 3 Layer
+auxl.shark4LayerData = {
+	parent: {core: auxl.shark4Parent}, 
+	child0: {core: auxl.shark4}, 
+}
+auxl.shark4Layer = auxl.Layer('shark4Layer',auxl.shark4LayerData);
+
+
+//Shark Mega Parent
+auxl.sharkMegaParentData = {
+	data:'sharkMegaParentData',
+	id:'sharkMegaParent',
+	position: new THREE.Vector3(0,0,0),
+	rotation: new THREE.Vector3(0,180,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations:{
+		swimming: {property: 'object3D.rotation.y', from: 180, to: 480, dur: 35000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	},
+};
+auxl.sharkMegaParent = auxl.Core(auxl.sharkMegaParentData);
+//Shark Mega
+auxl.sharkMegaData = {
+	data:'sharkMegaData',
+	id:'sharkMega',
+	position: new THREE.Vector3(0,69,-69),
+	rotation: new THREE.Vector3(0,90,0),
+	scale: new THREE.Vector3(22,22,22),
+	components:{
+		['gltf-model']:'./assets/3d/fauna/Shark-attack.glb',
+		['animation-mixer']: {loop: 'repeat', repetitions: 'Infinity', timeScale: 1, },
+	},
+};
+auxl.sharkMega = auxl.Core(auxl.sharkMegaData);
+
+//Shark Mega
+auxl.sharkMegaLayerData = {
+	parent: {core: auxl.sharkMegaParent}, 
+	child0: {core: auxl.sharkMega}, 
+}
+auxl.sharkMegaLayer = auxl.Layer('sharkMegaLayer',auxl.sharkMegaLayerData);
+
+//Shark Attack
+auxl.sharkMegaAttackData = {
+	data:'sharkMegaAttackData',
+	id:'sharkMegaAttack',
+	sounds:{
+		attack: {src: auxl.soundMonster3, autoplay: false, loop: false, volume: 10, on: 'attack'},
+	},
+	position: new THREE.Vector3(0,8.5,-51),
+	rotation: new THREE.Vector3(0,180,0),
+	scale: new THREE.Vector3(26,26,26),
+	animations:{
+		attack: {property: 'object3D.position.z', from: -56, to: -37.5, dur: 3000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	},
+	components:{
+		['gltf-model']:'./assets/3d/fauna/Shark-attack.glb',
+		['animation-mixer']: {loop: 'repeat', repetitions: 'Infinity', timeScale: 1, },
+	},
+};
+auxl.sharkMegaAttack = auxl.Core(auxl.sharkMegaAttackData);
 
 //Squid
 auxl.squidData = {
 	data:'squidData',
 	id:'squid',
-	position: new THREE.Vector3(0,25,-25),
+	sounds:{
+		sing: {src: auxl.soundWhaleCalls1, autoplay: false, loop: false, volume: 30, on: 'sing'},
+	},
+	position: new THREE.Vector3(0,-69,-69),
 	rotation: new THREE.Vector3(),
-	scale: new THREE.Vector3(15,15,15),
+	scale: new THREE.Vector3(38,38,38),
+	animations:{
+		swimming1: {property: 'object3D.position.z', from: -69, to: 69, dur: 60000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+		swimming2: {property: 'object3D.rotation.z', from: 0, to: -360, dur: 60000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	},
 	components:{
 		['gltf-model']:'./assets/3d/fauna/Squid.glb',
 		['animation-mixer']: {loop: 'repeat', repetitions: 'Infinity', timeScale: 0.25, },
@@ -2825,23 +3521,99 @@ auxl.squidData = {
 };
 auxl.squid = auxl.Core(auxl.squidData);
 
+//Flare
+auxl.spookyRoom3FlareData = {
+	data:'spookyRoom3FlareData',
+	id:'spookyRoom3Flare',
+	sounds:{
+		fire: {src: auxl.soundFlareFirework, autoplay: true, loop: false, volume: 1.25,},
+	},
+	geometry: {primitive: 'cylinder', radius: 0.0325, height: 0.3, openEnded: false, segmentsHeight: 2, segmentsRadial: 8, thetaStart: 0, thetaLength: 360},
+	material: {shader: "standard", color: "#9a254d", opacity: 1, side: 'front', emissive: '#9a254d', emissiveIntensity: 0.05},
+	position: new THREE.Vector3(0,13,-1),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations:{
+		falling: {property: 'object3D.position.y', from: 13, to: 8, dur: 6000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	},
+	classes: ['a-ent'],
+	components: false,
+};
+auxl.spookyRoom3Flare = auxl.Core(auxl.spookyRoom3FlareData);
+//Flare Fire
+auxl.spookyRoom3FlareFireData = {
+	data:'spookyRoom3FlareFireData',
+	id:'spookyRoom3FlareFire',
+	geometry: {primitive: 'sphere', radius: 0.05,},
+	material: {shader: "standard", color: "#e2aa13", opacity: 1, side: 'front', emissive: '#e2aa13', emissiveIntensity: 0},
+	position: new THREE.Vector3(0,0.14,0),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(0.6,2.2,0.6),
+	animations: {
+		flickerstart: {property: 'material.emissiveIntensity', from: 0, to: 1, dur: 500, delay: 300, loop: 'false', dir: 'alternate', easing: 'linear', elasticity: 400, autoplay: true, enabled: true,},
+		flicker1: {property: 'material.emissiveIntensity', from: 1, to: 0, dur: 3500, delay: 0, loop: 'false', dir: 'alternate', easing: 'easeInElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'animationcomplete__flickerstart, animationcomplete__flicker3'},
+		flicker2: {property: 'material.emissiveIntensity', from: 1, to: 0, dur: 750, delay: 0, loop: 'false', dir: 'alternate', easing: 'easeInElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'animationcomplete__flicker1'},
+		flicker3: {property: 'material.emissiveIntensity', from: 1, to: 0, dur: 1750, delay: 0, loop: 'false', dir: 'alternate', easing: 'easeInElastic', elasticity: 400, autoplay: false, enabled: true, startEvents: 'animationcomplete__flicker2'},
+	},
+	classes: ['a-ent'],
+	components: false,
+};
+auxl.spookyRoom3FlareFire = auxl.Core(auxl.spookyRoom3FlareFireData);
+//Flare Light
+auxl.spookyRoom3FlareLightData = {
+	data:'spookyRoom3FlareLightData',
+	id:'spookyRoom3FlareLight',
+	position: new THREE.Vector3(0,0.14,0),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	animations:{
+		flickerstart: {property: 'light.intensity', from: 0, to: 1, dur: 500, delay: 300, loop: 'false', dir: 'alternate', easing: 'linear', elasticity: 400, autoplay: true, enabled: true,},
+		flicker1: {property: 'light.intensity', from: 1.5, to: 0, dur: 3500, delay: 0, loop: 'false', dir: 'alternate', easing: 'easeInElastic', elasticity: 400, autoplay: false, enabled: true,startEvents: 'animationcomplete__flickerstart, animationcomplete__flicker3'},
+		flicker2: {property: 'light.intensity', from: 1.5, to: 0, dur: 750, delay: 0, loop: 'false', dir: 'alternate', easing: 'easeInElastic', elasticity: 400, autoplay: false, enabled: true,startEvents: 'animationcomplete__flicker1'},
+		flicker3: {property: 'light.intensity', from: 1.5, to: 0, dur: 1750, delay: 0, loop: 'false', dir: 'alternate', easing: 'easeInElastic', elasticity: 400, autoplay: false, enabled: true,startEvents: 'animationcomplete__flicker2'},
+	},
+	classes: ['a-ent'],
+	components: {
+	light: {type: 'point', intensity: 0, distance: 15, decay: 2},
+	},
+};
+auxl.spookyRoom3FlareLight = auxl.Core(auxl.spookyRoom3FlareLightData);
 
+//Layer
+auxl.spookyRoom3FlareLayerData = {
+	parent: {core: auxl.spookyRoom3Flare}, 
+	child1: {core: auxl.spookyRoom3FlareFire}, 
+	child0: {core: auxl.spookyRoom3FlareLight}, 
+}
+auxl.spookyRoom3FlareLayer = auxl.Layer('spookyRoom3FlareLayer',auxl.spookyRoom3FlareLayerData);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Ghost
+auxl.spookyGhostLayerData = auxl.layerDataFromTemplate(auxl.ghostLayerData, 'spookyGhostLayer', {position: new THREE.Vector3(10.5,-2,-11.75), rotation: new THREE.Vector3(0,-35,0), scale: new THREE.Vector3(3,3,3),
+animations:{
+	rotate: {property: 'object3D.rotation.y', from: -35, to: -25, dur: 13000, delay: 0, loop: 'true', dir: 'alternate', easing: 'easeInOutSine', elasticity: 400, autoplay: true, enabled: true},
+	hauntstart: {property: 'object3D.position.y', from: -3, to: -3, dur: 1, delay: 7000, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+	haunt1: {property: 'object3D.position.y', from: -3, to: 2, dur: 7000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'animationcomplete__hauntstart, animationcomplete__haunt5'},
+	haunt2: {property: 'object3D.position.z', from: -11.75, to: 12.25, dur: 20000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'animationcomplete__haunt1'},
+	haunt3: {property: 'object3D.position.x', from: 10.5, to: -11.5, dur: 20000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'animationcomplete__haunt1'},
+	haunt4: {property: 'object3D.position.y', from: 2, to: -3, dur: 7000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'animationcomplete__haunt3'},
+	haunt5: {property: 'position', from: '10.5,-2,-11.75', to: '10.5,-2,-11.75', dur: 1, delay: 7000, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'animationcomplete__haunt4'},
+},
+}, false, true);
+auxl.spookyGhostLayerData.child0.child3.parent.core.core.material.color = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.parent.core.core.material.emissive = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child0.core.core.material.color = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child0.core.core.material.emissive = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child1.core.core.material.color = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child1.core.core.material.emissive = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child2.core.core.material.color = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child2.core.core.material.emissive = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child3.core.core.material.color = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child3.core.core.material.emissive = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child4.core.core.material.color = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child4.core.core.material.emissive = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child5.core.core.material.color = '#eeb63d'
+auxl.spookyGhostLayerData.child0.child3.child5.core.core.material.emissive = '#eeb63d'
+auxl.spookyGhostLayer = auxl.Layer('spookyGhostLayer', auxl.spookyGhostLayerData);
 
 //
 //Entrance & Floor 1
@@ -2918,6 +3690,9 @@ auxl.skyBox1 = auxl.SkyBox(auxl.skyBox1Data);
 auxl.entranceToFloor1Data = {
 data:'entranceToFloor1Data',
 id:'entranceToFloor1',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 sources: false,
 text: false,
 geometry: {primitive: 'box', depth: 1, width: 3, height: 4},
@@ -2939,6 +3714,9 @@ auxl.entranceToFloor1 = auxl.Core(auxl.entranceToFloor1Data);
 auxl.floor1ToEntranceData = {
 data:'floor1ToEntranceData',
 id:'floor1ToEntrance',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 sources: false,
 text: false,
 geometry: {primitive: 'box', depth: 1, width: 3, height: 4},
@@ -2960,6 +3738,9 @@ auxl.floor1ToEntrance = auxl.Core(auxl.floor1ToEntranceData);
 auxl.entranceToSpookyData = {
 data:'entranceToSpookyData',
 id:'entranceToSpooky',
+sounds:{
+	open: {src: auxl.soundDoorOpen, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
+},
 gridSize: new THREE.Vector3(3,0,0.5),
 grid: {start:{x:4.5, y:0, z:-13}, yOffset: 0, collide: true},
 //position: new THREE.Vector3(3,2,-13),
@@ -2974,6 +3755,9 @@ components: {
 },
 };
 auxl.entranceToSpooky = auxl.Core(auxl.entranceToSpookyData);
+//auxl.entranceToSpookyEmote = auxl.InfoBubble('entranceToSpookyEmote', auxl.entranceToSpooky, 3, 'orange');
+
+
 
 //Materials
 auxl.floorPattern1 = './assets/img/tiles/xrcade/1.jpg';
@@ -3380,9 +4164,6 @@ auxl.InnerPilar4 = auxl.Core(auxl.InnerPilar4Data);
 //
 //Dividers
 
-//Divider North, East, South & West
-
-
 //Divider
 auxl.dividerData = {
 	data:'dividerData',
@@ -3412,12 +4193,8 @@ auxl.dividerNorth = auxl.Core(auxl.dividerNorthData);
 auxl.dividerSouthData = auxl.coreDataFromTemplate(auxl.dividerData, {id: 'dividerSouth', grid: {start:{x:-3, y:0, z:-3.5}, end: {x:3, y:0, z:-3}, yOffset: 0.75, collide: true}, geometry: {primitive: 'box', height: 1.5, width: 6, depth: 1},}, true);
 auxl.dividerSouth = auxl.Core(auxl.dividerSouthData);
 
-
 //
-//Elevator
-//Elevator at South wall
-
-//Doorway
+//Elevator Soon
 
 
 //Jukebox
@@ -3853,8 +4630,8 @@ auxl.cadeCabData = {
 	id:'cadeCab',
 	sources: false,
 	text: false,
-	sounds: {
-		click: {src: auxl.drop1, autoplay: false, loop: false, volume: 1, on: 'click'},
+	sounds:{
+		click: {src: auxl.drop1, autoplay: false, loop: false, volume: 1, on: 'mousedown'},
 	},
 	geometry: false,
 	material: false,
@@ -4520,10 +5297,10 @@ auxl.addToMainMenu = {
 		description: 'Toggle background audio',
 		subMenu: false,
 		action: {
-			auxlObj: 'player',
+			auxlObj: 'auxl',
 			component: false,
 			method: 'ToggleBackgroundAudio',
-			params: 'null',
+			params: '',
 			menu: 'stay',
 		},
 	},
@@ -4884,9 +5661,31 @@ auxl.WeatherControls = () => {
 
 	return {weather, SpawnWeather, DespawnWeather}
 }
-
 auxl.atmos = auxl.WeatherControls();
 
+
+
+
+//New
+/*
+auxl.emoticonTesting = auxl.InfoBubble('emoticonTesting', auxl.coreEventTesting, false, 'yellow');
+auxl.emoticonTesting.NewBubble({
+emote: true,
+text: '$_$',
+eventName: 'emote10',
+rotation: false,
+});
+auxl.emoticonTesting.NewBubble({
+alert: true,
+text: '$_$',
+eventName: 'alert10',
+rotation: false,
+});
+
+auxl.emoticonTesting = auxl.InfoBubble('emoticonTesting', auxl.coreEventTesting, false, 'yellow');
+coreEventTesting:{EmitEvent:'alert1'},
+
+*/
 
 //#rebuild
 //Build Scene Library Objects - Re-add all objGen declerations
@@ -4977,6 +5776,157 @@ auxl.buildSceneLibrary = () => {
 	//Cab 12
 	auxl.cadeCab12Layer = auxl.layerFromTemplate(auxl.cabLayer, 'cadeCab12Layer', {rotation: new THREE.Vector3(0,-90,0)}, {grid: {start:{x:4, y:0, z:-7.5}, end: {x:5.5, y:0, z:-6}, yOffset: 0, collide: true}}, true);
 
+	//Spooky
+	auxl.skyGradSpooky = auxl.Core(auxl.skyGradSpookyData);
+	auxl.moonEyes = auxl.Core(auxl.moonEyesData);
+	auxl.skyBoxSpooky = auxl.SkyBox(auxl.skyBoxSpookyData);
+	auxl.SpookySkyBoxSpawnFix = auxl.SkyBoxSpawnFix();
+	auxl.spookyToEntrance = auxl.Core(auxl.spookyToEntranceData);
+	auxl.spookyToExterior = auxl.Core(auxl.spookyToExteriorData);
+	auxl.spookyToExteriorEmote = auxl.InfoBubble('spookyToExteriorEmote', auxl.spookyToExterior, 3, 'orange');
+	auxl.spookyToExteriorBlock = auxl.Core(auxl.spookyToExteriorBlockData);
+	auxl.exteriorToSpooky = auxl.Core(auxl.exteriorToSpookyData);
+	auxl.exteriorToSpookyEmote = auxl.InfoBubble('exteriorToSpookyEmote', auxl.exteriorToSpooky, 3, 'orange');
+	auxl.exteriorRoom0Block = auxl.Core(auxl.exteriorRoom0BlockData);
+	auxl.exteriorToRoom1 = auxl.Core(auxl.exteriorToRoom1Data);
+	auxl.exteriorToRoom1Emote = auxl.InfoBubble('exteriorToRoom1Emote', auxl.exteriorToRoom1, 3, 'yellow');
+	auxl.exteriorRoom1Block = auxl.Core(auxl.exteriorRoom1BlockData);
+	auxl.exteriorToRoom2 = auxl.Core(auxl.exteriorToRoom2Data);
+	auxl.exteriorToRoom2Emote = auxl.InfoBubble('exteriorToRoom2Emote', auxl.exteriorToRoom2, 3, 'orange');
+	auxl.exteriorRoom2Block = auxl.Core(auxl.exteriorRoom2BlockData);
+	auxl.exteriorToRoom3 = auxl.Core(auxl.exteriorToRoom3Data);
+	auxl.exteriorToRoom3Emote = auxl.InfoBubble('exteriorToRoom3Emote', auxl.exteriorToRoom3, 3, 'red');
+	auxl.exteriorRoom3Block = auxl.Core(auxl.exteriorRoom3BlockData);
+	auxl.jackoSign = auxl.Core(auxl.jackoSignData);
+	auxl.ghostSign = auxl.Core(auxl.ghostSignData);
+	auxl.batsSign = auxl.Core(auxl.batsSignData);
+	auxl.spookyFloor = auxl.Core(auxl.spookyFloorData);
+	auxl.spookyHills = auxl.Horizon(auxl.spookyHillsData);
+	auxl.hallowGridDoors = auxl.GridLayout(auxl.hallowGridDoorsData);
+	auxl.hallowGridFencesX = auxl.GridLayout(auxl.hallowGridFencesXData);
+	auxl.hallowGridFencesZ = auxl.GridLayout(auxl.hallowGridFencesZData);
+	auxl.hallowGridGraves = auxl.GridLayout(auxl.hallowGridGravesData);
+	auxl.hallowGridGravesAlt = auxl.GridLayout(auxl.hallowGridGravesAltData);
+	auxl.hallowGridAltGraves = auxl.GridLayout(auxl.hallowGridAltGravesData);
+	auxl.hallowGridTrees = auxl.GridLayout(auxl.hallowGridTreesData);
+	auxl.hallowGridSkullTrees = auxl.GridLayout(auxl.hallowGridSkullTreesData);
+	auxl.hallowGridDeco = auxl.GridLayout(auxl.hallowGridDecoData);
+	auxl.hallowGridJackos = auxl.GridLayout(auxl.hallowGridJackosData);
+	auxl.hallowGridTallDeco = auxl.GridLayout(auxl.hallowGridTallDecoData);
+	auxl.spookyBenchDecorated1 = auxl.Core(auxl.spookyBenchDecorated1Data);
+	auxl.spookyBenchDecorated2 = auxl.Core(auxl.spookyBenchDecorated2Data);
+	auxl.spookyBenchDecorated3 = auxl.Core(auxl.spookyBenchDecorated3Data);
+	auxl.spookyBenchDecorated4 = auxl.Core(auxl.spookyBenchDecorated4Data);
+	auxl.treeRing1 = auxl.ObjsGenRing(auxl.treeRing1Data);
+	auxl.treeRing2 = auxl.ObjsGenRing(auxl.treeRing2Data);
+	auxl.treeRing3 = auxl.ObjsGenRing(auxl.treeRing3Data);
+	auxl.treeRing4 = auxl.ObjsGenRing(auxl.treeRing4Data);
+	auxl.treeRing5 = auxl.ObjsGenRing(auxl.treeRing5Data);
+	auxl.treeRing6 = auxl.ObjsGenRing(auxl.treeRing6Data);
+	auxl.innerRing1 = auxl.ObjsGenRing(auxl.innerRing1Data);
+	auxl.innerRing2 = auxl.ObjsGenRing(auxl.innerRing2Data);
+	auxl.innerRing3 = auxl.ObjsGenRing(auxl.innerRing3Data);
+	auxl.innerRing4 = auxl.ObjsGenRing(auxl.innerRing4Data);
+	auxl.spookyRoom1Ext = auxl.Core(auxl.spookyRoom1ExtData);
+	auxl.room1ToExterior = auxl.Core(auxl.room1ToExteriorData);
+	auxl.room1ToRoom1Alt = auxl.Core(auxl.room1ToRoom1AltData);
+	auxl.spookyRoom1AltBlock = auxl.Core(auxl.spookyRoom1AltBlockData);
+	auxl.spookyRoom1Floor = auxl.Core(auxl.spookyRoom1FloorData);
+	auxl.spookyRoom1AltFloor = auxl.Core(auxl.spookyRoom1AltFloorData);
+	auxl.spookyRoom1Ceiling = auxl.Core(auxl.spookyRoom1CeilingData);
+	auxl.spookyRoom1AltCeiling = auxl.Core(auxl.spookyRoom1AltCeilingData);
+	auxl.spookyRoom1Wall0 = auxl.Core(auxl.spookyRoom1Wall0Data);
+	auxl.spookyRoom1Wall1 = auxl.Core(auxl.spookyRoom1Wall1Data);
+	auxl.spookyRoom1Wall2 = auxl.Core(auxl.spookyRoom1Wall2Data);
+	auxl.spookyRoom1Wall3 = auxl.Core(auxl.spookyRoom1Wall3Data);
+	auxl.room1AltHorizon = auxl.Horizon(auxl.room1AltHorizonData);
+	auxl.spookyRoom1Rug = auxl.Core(auxl.spookyRoom1RugData);
+	auxl.room1Door1 = auxl.Core(auxl.room1Door1Data);
+	auxl.room1Door2 = auxl.Core(auxl.room1Door2Data);
+	auxl.room1Door3 = auxl.Core(auxl.room1Door3Data);
+	auxl.room1Door4 = auxl.Core(auxl.room1Door4Data);
+	auxl.room1Door5 = auxl.Core(auxl.room1Door5Data);
+	auxl.room1Door6 = auxl.Core(auxl.room1Door6Data);
+	auxl.room1Door7 = auxl.Core(auxl.room1Door7Data);
+	auxl.room1AltDoor = auxl.Core(auxl.room1AltDoorData);
+	auxl.room1TablesGrid = auxl.GridLayout(auxl.room1TablesGridData);
+	auxl.spookyRoom1Painting1 = auxl.Core(auxl.spookyRoom1Painting1Data);
+	auxl.spookyRoom1Painting2 = auxl.Core(auxl.spookyRoom1Painting2Data);
+	auxl.spookyRoom1Painting3 = auxl.Core(auxl.spookyRoom1Painting3Data);
+	auxl.spookyRoom1Painting4 = auxl.Core(auxl.spookyRoom1Painting4Data);
+	auxl.spookyRoom1Painting5 = auxl.Core(auxl.spookyRoom1Painting5Data);
+	auxl.spookyRoom1Painting6 = auxl.Core(auxl.spookyRoom1Painting6Data);
+	auxl.spookyRoom1Painting7 = auxl.Core(auxl.spookyRoom1Painting7Data);
+	auxl.spookyRoom1Painting8 = auxl.Core(auxl.spookyRoom1Painting8Data);
+	auxl.spookyRoom1Painting9 = auxl.Core(auxl.spookyRoom1Painting9Data);
+	auxl.spookyRoom1Painting10 = auxl.Core(auxl.spookyRoom1Painting10Data);
+	auxl.spookyRoom1Painting11 = auxl.Core(auxl.spookyRoom1Painting11Data);
+	auxl.spookyRoom1Painting12 = auxl.Core(auxl.spookyRoom1Painting12Data);
+	auxl.spookyRoom1Painting13 = auxl.Core(auxl.spookyRoom1Painting13Data);
+	auxl.spookyRoom1Jump1 = auxl.Core(auxl.spookyRoom1Jump1Data);
+	auxl.spookyRoom1Light1 = auxl.Core(auxl.spookyRoom1Light1Data);
+	auxl.spookyRoom1Light0 = auxl.Core(auxl.spookyRoom1Light0Data);
+	auxl.spookyRoom1Light2 = auxl.Core(auxl.spookyRoom1Light2Data);
+	auxl.spookyRoom1Light3 = auxl.Core(auxl.spookyRoom1Light3Data);
+	auxl.spookyRoom1Light4 = auxl.Core(auxl.spookyRoom1Light4Data);
+	auxl.spookyRoom1Light5 = auxl.Core(auxl.spookyRoom1Light5Data);
+	auxl.spookyRoom1Light6 = auxl.Core(auxl.spookyRoom1Light6Data);
+	auxl.spookyRoom1Light7 = auxl.Core(auxl.spookyRoom1Light7Data);
+	auxl.spookyRoom1Light2Trigger = auxl.Core(auxl.spookyRoom1Light2TriggerData);
+	auxl.spookyRoom1Light4Trigger = auxl.Core(auxl.spookyRoom1Light4TriggerData);
+	auxl.spookyRoom2Ext = auxl.Core(auxl.spookyRoom2ExtData);
+	auxl.spookyRoom2Floor = auxl.Core(auxl.spookyRoom2FloorData);
+	auxl.spookyRoom2Ceiling = auxl.Core(auxl.spookyRoom2CeilingData);
+	auxl.spookyRoom2North = auxl.Core(auxl.spookyRoom2NorthData);
+	auxl.spookyRoom2South = auxl.Core(auxl.spookyRoom2SouthData);
+	auxl.spookyRoom2West = auxl.Core(auxl.spookyRoom2WestData);
+	auxl.spookyRoom2East = auxl.Core(auxl.spookyRoom2EastData);
+	auxl.spookyRoom2Basement = auxl.Core(auxl.spookyRoom2BasementData);
+	auxl.room2ToExteriorDoor = auxl.Core(auxl.room2ToExteriorDoorData);
+	auxl.kayKitArmchairPillows = auxl.Core(auxl.kayKitArmchairPillowsData);
+	auxl.kayKitBedSingleA = auxl.Core(auxl.kayKitBedSingleAData);
+	auxl.kayKitCabinetMediumDecorated = auxl.Core(auxl.kayKitCabinetMediumDecoratedData);
+	auxl.kayKitCabinetSmall = auxl.Core(auxl.kayKitCabinetSmallData);
+	auxl.kayKitCabinetSmallDecorated = auxl.Core(auxl.kayKitCabinetSmallDecoratedData);
+	auxl.kayKitCactusMediumA = auxl.Core(auxl.kayKitCactusMediumAData);
+	auxl.kayKitChairStool = auxl.Core(auxl.kayKitChairStoolData);
+	auxl.kayKitLampStanding = auxl.Core(auxl.kayKitLampStandingData);
+	auxl.kayKitRugOvalA = auxl.Core(auxl.kayKitRugOvalAData);
+	auxl.kayKitShelfBLargeDecorated = auxl.Core(auxl.kayKitShelfBLargeDecoratedData);
+	auxl.grid2x05 = auxl.Core(auxl.grid2x05Data);
+	auxl.spookyRoom2Blood1 = auxl.Core(auxl.spookyRoom2Blood1Data);
+	auxl.spookyRoom2Blood2 = auxl.Core(auxl.spookyRoom2Blood2Data);
+	auxl.spookyRoom2Blood3 = auxl.Core(auxl.spookyRoom2Blood3Data);
+	auxl.spookyRoom2Blood4 = auxl.Core(auxl.spookyRoom2Blood4Data);
+	auxl.Room2Trap = auxl.Room2TrapSetup();
+	auxl.room3ToExteriorDoor = auxl.Core(auxl.room3ToExteriorDoorData);
+	auxl.spookyRoom3Ext = auxl.Core(auxl.spookyRoom3ExtData);
+	auxl.room2Block1Grid = auxl.GridLayout(auxl.room2Block1GridData);
+	auxl.room2Block2Grid = auxl.GridLayout(auxl.room2Block2GridData);
+	auxl.room2Block3Grid = auxl.GridLayout(auxl.room2Block3GridData);
+	auxl.block4Ring = auxl.ObjsGenRing(auxl.block4RingData);
+	auxl.shark1Parent = auxl.Core(auxl.shark1ParentData);
+	auxl.shark1 = auxl.Core(auxl.shark1Data);
+	auxl.shark1Layer = auxl.Layer('shark1Layer',auxl.shark1LayerData);
+	auxl.shark2Parent = auxl.Core(auxl.shark2ParentData);
+	auxl.shark2 = auxl.Core(auxl.shark2Data);
+	auxl.shark2Layer = auxl.Layer('shark2Layer',auxl.shark2LayerData);
+	auxl.shark3Parent = auxl.Core(auxl.shark3ParentData);
+	auxl.shark3 = auxl.Core(auxl.shark3Data);
+	auxl.shark3Layer = auxl.Layer('shark3Layer',auxl.shark3LayerData);
+	auxl.shark4Parent = auxl.Core(auxl.shark4ParentData);
+	auxl.shark4 = auxl.Core(auxl.shark4Data);
+	auxl.shark4Layer = auxl.Layer('shark4Layer',auxl.shark4LayerData);
+	auxl.sharkMegaParent = auxl.Core(auxl.sharkMegaParentData);
+	auxl.sharkMega = auxl.Core(auxl.sharkMegaData);
+	auxl.sharkMegaLayer = auxl.Layer('sharkMegaLayer',auxl.sharkMegaLayerData);
+	auxl.sharkMegaAttack = auxl.Core(auxl.sharkMegaAttackData);
+	auxl.squid = auxl.Core(auxl.squidData);
+	auxl.spookyRoom3Flare = auxl.Core(auxl.spookyRoom3FlareData);
+	auxl.spookyRoom3FlareFire = auxl.Core(auxl.spookyRoom3FlareFireData);
+	auxl.spookyRoom3FlareLight = auxl.Core(auxl.spookyRoom3FlareLightData);
+	auxl.spookyRoom3FlareLayer = auxl.Layer('spookyRoom3FlareLayer',auxl.spookyRoom3FlareLayerData);
+	auxl.spookyGhostLayer = auxl.Layer('spookyGhostLayer', auxl.spookyGhostLayerData);
 }
 auxl.toBeRebuilt('buildSceneLibrary');
 
@@ -5003,10 +5953,17 @@ auxl.entranceZoneData = {
 		zoneNum: 0,
 		start: 'entranceHome',
 		travelMenu: false,
+		backgroundAudio: 'town3',
 	},
 	controls:{
 	},
 	start:{
+		mintyWorld:{IfElse: {auxl:{cond: 'backgroundAudio',
+		ifTrue: {
+			mintyWorld:{MusicPlaylist: 'town3',},
+		},ifFalse: {
+			player:{Notification: 'fail',},
+		},}}},
 		skyBox1:{SpawnSkyBox: null},
 		player:{UpdatePlayerPosition: new THREE.Vector3(0,0,-1), TwistTo: 0},
 	},
@@ -5045,6 +6002,8 @@ auxl.entranceHomeData = {
 	controls:{
 	},
 	start:{
+		//Billboard Ad
+		sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
 		//Bug workaround to ensure game menus are removed
 		allGameMenus:{DespawnAllGameMenus:null},
 		//Attendant
@@ -5101,8 +6060,6 @@ auxl.entranceHomeData = {
 		//Mini Menus
 		jukeBox:{SpawnCoreOnGrid:null},
 		token:{SpawnCoreOnGrid:null},
-		//Billboard Ad
-		sponsor1:{SpawnCore:null},
 		//XRCade Sign
 		cadeSignSpinner:{SpawnLayer:null},
 		//North Wall
@@ -5128,6 +6085,9 @@ auxl.entranceHomeData = {
 		seWallPilarLineNorth:{ChangeCore:{property: 'components', value: {['gltf-model']:'./assets/3d/XRcade/line.glb', gltfmat: {colors: '#05aaf4, #eddd23', emissives: '1,1'},},}, SpawnCore:null,},
 	},
 	delay:{
+		1000:{
+			entranceToSpooky:{EmitEvent:'alert1'},
+		},
 	},
 	interval:{
 	},
@@ -5154,6 +6114,7 @@ auxl.xrcadeZoneData = {
 		zoneNum: 1,
 		start: 'xrcadeHome',
 		travelMenu: false,
+		backgroundAudio: 'town3',
 	},
 	controls:{
 	},
@@ -5196,6 +6157,8 @@ auxl.xrcadeHomeData = {
 	controls:{
 	},
 	start:{
+		//Billboard Ad
+		sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
 		//Doorway
 		floor1ToEntrance:{SpawnCore:null},
 		//Floor
@@ -5246,8 +6209,6 @@ auxl.xrcadeHomeData = {
 		//Mini Menus
 		jukeBox:{SpawnCoreOnGrid:null},
 		token:{SpawnCoreOnGrid:null},
-		//Billboard Ad
-		sponsor1:{SpawnCore:null},
 		//XRCade Sign
 		cadeSignSpinner:{SpawnLayer:null},
 		//North Wall
@@ -5746,6 +6707,7 @@ auxl.spookyZoneData = {
 		zoneNum: 0,
 		start: 'spookyHome',
 		travelMenu: false,
+		backgroundAudio: 'spookymusic1',
 	},
 	controls:{
 	},
@@ -5786,10 +6748,12 @@ auxl.spookyHomeData = {
 	controls:{
 	},
 	start:{
+		//Billboard Ad
+		sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
 		//Doorway
 		spookyToEntrance:{SpawnCore:null},
-		//spookyToExterior:{SpawnCore:null},
 		spookyToExterior:{SpawnCoreOnGrid:null},
+		spookyToExteriorBlock:{SpawnCore:null},
 		//Floor
 		floor:{SpawnCore:null},
 		carpetChange1:{SpawnCore:null},
@@ -5838,8 +6802,6 @@ auxl.spookyHomeData = {
 		//Mini Menus
 		jukeBox:{SpawnCoreOnGrid:null},
 		token:{SpawnCoreOnGrid:null},
-		//Billboard Ad
-		sponsor1:{SpawnCore:null},
 		//XRCade Sign
 		cadeSignSpinner:{SpawnLayer:null},
 		//North Wall
@@ -5866,6 +6828,18 @@ auxl.spookyHomeData = {
 
 	},
 	delay:{
+		1000:{
+/*
+		mintyWorld:{IfElse: {auxl:{cond: 'backgroundAudio',
+		ifTrue: {
+			mintyWorld:{MusicPlaylist: 'town3',},
+		},ifFalse: {
+			player:{Notification: 'fail',},
+		},}}},
+
+*/
+			spookyToExterior:{EmitEvent:'alert1'},
+		},
 	},
 	interval:{
 	},
@@ -5899,33 +6873,43 @@ auxl.spookyExtData = {
 	controls:{
 	},
 	start:{
+
+		//Billboard Ad
+		sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-1.75,8,22)}},
 		//Disable Flashlight
 		player:{ToggleFlashlight:{off:true},},
 		//Doors
 		exteriorToSpooky:{SpawnCoreOnGrid:null},
-		//exteriorToRoom1:{SpawnCoreOnGrid:null},
-		//exteriorToRoom2:{SpawnCoreOnGrid:null},
-		//exteriorToRoom3:{SpawnCoreOnGrid:null},
+		exteriorToRoom1:{SpawnCoreOnGrid:null},
+		exteriorToRoom2:{SpawnCoreOnGrid:null},
+		exteriorToRoom3:{SpawnCoreOnGrid:null},
+		exteriorRoom0Block:{SpawnCore:null},
+		exteriorRoom1Block:{SpawnCore:null},
+		exteriorRoom2Block:{SpawnCore:null},
+		exteriorRoom3Block:{SpawnCore:null},
 		//Horizon
 		spookyHills:{SpawnHorizon:null},
 		//Floor
 		spookyFloor:{SpawnCore:null},
-		//Fence
-		//kayKitFence:{SpawnCoreOnGrid:null},
-		//kayKitFenceBroken:{SpawnCoreOnGrid:null},
-		//kayKitFenceGate:{SpawnCoreOnGrid:null},
-		//kayKitFencePillar:{SpawnCoreOnGrid:null},
-		//kayKitFencePillarBroken:{SpawnCoreOnGrid:null},
-
-		//Grid Layouts
-		hallowGridDoors:{SpawnGridLayout:'layout1'},
-		hallowGridFences:{SpawnGridLayout:'layout1'},
+		//Grids
+		kayKitArch:{SpawnCore:null},
+		hallowGridFencesX:{SpawnGridLayout:'layout1'},
+		hallowGridFencesZ:{SpawnGridLayout:'layout1'},
+		kayKitArchGate:{SpawnCoreOnGrid:null},
+		kayKitArchGateX1:{SpawnCoreOnGrid:null},
+		kayKitArchGateX2:{SpawnCoreOnGrid:null},
 		hallowGridGraves:{SpawnGridLayout:'layout1'},
+		hallowGridGravesAlt:{SpawnGridLayout:'layout1'},
 		hallowGridAltGraves:{SpawnGridLayout:'layout1'},
 		hallowGridTrees:{SpawnGridLayout:'layout1'},
+		hallowGridSkullTrees:{SpawnGridLayout:'layout1'},
 		hallowGridDeco:{SpawnGridLayout:'layout1'},
+		hallowGridJackos:{SpawnGridLayout:'layout1'},
 		hallowGridTallDeco:{SpawnGridLayout:'layout1'},
-
+		spookyBenchDecorated1:{SpawnCoreOnGrid:null},
+		spookyBenchDecorated2:{SpawnCoreOnGrid:null},
+		spookyBenchDecorated3:{SpawnCoreOnGrid:null},
+		spookyBenchDecorated4:{SpawnCoreOnGrid:null},
 		//Outer Ring
 		treeRing1:{SpawnObjRing:null},
 		treeRing2:{SpawnObjRing:null},
@@ -5938,12 +6922,30 @@ auxl.spookyExtData = {
 		innerRing2:{SpawnObjRing:null},
 		innerRing3:{SpawnObjRing:null},
 		innerRing4:{SpawnObjRing:null},
-
+		//Ghost
+		spookyGhostLayer:{SpawnLayer:null, ChangeAll:{property: 'material', value: {opacity: 0.5}}}
 	},
 	delay:{
 		250:{
-			//Weather
 			atmos:{SpawnWeather:null},
+		},
+		1000:{
+			exteriorToRoom1:{IfElse: {exteriorToRoom1:{cond: 'done',
+			ifTrue: {},ifFalse: {
+				exteriorToRoom1:{EmitEvent:'alert1'},
+			},}}},
+		},
+		2000:{
+			exteriorToRoom2:{IfElse: {exteriorToRoom2:{cond: 'done',
+			ifTrue: {},ifFalse: {
+				exteriorToRoom2:{EmitEvent:'alert1'},
+			},}}},
+		},
+		3000:{
+			exteriorToRoom3:{IfElse: {exteriorToRoom3:{cond: 'done',
+			ifTrue: {},ifFalse: {
+				exteriorToRoom3:{EmitEvent:'alert1'},
+			},}}},
 		},
 	},
 	interval:{
@@ -5967,7 +6969,7 @@ auxl.spookyRoom1Data = {
 		name: 'Room 1',
 		description: 'Spooky room 1.',
 		sceneText: false,
-		fog: false,
+		fog: {type: 'exponential', color: '#000', density: 0.025},
 		map: {
 			size: 240,
 			height: {top: 0, bottom: 0},
@@ -5989,6 +6991,7 @@ auxl.spookyRoom1Data = {
 		//Doors
 		room1ToExterior:{SpawnCoreOnGrid:null},
 		room1ToRoom1Alt:{SpawnCoreOnGrid:null},
+		spookyRoom1AltBlock:{SpawnCore:null},
 		room1Door1:{SpawnCoreOnGrid:null},
 		room1Door2:{SpawnCoreOnGrid:null},
 		room1Door3:{SpawnCoreOnGrid:null},
@@ -6088,7 +7091,7 @@ auxl.spookyRoom1AltData = {
 			//Disable Flashlight
 			player:{ToggleFlashlight:{off:true},},
 		},
-		5995:{
+		5900:{
 			//Move Jump Scare
 			spookyRoom1Jump1:{EmitEvent: 'jump'},
 		},
@@ -6096,13 +7099,15 @@ auxl.spookyRoom1AltData = {
 			//Enable Flashlight
 			player:{ToggleFlashlight:{on:true},},
 		},
-		7000:{
+		8000:{
 			//Reload Skybox
 			SpookySkyBoxSpawnFix:{Fix: null},
 			//Move Back to Hallows
 			spookyZone:{Move: 'connect1'},
-			player:{ToggleFlashlight:{off:true}, UpdatePlayerPosition: new THREE.Vector3(0,0,0), TwistTo: 0},
-
+			player:{ToggleFlashlight:{off:true}, UpdatePlayerPosition: new THREE.Vector3(4.75,0,2), TwistTo: 0,},
+			playerAudio:{EmitEvent: 'respawn'},
+			//Completed
+			exteriorToRoom1:{SetFlag:{flag: 'done', value: true}},
 		},
 	},
 	interval:{
@@ -6126,7 +7131,7 @@ auxl.spookyRoom2Data = {
 		name: 'Room 2',
 		description: 'Spooky room 2.',
 		sceneText: false,
-		fog: false,
+		fog: {type: 'exponential', color: '#000', density: 0.025},
 		map: {
 			size: 24,
 			height: {top: 2, bottom: 0},
@@ -6141,7 +7146,8 @@ auxl.spookyRoom2Data = {
 	start:{
 		//Door
 		room2ToExteriorDoor:{SpawnCoreOnGrid:null},
-		//Floor, Ceiling & Walls
+		//Exterior, Floor, Ceiling & Walls
+		spookyRoom2Ext:{SpawnCore:null},
 		spookyRoom2Floor:{SpawnCore:null},
 		spookyRoom2Ceiling:{SpawnCore:null},
 		spookyRoom2North:{SpawnCore:null},
@@ -6187,7 +7193,6 @@ auxl.spookyRoom3Data = {
 		name: 'Room 3',
 		description: 'Spooky room 3.',
 		sceneText: false,
-		//fog: {type: 'exponential', color: '#375183', density: 0.025},
 		fog: {type: 'exponential', color: '#000', density: 0.025},
 		map: {
 			size: 96,
@@ -6202,15 +7207,14 @@ auxl.spookyRoom3Data = {
 	},
 	start:{
 		//Light Adjustments
-		directionalLight:{ChangeSelf: [{property: 'light', value: {intensity: 0.25}}, {property: 'position', value: new THREE.Vector3(0,1,0)}]},
+		directionalLight:{ChangeSelf: [{property: 'light', value: {intensity: 0.5}}, {property: 'position', value: new THREE.Vector3(0,1,0)}]},
 		directionalLight2:{ChangeSelf: {property: 'position', value: new THREE.Vector3(-1,-1,1)}},
 		directionalLight3:{ChangeSelf: {property: 'position', value: new THREE.Vector3(1,-1,-1)}},
-		ambientLight:{ChangeSelf: {property: 'light', value: {intensity: 0.75}}},
-
+		ambientLight:{ChangeSelf: {property: 'light', value: {intensity: 0.5}}},
 		//Swimming
 		player:{ChangeLocomotionType:{pov: '1st', axis: 'posXYZ', type: 'free'}},
 		//Exterior
-		spookyRoom2Ext:{SpawnCore:null},
+		spookyRoom3Ext:{SpawnCore:null},
 		//Door
 		room3ToExteriorDoor:{SpawnCoreOnGrid:null},
 		//Block Rocks
@@ -6220,18 +7224,59 @@ auxl.spookyRoom3Data = {
 		//Environment
 		block4Ring:{SpawnObjRing:null},
 		//Fauna
-		sharkAttack:{SpawnCore:null},
+		shark1Layer:{SpawnLayer:null},
+		shark2Layer:{SpawnLayer:null},
+		shark3Layer:{SpawnLayer:null},
+		shark4Layer:{SpawnLayer:null},
 		squid:{SpawnCore:null},
+		sharkMegaLayer:{SpawnLayer:null},
 	},
 	delay:{
-		1000:{
+		3000:{
+			squid:{EmitEvent: 'sing'}
+		},
+		7000:{
+			room3ToExteriorDoor:{DespawnCore:null},
 			directionalLight:{EmitEvent: 'fadeout'},
 			directionalLight2:{EmitEvent: 'fadeout'},
 			directionalLight3:{EmitEvent: 'fadeout'},
 			ambientLight:{EmitEvent: 'fadeout'},
+			playerAudio:{EmitEvent: 'heartbeat'},
+		},
+		32250:{
+			player:{PlayerQuickAnim: null},
+		},
+		32500:{
+			player:{LockLocomotion:null, UpdatePlayerPosition: new THREE.Vector3(0,8.5,1), TwistTo: 1,},
+		},
+		32750:{
+			player:{TwistTo: 1,},
+		},
+		33000:{
+			spookyRoom3FlareLayer:{SpawnLayer:null},
+		},
+		36500:{
+			sharkMegaAttack:{SpawnCore:null},
+		},
+		37000:{
+			sharkMegaAttack:{EmitEvent: 'attack'},
+		},
+		38500:{
+			playerAudio:{EmitEvent: 'respawn'},
+			//Move Back to Hallows
+			spookyZone:{Move: 'connect0'},
+			player:{UpdatePlayerPosition: new THREE.Vector3(10.5,0,-10.5), TwistTo: 45, SetFlag:{flag: 'room3', value: true}},
+			//Completed
+			exteriorToRoom3:{SetFlag:{flag: 'done', value: true}},
 		},
 	},
 	interval:{
+		4000: {
+			run: {playerAudio:{EmitEvent: 'underwater'},}, loop: 'infinite', end: 'stop',
+		},
+		11000: {
+			run: {squid:{EmitEvent: 'sing'},}, loop: 2, end: 'stop',
+		},
 	},
 	event:{
 	},
@@ -6239,7 +7284,7 @@ auxl.spookyRoom3Data = {
 	},
 	exit:{
 		//Walking
-		player:{ChangeLocomotionType:{pov: '1st', axis: 'posXZ', type: 'free'}},
+		player:{ChangeLocomotionType:{pov: '1st', axis: 'posXZ', type: 'free'}, UnlockLocomotion:null,},
 		directionalLight:{EmitEvent: 'stop', ChangeSelf: [{property: 'light', value: {intensity: 0.75}}, {property: 'position', value: new THREE.Vector3(-0.25,0.75,0.5)}]},
 		directionalLight2:{EmitEvent: 'stop', ChangeSelf: [{property: 'light', value: {intensity: 0.1}}, {property: 'position', value: new THREE.Vector3(0.25,0.75,-0.5)}]},
 		directionalLight3:{EmitEvent: 'stop', ChangeSelf: [{property: 'light', value: {intensity: 0.2}}, {property: 'position', value: new THREE.Vector3(0.25,0.75,0.5)}]},
@@ -6259,8 +7304,6 @@ auxl.spookyRoom1Alt = auxl.SceneNode(auxl.spookyRoom1AltData);
 auxl.spookyRoom2 = auxl.SceneNode(auxl.spookyRoom2Data);
 auxl.spookyRoom3 = auxl.SceneNode(auxl.spookyRoom3Data);
 auxl.spookyZone = auxl.MapZone(auxl.spookyZoneData);
-
-
 
 //
 //Scenarios
@@ -6424,9 +7467,9 @@ auxl.mintyScenarioData = {
 			},
 			spookyExt:{
 				connect0: {inZone: true, node: 'spookyHome',},
-				//connect1: {inZone: true, node: 'spookyRoom1',},
-				//connect2: {inZone: true, node: 'spookyRoom2',},
-				//connect3: {inZone: true, node: 'spookyRoom3',},
+				connect1: {inZone: true, node: 'spookyRoom1',},
+				connect2: {inZone: true, node: 'spookyRoom2',},
+				connect3: {inZone: true, node: 'spookyRoom3',},
 			},
 			spookyRoom1:{
 				connect0: {inZone: true, node: 'spookyExt',},
@@ -6455,6 +7498,10 @@ auxl.mintyScenarioData = {
 	},
 	start:{
 		comp:{SpawnComp: null},
+		//Reset Spooky Complete
+		exteriorToRoom1:{SetFlag: {flag: 'done', value: false}},
+		exteriorToRoom2:{SetFlag: {flag: 'done', value: false}},
+		exteriorToRoom3:{SetFlag: {flag: 'done', value: false}},
 	},
 	delay:{
 	},
@@ -6483,7 +7530,10 @@ auxl.mintyWorldData = {
 		physics: false,
 		menuStyle: auxl.menuStyleData,
 		menuOptions: auxl.addToMainMenu,
-		backgroundAudio: auxl.town3,
+		backgroundAudio: {
+			town3: {src: auxl.town3, autoplay: false, loop: true, volume: 0.5, on: 'town3'},
+			spookymusic1: {src: auxl.soundSpookyMusic1, autoplay: false, loop: true, volume: 0.5, on: 'spookymusic1'},
+		},
 		soundEffects: {},
 		compBookUpdate: auxl.compCadeBookData,
 

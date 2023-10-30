@@ -1,15 +1,25 @@
-# Minty's XRcade v0.15
+# Minty's XRcade v0.2
 ### [Play at mintyxr.com](https://mintyxr.com)
 ## A WebXR arcade full of A-Frame built games using [A-Frame UX Library ](https://github.com/Minty-Crisp/AUXL). Currently with 10 games to choose from! Support for VR | Desktop | Mobile.
 ![xrcade preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/mintyxr-cade-revamp0.jpg)
 ![attendent preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/mintyxr-cade-revamp1.jpg)
 ---
-## Spooky Preview :
+# :watermelon:  Minty Crisp
+[mintycrisp.com](https://mintycrisp.com)
+[ko-fi](https://ko-fi.com/mintycrisp)
+
+---
+## New Update - Spooky Zone :
+
+### Haunted Hallway : Explore a haunted hallway filled with spooktacular goodies!
+
+### It's a Trap! : A vertigo experience that is to die for.
+
+### The Deep Dark : Swim with the leviathans.
 
 ![spooky preview 0](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/mintyxr-cade-spooky0.jpg)
 
 ![spooky preview 1](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/mintyxr-cade-spooky1.jpg)
-
 
 ---
 ## XRcade Games :
