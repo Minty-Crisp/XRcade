@@ -14,6 +14,13 @@
 
 ![spooky preview 1](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/mintyxr-cade-spooky1.jpg)
 
+---
+
+Known Issues : 
+- Mobile audio not working properly. Sorry for the inconvience.
+
+---
+
 ![xrcade preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/mintyxr-cade-revamp0.jpg)
 ![attendent preview](https://github.com/Minty-Crisp/XRcade/blob/main/assets/img/previews/mintyxr-cade-revamp1.jpg)
 
