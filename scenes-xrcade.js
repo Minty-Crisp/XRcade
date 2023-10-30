@@ -74,25 +74,32 @@ auxl.soundSpookyMusic1 = './assets/audio/gameSounds/Anttis instrumentals - Sad P
 
 //Respawn
 auxl.soundHarpAsscend = './assets/audio/gameSounds/33 FX3184 Ascending Harp Glissando.ogg';
-auxl.playerAudio.ChangeSelf({property:'auxsound__respawn', value: {src: auxl.soundHarpAsscend, autoplay: false, loop: false, volume: 0.5, on: 'respawn'}}, true)
+//auxl.playerAudio.ChangeSelf({property:'auxsound__respawn', value: {src: auxl.soundHarpAsscend, autoplay: false, loop: false, volume: 0.5, on: 'respawn'}}, true)
+auxl.playerAudio.ChangeSelf({property:'sound__respawn', value: {src: auxl.soundHarpAsscend, autoplay: false, loop: false, volume: 0.5, on: 'respawn'}}, true)
 //Hearbeat
 auxl.soundHeartbeatSpeed = './assets/audio/gameSounds/heartbeat-speeding-up-02.ogg';
-auxl.playerAudio.ChangeSelf({property:'auxsound__heartbeat', value: {src: auxl.soundHeartbeatSpeed, autoplay: false, loop: false, volume: 0.35, on: 'heartbeat'}}, true)
+//auxl.playerAudio.ChangeSelf({property:'auxsound__heartbeat', value: {src: auxl.soundHeartbeatSpeed, autoplay: false, loop: false, volume: 0.35, on: 'heartbeat'}}, true)
+auxl.playerAudio.ChangeSelf({property:'sound__heartbeat', value: {src: auxl.soundHeartbeatSpeed, autoplay: false, loop: false, volume: 0.35, on: 'heartbeat'}}, true)
 //Juicy Impact
 auxl.soundJuicyImpact1 = './assets/audio/gameSounds/Smash_Gore_Juicy_Smash_07.ogg';
-auxl.playerAudio.ChangeSelf({property:'auxsound__juicyimpact', value: {src: auxl.soundJuicyImpact1, autoplay: false, loop: false, volume: 0.75, on: 'juicyimpact'}}, true)
+//auxl.playerAudio.ChangeSelf({property:'auxsound__juicyimpact', value: {src: auxl.soundJuicyImpact1, autoplay: false, loop: false, volume: 0.75, on: 'juicyimpact'}}, true)
+auxl.playerAudio.ChangeSelf({property:'sound__juicyimpact', value: {src: auxl.soundJuicyImpact1, autoplay: false, loop: false, volume: 0.75, on: 'juicyimpact'}}, true)
 //Trap Door
 auxl.soundTrapDoor = './assets/audio/gameSounds/trap-door-1.ogg';
-auxl.playerAudio.ChangeSelf({property:'auxsound__trapdoor', value: {src: auxl.soundTrapDoor, autoplay: false, loop: false, volume: 0.75, on: 'trapdoor'}}, true)
+//auxl.playerAudio.ChangeSelf({property:'auxsound__trapdoor', value: {src: auxl.soundTrapDoor, autoplay: false, loop: false, volume: 0.75, on: 'trapdoor'}}, true)
+auxl.playerAudio.ChangeSelf({property:'sound__trapdoor', value: {src: auxl.soundTrapDoor, autoplay: false, loop: false, volume: 0.75, on: 'trapdoor'}}, true)
 //Trap
 auxl.soundConcreteGrind = './assets/audio/gameSounds/Metallic ball rolling on concrete 02.ogg';
-auxl.playerAudio.ChangeSelf({property:'auxsound__trap', value: {src: auxl.soundConcreteGrind, autoplay: false, loop: false, volume: 0.75, on: 'trap'}}, true)
+//auxl.playerAudio.ChangeSelf({property:'auxsound__trap', value: {src: auxl.soundConcreteGrind, autoplay: false, loop: false, volume: 0.75, on: 'trap'}}, true)
+auxl.playerAudio.ChangeSelf({property:'sound__trap', value: {src: auxl.soundConcreteGrind, autoplay: false, loop: false, volume: 0.75, on: 'trap'}}, true)
 //Wind Fall
 auxl.soundWindFall = './assets/audio/gameSounds/wind_blustery_08_loop.ogg';
-auxl.playerAudio.ChangeSelf({property:'auxsound__windfall', value: {src: auxl.soundWindFall, autoplay: false, loop: false, volume: 1, on: 'trapdoor'}}, true)
+//auxl.playerAudio.ChangeSelf({property:'auxsound__windfall', value: {src: auxl.soundWindFall, autoplay: false, loop: false, volume: 1, on: 'trapdoor'}}, true)
+auxl.playerAudio.ChangeSelf({property:'sound__windfall', value: {src: auxl.soundWindFall, autoplay: false, loop: false, volume: 1, on: 'trapdoor'}}, true)
 //Underwater
 auxl.soundUnderwater1 = './assets/audio/gameSounds/underwater_object_movement_quick_deep_15.ogg';
-auxl.playerAudio.ChangeSelf({property:'auxsound__underwater', value: {src: auxl.soundUnderwater1, autoplay: false, loop: false, volume: 0.5, on: 'underwater'}}, true)
+//auxl.playerAudio.ChangeSelf({property:'auxsound__underwater', value: {src: auxl.soundUnderwater1, autoplay: false, loop: false, volume: 0.5, on: 'underwater'}}, true)
+auxl.playerAudio.ChangeSelf({property:'sound__underwater', value: {src: auxl.soundUnderwater1, autoplay: false, loop: false, volume: 0.5, on: 'underwater'}}, true)
 
 
 //Positional
