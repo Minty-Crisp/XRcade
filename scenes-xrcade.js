@@ -265,13 +265,13 @@ auxl.ambientLight.core.components.light.intensity = 0.5;
 
 
 //The Deep Dark SkyBox Anims
-auxl.directionalLight.core.animations.fadeout = {property: 'light.intensity', from: 0.5, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
+auxl.directionalLight.core.animations.fadeout = {property: 'light.intensity', from: 0.75, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
 
 auxl.directionalLight2.core.animations.fadeout = {property: 'light.intensity', from: 0.1, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
 
 auxl.directionalLight3.core.animations.fadeout = {property: 'light.intensity', from: 0.2, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
 
-auxl.ambientLight.core.animations.fadeout = {property: 'light.intensity', from: 0.5, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
+auxl.ambientLight.core.animations.fadeout = {property: 'light.intensity', from: 0.75, to: 0, dur: 23000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: false, enabled: true, startEvents: 'fadeout', pauseEvents: 'stop',};
 
 //SkyBox
 //
@@ -1813,129 +1813,18 @@ auxl.spookyBenchDecorated4 = auxl.Core(auxl.spookyBenchDecorated4Data);
 //No Collision Decoration
 
 
-//Outer Environment Rings
-//
-
-//Tree Ring 1
-auxl.treeRing1Data = {
-	id: 'treeRing1',
-	objData: auxl.kayKitTreePineOrangeLargeData,
-	total: 10,
-	outerRingRadius: 150,
-	innerRingRadius: 50,
-	sameTypeRadius: 2,
-	otherTypeRadius: 1,
-	ranYPos: false,
-	yPosFlex: 1,
-	ranScaleX: true,
-	ranScaleY: true,
-	ranScaleZ: true,
-	scaleFlex: 1,
-	ranRotX: false,
-	ranRotY: true,
-	ranRotZ: false,
+//Outer Environment Ring
+auxl.spookyTreeRingData = {
+	data:'spookyTreeRingData',
+	id:'spookyTreeRing',
+	position: new THREE.Vector3(),
+	rotation: new THREE.Vector3(0,0,0),
+	scale: new THREE.Vector3(1,1,1),
+	components:{
+		['gltf-model']:'./assets/3d/kayKit/hallows/tree_ring.glb',
+	},
 };
-auxl.treeRing1 = auxl.ObjsGenRing(auxl.treeRing1Data);
-//Tree Ring 2
-auxl.treeRing2Data = {
-	id: 'treeRing2',
-	objData: auxl.kayKitTreePineOrangeMediumData,
-	total: 20,
-	outerRingRadius: 100,
-	innerRingRadius: 50,
-	sameTypeRadius: 2,
-	otherTypeRadius: 1,
-	ranYPos: false,
-	yPosFlex: 1,
-	ranScaleX: true,
-	ranScaleY: true,
-	ranScaleZ: true,
-	scaleFlex: 1,
-	ranRotX: false,
-	ranRotY: true,
-	ranRotZ: false,
-};
-auxl.treeRing2 = auxl.ObjsGenRing(auxl.treeRing2Data);
-//Tree Ring 3
-auxl.treeRing3Data = {
-	id: 'treeRing3',
-	objData: auxl.kayKitTreePineYellowLargeData,
-	total: 10,
-	outerRingRadius: 150,
-	innerRingRadius: 50,
-	sameTypeRadius: 2,
-	otherTypeRadius: 1,
-	ranYPos: false,
-	yPosFlex: 1,
-	ranScaleX: true,
-	ranScaleY: true,
-	ranScaleZ: true,
-	scaleFlex: 1,
-	ranRotX: false,
-	ranRotY: true,
-	ranRotZ: false,
-};
-auxl.treeRing3 = auxl.ObjsGenRing(auxl.treeRing3Data);
-//Tree Ring 4
-auxl.treeRing4Data = {
-	id: 'treeRing4',
-	objData: auxl.kayKitTreePineYellowMediumData,
-	total: 20,
-	outerRingRadius: 100,
-	innerRingRadius: 50,
-	sameTypeRadius: 2,
-	otherTypeRadius: 1,
-	ranYPos: false,
-	yPosFlex: 1,
-	ranScaleX: true,
-	ranScaleY: true,
-	ranScaleZ: true,
-	scaleFlex: 1,
-	ranRotX: false,
-	ranRotY: true,
-	ranRotZ: false,
-};
-auxl.treeRing4 = auxl.ObjsGenRing(auxl.treeRing4Data);
-//Tree Ring 5
-auxl.treeRing5Data = {
-	id: 'treeRing5',
-	objData: auxl.kayKitTreeDeadLargeData,
-	total: 10,
-	outerRingRadius: 150,
-	innerRingRadius: 50,
-	sameTypeRadius: 2,
-	otherTypeRadius: 1,
-	ranYPos: false,
-	yPosFlex: 1,
-	ranScaleX: true,
-	ranScaleY: true,
-	ranScaleZ: true,
-	scaleFlex: 1,
-	ranRotX: false,
-	ranRotY: true,
-	ranRotZ: false,
-};
-auxl.treeRing5 = auxl.ObjsGenRing(auxl.treeRing5Data);
-//Tree Ring 6
-auxl.treeRing6Data = {
-	id: 'treeRing6',
-	objData: auxl.kayKitTreeDeadMediumData,
-	total: 20,
-	outerRingRadius: 100,
-	innerRingRadius: 50,
-	sameTypeRadius: 2,
-	otherTypeRadius: 1,
-	ranYPos: false,
-	yPosFlex: 1,
-	ranScaleX: true,
-	ranScaleY: true,
-	ranScaleZ: true,
-	scaleFlex: 1,
-	ranRotX: false,
-	ranRotY: true,
-	ranRotZ: false,
-};
-auxl.treeRing6 = auxl.ObjsGenRing(auxl.treeRing6Data);
+auxl.spookyTreeRing = auxl.Core(auxl.spookyTreeRingData);
 
 //Inner Environment Decoration Rings
 //
@@ -2383,7 +2272,7 @@ auxl.spookyRoom1Painting1Data = {
 		spookwoosh: {src: auxl.spookWoosh, autoplay: false, loop: false, volume: 0.5, on: 'mouseenter'},
 	},
 	geometry: {primitive: 'plane', width: 2.5, height: 3.75,},
-	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting1,},
+	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting1Alt,},
 	position: new THREE.Vector3(-4.725,3.25,40),
 	rotation: new THREE.Vector3(0,90,0),
 	scale: new THREE.Vector3(1,1,1),
@@ -2407,40 +2296,40 @@ auxl.spookyRoom1Painting1Data = {
 };
 auxl.spookyRoom1Painting1 = auxl.Core(auxl.spookyRoom1Painting1Data);
 //Painting 2
-auxl.spookyRoom1Painting2Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting2', sounds:{spookwoosh: {src: auxl.spookWoosh, autoplay: false, loop: false, volume: 0.5, on: 'mouseenter'}, footsteps: {src: auxl.soundFootsteps, autoplay: true, loop: true, volume: 1,},}, position: new THREE.Vector3(4.725,3.25,35), rotation: new THREE.Vector3(0,-90,0),	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting2,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting2', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting2Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting2', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting2,},},}, true);
+auxl.spookyRoom1Painting2Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting2', sounds:{spookwoosh: {src: auxl.spookWoosh, autoplay: false, loop: false, volume: 0.5, on: 'mouseenter'}, footsteps: {src: auxl.soundFootsteps, autoplay: true, loop: true, volume: 1,},}, position: new THREE.Vector3(4.725,3.25,35), rotation: new THREE.Vector3(0,-90,0),	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting2Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting2', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting2Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting2', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting2,},},}, true);
 auxl.spookyRoom1Painting2 = auxl.Core(auxl.spookyRoom1Painting2Data);
 //Painting 3
-auxl.spookyRoom1Painting3Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting3', position: new THREE.Vector3(4.725,3.25,25), rotation: new THREE.Vector3(0,-90,0),	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting3,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting3', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting3Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting3', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting3,},}}, true);
+auxl.spookyRoom1Painting3Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting3', position: new THREE.Vector3(4.725,3.25,25), rotation: new THREE.Vector3(0,-90,0),	material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting3Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting3', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting3Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting3', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting3,},}}, true);
 auxl.spookyRoom1Painting3 = auxl.Core(auxl.spookyRoom1Painting3Data);
 //Painting 4
-auxl.spookyRoom1Painting4Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting4', position: new THREE.Vector3(-4.725,3.25,20), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting4,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting4', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting4Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting4', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting4,},}}, true);
+auxl.spookyRoom1Painting4Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting4', position: new THREE.Vector3(-4.725,3.25,20), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting4Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting4', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting4Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting4', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting4,},}}, true);
 auxl.spookyRoom1Painting4 = auxl.Core(auxl.spookyRoom1Painting4Data);
 //Painting 5
-auxl.spookyRoom1Painting5Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting5', position: new THREE.Vector3(-4.725,3.25,10), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting5,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting5', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting5Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting5', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting5,},}}, true);
+auxl.spookyRoom1Painting5Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting5', position: new THREE.Vector3(-4.725,3.25,10), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting5Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting5', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting5Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting5', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting5,},}}, true);
 auxl.spookyRoom1Painting5 = auxl.Core(auxl.spookyRoom1Painting5Data);
 //Painting 6
-auxl.spookyRoom1Painting6Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting6', position: new THREE.Vector3(4.725,3.25,5), rotation: new THREE.Vector3(0,-90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting6,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting6', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting6Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting6', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting6,},}}, true);
+auxl.spookyRoom1Painting6Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting6', position: new THREE.Vector3(4.725,3.25,5), rotation: new THREE.Vector3(0,-90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting6Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting6', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting6Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting6', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting6,},}}, true);
 auxl.spookyRoom1Painting6 = auxl.Core(auxl.spookyRoom1Painting6Data);
 //Painting 7
-auxl.spookyRoom1Painting7Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting7', position: new THREE.Vector3(4.725,3.25,-5), rotation: new THREE.Vector3(0,-90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting13,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting7', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting13Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting7', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting13,},}}, true);
+auxl.spookyRoom1Painting7Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting7', position: new THREE.Vector3(4.725,3.25,-5), rotation: new THREE.Vector3(0,-90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting13Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting7', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting13Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting7', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting13,},}}, true);
 auxl.spookyRoom1Painting7 = auxl.Core(auxl.spookyRoom1Painting7Data);
 //Painting 8
-auxl.spookyRoom1Painting8Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting8', position: new THREE.Vector3(-4.725,3.25,-10), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting7,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting8', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting7Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting8', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting7,},}}, true);
+auxl.spookyRoom1Painting8Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting8', position: new THREE.Vector3(-4.725,3.25,-10), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting7Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting8', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting7Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting8', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting7,},}}, true);
 auxl.spookyRoom1Painting8 = auxl.Core(auxl.spookyRoom1Painting8Data);
 //Painting 9
-auxl.spookyRoom1Painting9Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting9', position: new THREE.Vector3(-4.725,3.25,-20), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting8,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting9', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting8Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting9', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting8,},}}, true);
+auxl.spookyRoom1Painting9Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting9', position: new THREE.Vector3(-4.725,3.25,-20), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting8Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting9', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting8Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting9', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting8,},}}, true);
 auxl.spookyRoom1Painting9 = auxl.Core(auxl.spookyRoom1Painting9Data);
 //Painting 10
-auxl.spookyRoom1Painting10Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting10', position: new THREE.Vector3(4.725,3.25,-25), rotation: new THREE.Vector3(0,-90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting9,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting10', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting9Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting10', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting9,},}}, true);
+auxl.spookyRoom1Painting10Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting10', position: new THREE.Vector3(4.725,3.25,-25), rotation: new THREE.Vector3(0,-90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting9Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting10', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting9Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting10', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting9,},}}, true);
 auxl.spookyRoom1Painting10 = auxl.Core(auxl.spookyRoom1Painting10Data);
 //Painting 11
-auxl.spookyRoom1Painting11Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting11', position: new THREE.Vector3(4.725,3.25,-35), rotation: new THREE.Vector3(0,-90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting10,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting11', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting10Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting11', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting10,},}}, true);
+auxl.spookyRoom1Painting11Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting11', position: new THREE.Vector3(4.725,3.25,-35), rotation: new THREE.Vector3(0,-90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting10Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting11', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting10Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting11', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting10,},}}, true);
 auxl.spookyRoom1Painting11 = auxl.Core(auxl.spookyRoom1Painting11Data);
 //Painting 12
-auxl.spookyRoom1Painting12Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting12', position: new THREE.Vector3(-4.725,3.25,-40), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting11,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting12', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting11Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting12', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting11,},}}, true);
+auxl.spookyRoom1Painting12Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting12', position: new THREE.Vector3(-4.725,3.25,-40), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting11Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting12', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting11Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting12', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting11,},}}, true);
 auxl.spookyRoom1Painting12 = auxl.Core(auxl.spookyRoom1Painting12Data);
 //Painting 13
-auxl.spookyRoom1Painting13Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting13', position: new THREE.Vector3(-4.725,3.25,-50), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting12,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting13', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting12Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting13', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting12,},}}, true);
+auxl.spookyRoom1Painting13Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Painting13', position: new THREE.Vector3(-4.725,3.25,-50), rotation: new THREE.Vector3(0,90,0), material: {shader: "standard", color: "#43aece", opacity: 1, metalness: 0.3, roughness: 0.7, src: auxl.spookyPainting12Alt,}, components: {mouseenterrun__spooky:{cursorObj: 'spookyRoom1Painting13', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting12Alt,}, mouseleaverun__normal:{ cursorObj: 'spookyRoom1Painting13', component: 'null', method: 'ChangeMatSrc', params: auxl.spookyPainting12,},}}, true);
 auxl.spookyRoom1Painting13 = auxl.Core(auxl.spookyRoom1Painting13Data);
 //Jump
 auxl.spookyRoom1Jump1Data = auxl.coreDataFromTemplate(auxl.spookyRoom1Painting1Data, {id: 'spookyRoom1Jump1', geometry: {primitive: 'box', height: 3.75, width: 2.5, depth: 0.1}, position: new THREE.Vector3(2,0,-15), rotation: new THREE.Vector3(0,0,0), material: {shader: "standard", opacity: 1, src: auxl.spookyJump1,},
@@ -3491,7 +3380,8 @@ auxl.sharkMegaAttackData = {
 	rotation: new THREE.Vector3(0,180,0),
 	scale: new THREE.Vector3(26,26,26),
 	animations:{
-		attack: {property: 'object3D.position.z', from: -56, to: -37.5, dur: 3000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+		//attack: {property: 'object3D.position.z', from: -56, to: -37.5, dur: 3000, delay: 0, loop: 'true', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
+		attack: {property: 'object3D.position.z', from: -56, to: -25.5, dur: 5000, delay: 0, loop: 'false', dir: 'normal', easing: 'linear', elasticity: 400, autoplay: true, enabled: true},
 	},
 	components:{
 		['gltf-model']:'./assets/3d/fauna/Shark-attack.glb',
@@ -3755,7 +3645,7 @@ components: {
 },
 };
 auxl.entranceToSpooky = auxl.Core(auxl.entranceToSpookyData);
-//auxl.entranceToSpookyEmote = auxl.InfoBubble('entranceToSpookyEmote', auxl.entranceToSpooky, 3, 'orange');
+auxl.entranceToSpookyEmote = auxl.InfoBubble('entranceToSpookyEmote', auxl.entranceToSpooky, 3, 'orange');
 
 
 
@@ -5817,12 +5707,6 @@ auxl.buildSceneLibrary = () => {
 	auxl.spookyBenchDecorated2 = auxl.Core(auxl.spookyBenchDecorated2Data);
 	auxl.spookyBenchDecorated3 = auxl.Core(auxl.spookyBenchDecorated3Data);
 	auxl.spookyBenchDecorated4 = auxl.Core(auxl.spookyBenchDecorated4Data);
-	auxl.treeRing1 = auxl.ObjsGenRing(auxl.treeRing1Data);
-	auxl.treeRing2 = auxl.ObjsGenRing(auxl.treeRing2Data);
-	auxl.treeRing3 = auxl.ObjsGenRing(auxl.treeRing3Data);
-	auxl.treeRing4 = auxl.ObjsGenRing(auxl.treeRing4Data);
-	auxl.treeRing5 = auxl.ObjsGenRing(auxl.treeRing5Data);
-	auxl.treeRing6 = auxl.ObjsGenRing(auxl.treeRing6Data);
 	auxl.innerRing1 = auxl.ObjsGenRing(auxl.innerRing1Data);
 	auxl.innerRing2 = auxl.ObjsGenRing(auxl.innerRing2Data);
 	auxl.innerRing3 = auxl.ObjsGenRing(auxl.innerRing3Data);
@@ -6911,12 +6795,7 @@ auxl.spookyExtData = {
 		spookyBenchDecorated3:{SpawnCoreOnGrid:null},
 		spookyBenchDecorated4:{SpawnCoreOnGrid:null},
 		//Outer Ring
-		treeRing1:{SpawnObjRing:null},
-		treeRing2:{SpawnObjRing:null},
-		treeRing3:{SpawnObjRing:null},
-		treeRing4:{SpawnObjRing:null},
-		treeRing5:{SpawnObjRing:null},
-		treeRing6:{SpawnObjRing:null},
+		spookyTreeRing:{SpawnCore:null},
 		//Inner Ring
 		innerRing1:{SpawnObjRing:null},
 		innerRing2:{SpawnObjRing:null},
@@ -7013,19 +6892,19 @@ auxl.spookyRoom1Data = {
 		//Tables
 		room1TablesGrid:{SpawnGridLayout:'layout1'},
 		//Paintings
-		spookyRoom1Painting1:{SpawnCore:null},
-		spookyRoom1Painting2:{SpawnCore:null},
-		spookyRoom1Painting3:{SpawnCore:null},
-		spookyRoom1Painting4:{SpawnCore:null},
-		spookyRoom1Painting5:{SpawnCore:null},
-		spookyRoom1Painting6:{SpawnCore:null},
-		spookyRoom1Painting7:{SpawnCore:null},
-		spookyRoom1Painting8:{SpawnCore:null},
-		spookyRoom1Painting9:{SpawnCore:null},
-		spookyRoom1Painting10:{SpawnCore:null},
-		spookyRoom1Painting11:{SpawnCore:null},
-		spookyRoom1Painting12:{SpawnCore:null},
-		spookyRoom1Painting13:{SpawnCore:null},
+		spookyRoom1Painting1:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting1}},},
+		spookyRoom1Painting2:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting2}},},
+		spookyRoom1Painting3:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting3}},},
+		spookyRoom1Painting4:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting4}},},
+		spookyRoom1Painting5:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting5}},},
+		spookyRoom1Painting6:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting6}},},
+		spookyRoom1Painting7:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting13}},},
+		spookyRoom1Painting8:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting7}},},
+		spookyRoom1Painting9:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting8}},},
+		spookyRoom1Painting10:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting9}},},
+		spookyRoom1Painting11:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting10}},},
+		spookyRoom1Painting12:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting11}},},
+		spookyRoom1Painting13:{SpawnCore:null, ChangeSelf:{property: 'material', value: {src: auxl.spookyPainting12}},},
 		//Lights
 		spookyRoom1Light0:{SpawnCore:null},
 		spookyRoom1Light1:{SpawnCore:null},
@@ -7207,21 +7086,19 @@ auxl.spookyRoom3Data = {
 	},
 	start:{
 		//Light Adjustments
-		directionalLight:{ChangeSelf: [{property: 'light', value: {intensity: 0.5}}, {property: 'position', value: new THREE.Vector3(0,1,0)}]},
+		directionalLight:{ChangeSelf: [{property: 'light', value: {intensity: 0.75}}, {property: 'position', value: new THREE.Vector3(0,1,0)}]},
 		directionalLight2:{ChangeSelf: {property: 'position', value: new THREE.Vector3(-1,-1,1)}},
 		directionalLight3:{ChangeSelf: {property: 'position', value: new THREE.Vector3(1,-1,-1)}},
-		ambientLight:{ChangeSelf: {property: 'light', value: {intensity: 0.5}}},
+		ambientLight:{ChangeSelf: {property: 'light', value: {intensity: 0.75}}},
 		//Swimming
 		player:{ChangeLocomotionType:{pov: '1st', axis: 'posXYZ', type: 'free'}},
 		//Exterior
 		spookyRoom3Ext:{SpawnCore:null},
 		//Door
 		room3ToExteriorDoor:{SpawnCoreOnGrid:null},
-		//Block Rocks
 		room2Block1Grid:{SpawnGridLayout:'layout1'},
 		room2Block2Grid:{SpawnGridLayout:'layout1'},
 		room2Block3Grid:{SpawnGridLayout:'layout1'},
-		//Environment
 		block4Ring:{SpawnObjRing:null},
 		//Fauna
 		shark1Layer:{SpawnLayer:null},
@@ -7244,7 +7121,7 @@ auxl.spookyRoom3Data = {
 			playerAudio:{EmitEvent: 'heartbeat'},
 		},
 		32250:{
-			player:{PlayerQuickAnim: null},
+			player:{PlayerTeleportAnim: null},
 		},
 		32500:{
 			player:{LockLocomotion:null, UpdatePlayerPosition: new THREE.Vector3(0,8.5,1), TwistTo: 1,},
@@ -7258,15 +7135,10 @@ auxl.spookyRoom3Data = {
 		36500:{
 			sharkMegaAttack:{SpawnCore:null},
 		},
-		37000:{
-			sharkMegaAttack:{EmitEvent: 'attack'},
-		},
-		38500:{
+		38700:{
 			playerAudio:{EmitEvent: 'respawn'},
-			//Move Back to Hallows
 			spookyZone:{Move: 'connect0'},
 			player:{UpdatePlayerPosition: new THREE.Vector3(10.5,0,-10.5), TwistTo: 45, SetFlag:{flag: 'room3', value: true}},
-			//Completed
 			exteriorToRoom3:{SetFlag:{flag: 'done', value: true}},
 		},
 	},
@@ -7491,10 +7363,10 @@ auxl.mintyScenarioData = {
 	controls:{
 		action1Down:{auxlObj: 'playerRig', component: 'locomotion', func: 'toggleSpeed', name: 'Toggle Walk/Run', info: 'Change your walking speed between walk and run.'},
 		action2Down:{auxlObj: 'player', func: 'ToggleCrouch', name: 'Toggle Crouch/Stand', info: 'Change your position speed between crouch and standing.'},
-		action3Down:{auxlObj: 'player', func: 'ToggleSittingMode', name: 'Toggle Sit/Stand', info: 'Change your height between sitting and standing mode.'},
-		action6Down:{auxlObj: 'player', func: 'SnapLeft45', name: 'Snap View Left', info: 'Quick snap your view 45 degrees to the left.'},
-		action7Down:{auxlObj: 'player', func: 'SnapRight45', name: 'Snap View Right', info: 'Quick snap your view 45 degrees to the right.'},
-		action8Down:{auxlObj: 'player', func: 'MainMenuAction', name: 'Toggle Main Menu', info: 'Go back in the Main Menu or Spawn/Despawn Compaon.'},
+		//action3Down:{auxlObj: 'player', func: 'ToggleSittingMode', name: 'Toggle Sit/Stand', info: 'Change your height between sitting and standing mode.'},
+		action6Down:{auxlObj: 'player', func: 'MainMenuAction', name: 'Toggle Main Menu', info: 'Go back in the Main Menu or Spawn/Despawn Compaon.'},
+		action7Down:{auxlObj: 'player', func: 'SnapLeft45', name: 'Snap View Left', info: 'Quick snap your view 45 degrees to the left.'},
+		action8Down:{auxlObj: 'player', func: 'SnapRight45', name: 'Snap View Right', info: 'Quick snap your view 45 degrees to the right.'},
 	},
 	start:{
 		comp:{SpawnComp: null},
@@ -7531,8 +7403,8 @@ auxl.mintyWorldData = {
 		menuStyle: auxl.menuStyleData,
 		menuOptions: auxl.addToMainMenu,
 		backgroundAudio: {
-			town3: {src: auxl.town3, autoplay: false, loop: true, volume: 0.5, on: 'town3'},
-			spookymusic1: {src: auxl.soundSpookyMusic1, autoplay: false, loop: true, volume: 0.5, on: 'spookymusic1'},
+			town3: {src: auxl.town3, autoplay: false, loop: true, volume: 0.6, on: 'town3'},
+			spookymusic1: {src: auxl.soundSpookyMusic1, autoplay: false, loop: true, volume: 0.6, on: 'spookymusic1'},
 		},
 		soundEffects: {},
 		compBookUpdate: auxl.compCadeBookData,

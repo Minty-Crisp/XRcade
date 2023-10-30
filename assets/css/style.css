@@ -6,7 +6,7 @@ scroll-behavior: smooth;
 
 body {
 background-color: #C14B76;
-background-image: url(../img/minty/bkgd-tex.png);
+background-image: none;
 background-repeat: repeat;
 touch-action: manipulation;
 }
@@ -58,7 +58,7 @@ position: fixed;
 
 #stickyBar {
 padding: 0.25em;
-background-color: #46c496;
+background-color: transparent;
 height: 2.75em;
 }
 
@@ -342,6 +342,10 @@ user-select: none;
 	background-color: transparent;
 }
 
+
+#menuModeButton {
+	background-color: red!Important;
+}
 
 
 /* Portrait */
