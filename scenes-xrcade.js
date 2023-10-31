@@ -59,66 +59,49 @@ auxl.spookyJump1 = './assets/img/spooky_portraits/jump1.jpg';
 
 //Game Sounds (https://gamesounds.xyz/)
 
-//General Sounds
-auxl.soundDoorOpen = './assets/audio/gameSounds/SBvfe1_Door Handle D 002.ogg';
-auxl.soundFootstep1 = './assets/audio/gameSounds/FS Ground Civilian Walk N03.ogg';
-auxl.soundFootstep2 = './assets/audio/gameSounds/FS Ground Civilian Walk N05.ogg';
-auxl.soundFootstep3 = './assets/audio/gameSounds/FS Wood Civilian Crouch N03.ogg';
-auxl.soundFootstep3 = './assets/audio/gameSounds/FS Wood Civilian Crouch N05.ogg';
-
 //Music
-auxl.soundSpookyMusic1 = './assets/audio/gameSounds/Anttis instrumentals - Sad Piece.ogg';
+auxl.soundSpookyMusic1 = './assets/audio/gameSounds/Anttis instrumentals - Sad Piece.mp3';
 
 //Spooky Sounds
 //Non-positionals
 //Respawn
-auxl.soundHarpAsscend = './assets/audio/gameSounds/33 FX3184 Ascending Harp Glissando.ogg';
-auxl.playerAudio.ChangeSelf({property:'sound__respawn', value: {src: auxl.soundHarpAsscend, autoplay: false, loop: false, volume: 0.5, on: 'respawn'}}, true)
+auxl.soundHarpAsscend = './assets/audio/gameSounds/33 FX3184 Ascending Harp Glissando.mp3';
+auxl.playerAudio.ChangeSelf({property:'auxsound__respawn', value: {src: auxl.soundHarpAsscend, autoplay: false, loop: false, volume: 0.5, on: 'respawn'}}, true)
 //Hearbeat
-auxl.soundHeartbeatSpeed = './assets/audio/gameSounds/heartbeat-speeding-up-02.ogg';
-auxl.playerAudio.ChangeSelf({property:'sound__heartbeat', value: {src: auxl.soundHeartbeatSpeed, autoplay: false, loop: false, volume: 0.35, on: 'heartbeat'}}, true)
+auxl.soundHeartbeatSpeed = './assets/audio/gameSounds/heartbeat-speeding-up-02.mp3';
+auxl.playerAudio.ChangeSelf({property:'auxsound__heartbeat', value: {src: auxl.soundHeartbeatSpeed, autoplay: false, loop: false, volume: 0.35, on: 'heartbeat'}}, true)
 //Juicy Impact
-auxl.soundJuicyImpact1 = './assets/audio/gameSounds/Smash_Gore_Juicy_Smash_07.ogg';
-auxl.playerAudio.ChangeSelf({property:'sound__juicyimpact', value: {src: auxl.soundJuicyImpact1, autoplay: false, loop: false, volume: 0.75, on: 'juicyimpact'}}, true)
+auxl.soundJuicyImpact1 = './assets/audio/gameSounds/Smash_Gore_Juicy_Smash_07.mp3';
+auxl.playerAudio.ChangeSelf({property:'auxsound__juicyimpact', value: {src: auxl.soundJuicyImpact1, autoplay: false, loop: false, volume: 0.75, on: 'juicyimpact'}}, true)
 //Trap Door
-auxl.soundTrapDoor = './assets/audio/gameSounds/trap-door-1.ogg';
-auxl.playerAudio.ChangeSelf({property:'sound__trapdoor', value: {src: auxl.soundTrapDoor, autoplay: false, loop: false, volume: 0.75, on: 'trapdoor'}}, true)
+auxl.soundTrapDoor = './assets/audio/gameSounds/trap-door-1.mp3';
+auxl.playerAudio.ChangeSelf({property:'auxsound__trapdoor', value: {src: auxl.soundTrapDoor, autoplay: false, loop: false, volume: 0.75, on: 'trapdoor'}}, true)
 //Trap
-auxl.soundConcreteGrind = './assets/audio/gameSounds/Metallic ball rolling on concrete 02.ogg';
-auxl.playerAudio.ChangeSelf({property:'sound__trap', value: {src: auxl.soundConcreteGrind, autoplay: false, loop: false, volume: 0.75, on: 'trap'}}, true)
+auxl.soundConcreteGrind = './assets/audio/gameSounds/Metallic ball rolling on concrete 02.mp3';
+auxl.playerAudio.ChangeSelf({property:'auxsound__trap', value: {src: auxl.soundConcreteGrind, autoplay: false, loop: false, volume: 0.75, on: 'trap'}}, true)
 //Wind Fall
-auxl.soundWindFall = './assets/audio/gameSounds/wind_blustery_08_loop.ogg';
-auxl.playerAudio.ChangeSelf({property:'sound__windfall', value: {src: auxl.soundWindFall, autoplay: false, loop: false, volume: 1, on: 'trapdoor'}}, true)
+auxl.soundWindFall = './assets/audio/gameSounds/wind_blustery_08_loop.mp3';
+auxl.playerAudio.ChangeSelf({property:'auxsound__windfall', value: {src: auxl.soundWindFall, autoplay: false, loop: false, volume: 1, on: 'trapdoor'}}, true)
 //Underwater
-auxl.soundUnderwater1 = './assets/audio/gameSounds/underwater_object_movement_quick_deep_15.ogg';
-auxl.playerAudio.ChangeSelf({property:'sound__underwater', value: {src: auxl.soundUnderwater1, autoplay: false, loop: false, volume: 0.5, on: 'underwater'}}, true)
+auxl.soundUnderwater1 = './assets/audio/gameSounds/underwater_object_movement_quick_deep_15.mp3';
+auxl.playerAudio.ChangeSelf({property:'auxsound__underwater', value: {src: auxl.soundUnderwater1, autoplay: false, loop: false, volume: 0.5, on: 'underwater'}}, true)
 
 
 //Positional
-auxl.spookWoosh = './assets/audio/gameSounds/Scary_Breath_Whoosh_05.ogg';
-auxl.soundGlassBreak = './assets/audio/gameSounds/Glass6.ogg';
-auxl.soundFootsteps = './assets/audio/gameSounds/heavy_footsteps.ogg';
-auxl.soundKnifeSharpening = './assets/audio/gameSounds/sharpening-knife-1.ogg';
-auxl.soundMonster1 = './assets/audio/gameSounds/6Monsters_BlackBoss_Scream_04.ogg';
-auxl.soundMonster2 = './assets/audio/gameSounds/Creature_Dragon_Roar_01.ogg';
-auxl.soundMonster3 = './assets/audio/gameSounds/Dinosaur Growl 3_Mono.ogg';
-auxl.soundMonster4 = './assets/audio/gameSounds/Monster 20.ogg';
-auxl.soundMonster5 = './assets/audio/gameSounds/Monster 31.ogg';
-auxl.soundMonster6 = './assets/audio/gameSounds/Monster Bite 3.ogg';
-auxl.soundMonster7 = './assets/audio/gameSounds/Monster Tail Hit on Chainmail.ogg';
-auxl.soundMonster8 = './assets/audio/gameSounds/Monster_Roar_Growl_009.ogg';
-auxl.soundPendulumMachine = './assets/audio/gameSounds/79 Horror, Pendulum Torture Machine.ogg';
-auxl.soundScream1 = './assets/audio/gameSounds/SH101_Human_Female_Scream_Alien_OtherWorldly_Fienup_002.ogg';
-auxl.soundSqueakingChair = './assets/audio/gameSounds/SqueakingChair.ogg';
-auxl.soundWaterDrops = './assets/audio/gameSounds/water_drops2.ogg';
-auxl.soundWhaleCalls1 = './assets/audio/gameSounds/Whale Call-Answer Close (echo) 7.ogg';
-auxl.soundFlareFirework = './assets/audio/gameSounds/04 Fireworks, Mine Of Serpents--Fizz.ogg';
+auxl.soundDoorOpen = './assets/audio/gameSounds/SBvfe1_Door Handle D 002.mp3'
 
+auxl.spookWoosh = './assets/audio/gameSounds/Scary_Breath_Whoosh_05.mp3';
+auxl.soundGlassBreak = './assets/audio/gameSounds/Glass6.mp3';
+auxl.soundFootsteps = './assets/audio/gameSounds/heavy_footsteps.mp3';
+auxl.soundKnifeSharpening = './assets/audio/gameSounds/sharpening-knife-1.mp3';
+auxl.soundMonster1 = './assets/audio/gameSounds/6Monsters_BlackBoss_Scream_04.mp3';
+auxl.soundMonster3 = './assets/audio/gameSounds/Dinosaur Growl 3_Mono.mp3';
+auxl.soundPendulumMachine = './assets/audio/gameSounds/79 Horror, Pendulum Torture Machine.mp3';
+auxl.soundSqueakingChair = './assets/audio/gameSounds/SqueakingChair.mp3';
+auxl.soundWaterDrops = './assets/audio/gameSounds/water_drops2.mp3';
+auxl.soundWhaleCalls1 = './assets/audio/gameSounds/Whale Call-Answer Close (echo) 7.mp3';
+auxl.soundFlareFirework = './assets/audio/gameSounds/04 Fireworks, Mine Of Serpents--Fizz.mp3';
 
-
-//Mobile Test
-auxl.soundMobileTest = './assets/audio/test/retro_collect_pickup_coin_03.wav';
-auxl.playerAudio.ChangeSelf({property:'sound__mobiletest', value: {src: auxl.soundMobileTest, autoplay: false, loop: false, volume: 1, on: 'mobiletest'}}, true)
 
 
 
@@ -5977,9 +5960,6 @@ auxl.entranceHomeData = {
 	delay:{
 		1000:{
 			entranceToSpooky:{EmitEvent:'alert1'},
-		},
-		3000:{
-			playerAudio:{EmitEvent:'mobiletest'},
 		},
 	},
 	interval:{

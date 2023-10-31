@@ -33,36 +33,36 @@ auxl.game10Preview = './assets/img/previews/game10.jpg';
 //
 
 //Kenny
-auxl.confirm1 = './assets/audio/kenny/confirmation_001.ogg';
-auxl.confirm2 = './assets/audio/kenny/confirmation_002.ogg';
-auxl.confirm3 = './assets/audio/kenny/confirmation_003.ogg';
-auxl.confirm4 = './assets/audio/kenny/confirmation_004.ogg';
-auxl.drop1 = './assets/audio/kenny/drop_001.ogg';
-auxl.drop2 = './assets/audio/kenny/drop_002.ogg';
-auxl.drop3 = './assets/audio/kenny/drop_003.ogg';
-auxl.drop4 = './assets/audio/kenny/drop_004.ogg';
-auxl.error7 = './assets/audio/kenny/error_007.ogg';
-auxl.glass1 = './assets/audio/kenny/glass_001.ogg';
-auxl.glass3 = './assets/audio/kenny/glass_003.ogg';
-auxl.maximize6 = './assets/audio/kenny/maximize_006.ogg';
-auxl.maximize7 = './assets/audio/kenny/maximize_007.ogg';
-auxl.maximize8 = './assets/audio/kenny/maximize_008.ogg';
-auxl.minimize6 = './assets/audio/kenny/minimize_006.ogg';
-auxl.minimize7 = './assets/audio/kenny/minimize_007.ogg';
-auxl.minimize8 = './assets/audio/kenny/minimize_008.ogg';
-auxl.pluck1 = './assets/audio/kenny/pluck_001.ogg';
-auxl.pluck2 = './assets/audio/kenny/pluck_002.ogg';
-auxl.question3 = './assets/audio/kenny/question_003.ogg';
-auxl.select2 = './assets/audio/kenny/select_002.ogg';
-auxl.select6 = './assets/audio/kenny/select_006.ogg';
-auxl.select7 = './assets/audio/kenny/select_007.ogg';
-auxl.switch2 = './assets/audio/kenny/switch_002.ogg';
+auxl.confirm1 = './assets/audio/kenny/confirmation_001.mp3';
+auxl.confirm2 = './assets/audio/kenny/confirmation_002.mp3';
+auxl.confirm3 = './assets/audio/kenny/confirmation_003.mp3';
+auxl.confirm4 = './assets/audio/kenny/confirmation_004.mp3';
+auxl.drop1 = './assets/audio/kenny/drop_001.mp3';
+auxl.drop2 = './assets/audio/kenny/drop_002.mp3';
+auxl.drop3 = './assets/audio/kenny/drop_003.mp3';
+auxl.drop4 = './assets/audio/kenny/drop_004.mp3';
+auxl.error7 = './assets/audio/kenny/error_007.mp3';
+auxl.glass1 = './assets/audio/kenny/glass_001.mp3';
+auxl.glass3 = './assets/audio/kenny/glass_003.mp3';
+auxl.maximize6 = './assets/audio/kenny/maximize_006.mp3';
+auxl.maximize7 = './assets/audio/kenny/maximize_007.mp3';
+auxl.maximize8 = './assets/audio/kenny/maximize_008.mp3';
+auxl.minimize6 = './assets/audio/kenny/minimize_006.mp3';
+auxl.minimize7 = './assets/audio/kenny/minimize_007.mp3';
+auxl.minimize8 = './assets/audio/kenny/minimize_008.mp3';
+auxl.pluck1 = './assets/audio/kenny/pluck_001.mp3';
+auxl.pluck2 = './assets/audio/kenny/pluck_002.mp3';
+auxl.question3 = './assets/audio/kenny/question_003.mp3';
+auxl.select2 = './assets/audio/kenny/select_002.mp3';
+auxl.select6 = './assets/audio/kenny/select_006.mp3';
+auxl.select7 = './assets/audio/kenny/select_007.mp3';
+auxl.switch2 = './assets/audio/kenny/switch_002.mp3';
 
 //Music
 //
 
 //Silver Nimbus
-auxl.town3 = './assets/audio/silverNimbus/Town_III.ogg';
+auxl.town3 = './assets/audio/silverNimbus/Town_III.mp3';
 
 //
 //Game Menu
@@ -1084,8 +1084,9 @@ auxl.MemoryGame = (id) => {
 	}
 	//Check Level Sequence
 	const CheckSequence = () => {
+console.log('Checking')
 		if(playerSequence[currInSequence] === allSequence[currInSequence]){
-			//console.log('Match');
+			console.log('Match');
 			currInSequence++;
 			//push selection to front of sequenceRef and remove the last item
 			sequenceTempArray.unshift('X');
@@ -1093,14 +1094,14 @@ auxl.MemoryGame = (id) => {
 			sequenceRef = sequenceTempArray.join("");
 			memory.memoryUI.GetChild('memoryUI3').ChangeSelf({property: 'text', value: {value: 'Sequence :\n'+sequenceRef}});
 		} else {
-			//console.log('Game Over');
+			console.log('Game Over');
 			gameStarted = false;
 			gameOverTimeout1 = setTimeout(() => {
 				GameOver();
 			}, 250);
 		}
 		if(currInSequence >= currMaxSequence){
-			//console.log('Correct Sequence');
+			console.log('Correct Sequence');
 			currInSequence = 0;
 			currMaxSequence++;
 			currentScore++;
