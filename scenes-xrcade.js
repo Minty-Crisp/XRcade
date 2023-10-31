@@ -7392,8 +7392,8 @@ auxl.mintyWorldData = {
 		menuStyle: auxl.menuStyleData,
 		menuOptions: auxl.addToMainMenu,
 		backgroundAudio: {
-			town3: {src: auxl.town3, autoplay: false, loop: true, volume: 0.6, on: 'town3'},
-			spookymusic1: {src: auxl.soundSpookyMusic1, autoplay: false, loop: true, volume: 0.6, on: 'spookymusic1'},
+			town3: {src: auxl.town3, autoplay: false, loop: true, volume: 0.4, on: 'town3'},
+			spookymusic1: {src: auxl.soundSpookyMusic1, autoplay: false, loop: true, volume: 0.3, on: 'spookymusic1'},
 		},
 		soundEffects: {},
 		compBookUpdate: auxl.compCadeBookData,
