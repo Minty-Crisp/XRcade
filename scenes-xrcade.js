@@ -4262,6 +4262,7 @@ auxl.tokenLink3 = auxl.Core(auxl.tokenLink3Data);
 
 
 //Sponsor
+/*
 auxl.sponsorData = {
 	data:'sponsorData',
 	id:'sponsor',
@@ -4280,8 +4281,9 @@ auxl.sponsorData = {
 		//['stare']:{id: 'playerRig'},
 	},
 };
-auxl.sponsor1Data = auxl.coreDataFromTemplate(auxl.sponsorData, {id: 'sponsor1', position: new THREE.Vector3(-5.5,6,1.74),}, true);
-auxl.sponsor1 = auxl.Core(auxl.sponsor1Data);
+*/
+//auxl.sponsor1Data = auxl.coreDataFromTemplate(auxl.sponsorData, {id: 'sponsor1', position: new THREE.Vector3(-5.5,6,1.74),}, true);
+//auxl.sponsor1 = auxl.Core(auxl.sponsor1Data);
 
 //
 //Neons
@@ -5582,7 +5584,7 @@ auxl.buildSceneLibrary = () => {
 	auxl.jukeBox = auxl.Core(auxl.jukeBoxData);
 	auxl.jukeBoxAudioToggle = auxl.Core(auxl.jukeBoxAudioToggleData);
 	auxl.token = auxl.Core(auxl.tokenData);
-	auxl.sponsor1 = auxl.Core(auxl.sponsor1Data);
+	//auxl.sponsor1 = auxl.Core(auxl.sponsor1Data);
 	auxl.wavesSign = auxl.Core(auxl.wavesSignData);
 	auxl.heartsSign = auxl.Core(auxl.heartsSignData);
 	auxl.heartLineSign = auxl.Core(auxl.heartLineSignData);
@@ -5876,7 +5878,7 @@ auxl.entranceHomeData = {
 	},
 	start:{
 		//Billboard Ad
-		sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
+		//sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
 		//Bug workaround to ensure game menus are removed
 		allGameMenus:{DespawnAllGameMenus:null},
 		//Attendant
@@ -6031,7 +6033,7 @@ auxl.xrcadeHomeData = {
 	},
 	start:{
 		//Billboard Ad
-		sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
+		//sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
 		//Doorway
 		floor1ToEntrance:{SpawnCore:null},
 		//Floor
@@ -6622,7 +6624,7 @@ auxl.spookyHomeData = {
 	},
 	start:{
 		//Billboard Ad
-		sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
+		//sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-5.5,6,1.74)}},
 		//Doorway
 		spookyToEntrance:{SpawnCore:null},
 		spookyToExterior:{SpawnCoreOnGrid:null},
@@ -6748,7 +6750,7 @@ auxl.spookyExtData = {
 	start:{
 
 		//Billboard Ad
-		sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-1.75,8,22)}},
+		//sponsor1:{SpawnCore:null, ChangeSelf: {property: 'position', value: new THREE.Vector3(-1.75,8,22)}},
 		//Disable Flashlight
 		player:{ToggleFlashlight:{off:true},},
 		//Doors
@@ -7397,7 +7399,6 @@ auxl.mintyWorldData = {
 		},
 		soundEffects: {},
 		compBookUpdate: auxl.compCadeBookData,
-
 	},
 	scenarios:[
 		auxl.mintyScenario,
