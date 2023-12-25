@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+html {
+	background-color: #212324;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	font-family: monospace;
+}
+
+
+button {
+	width: 22vw;
+	height: 18vh;
+	margin: 1vh;
+	font-size: 1.25em;
+	color: #d8d4cf;
+	background-color: #279f27;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+	display: block;
+}
+#startButton {
+	padding: 20px;
+	font-size: 1.5em;
+	background-color: #3498db;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	}
+
+  </style>
+</head>
+<body>
+<!--
+#004daa
+
+	font-family: Arial, sans-serif;
+-->
+
+  <!-- Overlay Start Button -->
+  <div id="overlay">
+    <button id="startButton" onclick="startExperience()">Start</button>
+  </div>
+<!-- Sounds
+Jackass
+Ya Jackass
+You suck, ya Jackass
+RANDOM
+
+Trombone
+Drumroll
+Rimshot
+Whip
+
+Meow
+Frog
+Chicken
+Squeak
+
+Whistle
+Applause
+Fart
+Jackpot
+
+Buzzer
+Gong
+Air Horn
+Timer
+-->
+
+	<!-- Row 1 -->
+	<button id='0' onclick="playSound(0, () => {soundDone(0)})"><span>Jackass</span></button>
+	<button id='1' onclick="playSound(1, () => {soundDone(1)})"><span>Ya Jackass</span></button>
+	<button id='2' onclick="playSound(2, () => {soundDone(2)})"><span>You Suck, Ya Jackass</span></button>
+	<button id='random' onclick="randomSound()" style="background-color: #3498db;"><span>Random</span></button>
+	<!-- Row 2 -->
+	<button id='3' onclick="playSound(3, () => {soundDone(3)})"><span>Trombone</span></button>
+	<button id='4' onclick="playSound(4, () => {soundDone(4)})"><span>Drumroll</span></button>
+	<button id='5' onclick="playSound(5, () => {soundDone(5)})"><span>Rimshot</span></button>
+	<button id='6' onclick="playSound(6, () => {soundDone(6)})"><span>Whip</span></button>
+	<!-- Row 3 -->
+	<button id='7' onclick="playSound(7, () => {soundDone(7)})"><span>Meow</span></button>
+	<button id='8' onclick="playSound(8, () => {soundDone(8)})"><span>Frog</span></button>
+	<button id='9' onclick="playSound(9, () => {soundDone(9)})"><span>Chicken</span></button>
+	<button id='10' onclick="playSound(10, () => {soundDone(10)})"><span>Squeak</span></button>
+	<!-- Row 4 -->
+	<button id='11' onclick="playSound(11, () => {soundDone(11)})"><span>Whistle</span></button>
+	<button id='12' onclick="playSound(12, () => {soundDone(12)})"><span>Applause</span></button>
+	<button id='13' onclick="playSound(13, () => {soundDone(13)})"><span>Fart</span></button>
+	<button id='14' onclick="playSound(14, () => {soundDone(14)})"><span>Jackpot</span></button>
+	<!-- Row 5 -->
+	<button id='15' onclick="playSound(15, () => {soundDone(15)})"><span>Buzzer</span></button>
+	<button id='16' onclick="playSound(16, () => {soundDone(16)})"><span>Gong</span></button>
+	<button id='17' onclick="playSound(17, () => {soundDone(17)})"><span>Air Horn</span></button>
+	<button id='18' onclick="playSound(18, () => {soundDone(18)})"><span>10 Sec Timer</span></button>
+  <script>
+let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+function startExperience() {
+	document.getElementById('overlay').style.display = 'none';
+}
+
+let allSounds = [
+'./assets/audio/board/jackass.mp3',
+'./assets/audio/board/ya-jackass.mp3',
+'./assets/audio/board/full-jackass.mp3',
+'./assets/audio/board/trombone.mp3',
+'./assets/audio/board/drumroll.mp3',
+'./assets/audio/board/rimshot.mp3',
+'./assets/audio/board/whip.mp3',
+'./assets/audio/board/meow.mp3',
+'./assets/audio/board/frog.mp3',
+'./assets/audio/board/chicken.mp3',
+'./assets/audio/board/squeak.mp3',
+'./assets/audio/board/whistle.mp3',
+'./assets/audio/board/applause.mp3',
+'./assets/audio/board/fart.mp3',
+'./assets/audio/board/jackpot.mp3',
+'./assets/audio/board/buzzer.mp3',
+'./assets/audio/board/gong.mp3',
+'./assets/audio/board/airhorn.mp3',
+'./assets/audio/board/timer.mp3',
+];
+
+let playing = {
+0: false,
+1: false,
+2: false,
+3: false,
+4: false,
+5: false,
+6: false,
+7: false,
+8: false,
+9: false,
+10: false,
+11: false,
+12: false,
+13: false,
+14: false,
+15: false,
+16: false,
+17: false,
+18: false,
+};
+
+function playSound(num, onEndedCallback) {
+	if(playing[num]){
+		return;
+	}
+	let el = document.getElementById(num);
+	let url = allSounds[num];
+	fetch(url)
+	.then(response => response.arrayBuffer())
+	.then(buffer => {
+		audioContext.decodeAudioData(buffer, decodedData => {
+		let source = audioContext.createBufferSource();
+		source.buffer = decodedData;
+		// Event listener for when the sound has finished playing
+		source.onended = () => {
+			if (typeof onEndedCallback === 'function') {
+				onEndedCallback();
+			}
+		};
+		source.connect(audioContext.destination);
+		source.start();
+		playing[num] = true;
+		el.style.backgroundColor = 'red';
+		});
+	})
+	.catch(error => console.error('Error loading audio:', error));
+}
+
+function soundDone(num){
+	let el = document.getElementById(num);
+	el.style.backgroundColor = '#279f27';
+	playing[num] = false;
+	console.log(num+': Sound has finished playing');
+}
+
+function randomSound() {
+	let ran = Math.floor(Math.random()*allSounds.length);
+	playSound(ran, () => {soundDone(ran)});
+}
+
+  </script>
+</body>
+</html>
