@@ -1,11 +1,7 @@
-# Minty's XRcade v0.2 by :watermelon: [Minty Crisp](https://mintycrisp.com)
-### [Play](https://mintyxr.com) @  [https://mintyxr.com](https://mintyxr.com)
-## A free open-source WebXR arcade full of A-Frame built games & experiences using [A-Frame UX Library ](https://github.com/Minty-Crisp/AUXL). Support for VR | Desktop | Mobile.
-
-### [Donate a Ko-fi](https://ko-fi.com/mintycrisp)
+# Minty's XRcade by :watermelon: [Minty Crisp](https://mintycrisp.com)
+### [Play](https://minty-crisp.github.io/XRcade/)
+## A WebXR arcade with a handfull of A-Frame built games & experiences using [A-Frame UX Library ](https://github.com/Minty-Crisp/AUXL). Support for VR | Desktop | Mobile.
 ---
-# New Update! -> Spooky Zone : Killer Experiences
-
 ### Haunted Hallway : Explore a haunted hallway filled with spooktacular goodies!
 
 ### It's a Trap! : A vertigo experience that is to die for.
